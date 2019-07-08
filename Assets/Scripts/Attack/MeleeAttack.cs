@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackFunction : MonoBehaviour
+public class MeleeAttack : MonoBehaviour
 {
     public PlayerStats playerStats;
     public bool isWeapon;

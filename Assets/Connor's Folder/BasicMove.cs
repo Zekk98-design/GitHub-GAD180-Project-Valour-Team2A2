@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BasicMove : MonoBehaviour
 {
-    public float speed = 1.0f;
+    public float moveSpeed = 1.0f;
+    public float rotSpeed = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +16,9 @@ public class BasicMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
-        float z = speed * Input.GetAxis("Vertical") * Time.deltaTime;
-        transform.Translate(x, 0, z);
+        float move = moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
+        float rot = rotSpeed * Input.GetAxis("Horizontal") * Time.deltaTime;
+        transform.Translate(0, 0, move);
+        transform.Rotate(0, rot, 0);
     }
 }

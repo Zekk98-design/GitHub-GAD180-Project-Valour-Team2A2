@@ -19,6 +19,8 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthText.text = "HP: " + health;
+
         if (health == 0)
         {
             Destroy(gameObject);
