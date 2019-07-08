@@ -20,5 +20,14 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         healthText.text = "HP: " + health;
+
+        if (health <= 0)
+        {
+            health = 0;
+
+            // play death animation
+
+            Destroy(gameObject);
+        }
     }
 }
