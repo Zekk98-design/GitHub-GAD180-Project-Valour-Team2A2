@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/temporary_/Valour Testing/Main Menu.unity
+    guid: 11f117598aac308468b624422a436349
+  - enabled: 1
+    path: Assets/temporary_/Valour Testing/Character select scene.unity
+    guid: b1bf1e8ecf80f294795d64437ef27c94
   m_configObjects: {}
