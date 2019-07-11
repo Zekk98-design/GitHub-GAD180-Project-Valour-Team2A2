@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharactersMovement : MonoBehaviour
 {
-    private CharacterController chaController;
+    private CharacterController chaController; //Unity built-in component
     private CharacterAnimations playerAnimations;
     
 

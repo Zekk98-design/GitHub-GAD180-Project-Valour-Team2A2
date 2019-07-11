@@ -19,9 +19,9 @@ public class ButtonPlayerSelection : MonoBehaviour
 
     public void Player1Select()
     {
-        charactersM[0].isPlayer1 = true;
-        charactersM[1].isPlayer1 = true;
-        charactersM[2].isPlayer1 = true;
+        charactersM[0].isPlayer1 = true; // Put Warrior model in Inspector
+        charactersM[1].isPlayer1 = true; // Put Rogue model in Inspector
+        charactersM[2].isPlayer1 = true; // Put Mage model in Inspector
 
     }
 
