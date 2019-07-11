@@ -1069,6 +1069,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8341288572099674105}
   - component: {fileID: 437628908169151074}
+  - component: {fileID: -7786336507802162411}
+  - component: {fileID: -3371049576670112772}
   m_Layer: 0
   m_Name: Warrior Tpose
   m_TagString: Untagged
@@ -1109,6 +1111,37 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &-7786336507802162411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015158526672129514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b699f9bf09ca3a84090c768bc04a59f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage: 80
+  defence: 90
+  health: 0
+  healthText: {fileID: 0}
+--- !u!114 &-3371049576670112772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015158526672129514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ae9568492deaa4586f17c09c159213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: -7786336507802162411}
+  isWeapon: 0
 --- !u!1 &5102566753014005803
 GameObject:
   m_ObjectHideFlags: 0

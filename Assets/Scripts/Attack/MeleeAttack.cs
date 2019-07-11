@@ -13,14 +13,24 @@ public class MeleeAttack : MonoBehaviour
         {
             EnemyStats enemyStats = collision.gameObject.GetComponent<EnemyStats>();        // Get stats on collided enemy
 
-            if (isWeapon == true)
+            if (isWeapon == true & enemyStats.defence > 0)
+            {
+                enemyStats.defence = enemyStats.defence - playerStats.damage;
+            }
+
+            if (isWeapon == true & enemyStats.defence < 0)
             {
                 enemyStats.health = enemyStats.health - playerStats.damage;                 // if weapon, deal damage
             }
 
-            if (isWeapon == false)
+            if (isWeapon == false & playerStats.defence > 0)
             {
-                playerStats.health = playerStats.health - enemyStats.damage;                // if not weapon, take damage
+                playerStats.defence = playerStats.defence - enemyStats.damage;                // if not weapon, take damage
+            }
+
+            if (isWeapon == false & playerStats.defence < 0)
+            {
+                playerStats.health = playerStats.health - enemyStats.damage;
             }
         }
     }

@@ -8,6 +8,7 @@ public class EnemyStats : MonoBehaviour
     public float maxHealth = 10;
     public float damage = 1;
     public float health = 10;
+    public float defence = 3;
 
     // Start is called before the first frame update
     void Start()

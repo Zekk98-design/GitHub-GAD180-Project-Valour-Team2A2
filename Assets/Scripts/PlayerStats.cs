@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
 {
     public float maxHealth = 20;
     public float damage = 3;
+    public float defence = 20;
     public float health;
     public Text healthText;
 
