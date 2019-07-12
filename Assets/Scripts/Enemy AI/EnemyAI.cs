@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour
         TargetWarrior = GameObject.FindGameObjectWithTag("Warrior");
         TargetRogue = GameObject.FindGameObjectWithTag("Rogue");
         TargetMage = GameObject.FindGameObjectWithTag("Mage");
-        TargetClosest = null;
+        
 
         rb = GetComponent<Rigidbody>();
     }
