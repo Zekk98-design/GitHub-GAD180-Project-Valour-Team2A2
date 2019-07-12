@@ -8,6 +8,12 @@ TagManager:
   - Player1
   - Enemy
   - Players
+  - P1Warrior
+  - P1Rogue
+  - P1Mage
+  - P2Warrior
+  - P2Rogue
+  - P2Mage
   layers:
   - Default
   - TransparentFX
