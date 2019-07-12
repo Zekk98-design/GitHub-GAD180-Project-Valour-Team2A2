@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   // same as playerTargets = GameObject.Find("Warrior");
-        playerTargets = GameObject.FindGameObjectsWithTag("Players"); 
+        playerTargets = GameObject.FindGameObjectsWithTag("Player2"); 
         rb = GetComponent<Rigidbody>();
 
     }
@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
             //move towards player
             //transform.position += transform.forward * mSpeed * Time.deltaTime;
             //rb.AddForce(Vector3.forward * Time.deltaTime * mSpeed);
-            transform.Translate(transform.forward * mSpeed * Time.deltaTime);
+            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
         }
         else
             Debug.Log("No objects found");
