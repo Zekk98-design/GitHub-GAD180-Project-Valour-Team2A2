@@ -13,7 +13,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject bbegModel;
     public Vector3 spawn;
     public Rounds rounds;
-    private float spawnTimer = 10.0f;
+    private float spawnTimer = 1.0f;
 
     void Update()
     {

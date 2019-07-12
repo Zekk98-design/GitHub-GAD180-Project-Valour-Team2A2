@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public float defence = 20;
     public float health;
     public Text healthText;
+    public bool isPlayer1;
 
     // Start is called before the first frame update
     void Start()
