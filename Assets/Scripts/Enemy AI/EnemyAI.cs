@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private GameObject TargetWarrior;
     [SerializeField] private GameObject TargetRogue;
     [SerializeField] private GameObject TargetMage;
-    GameObject TargetClosest;
+   
     [SerializeField] private float mSpeed= 5f; // enemy speed
     [SerializeField] private Rigidbody rb;
 
@@ -23,68 +23,38 @@ public class EnemyAI : MonoBehaviour
         TargetClosest = null;
 
         rb = GetComponent<Rigidbody>();
-
-       
-
-   
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        float distance1 = Vector3.Distance(transform.position, TargetWarrior.transform.position);
+        float distance1 = Vector3.Distance(transform.position, TargetWarrior.transform.position); // get distance between Enemy and Character
         float distance2 = Vector3.Distance(transform.position, TargetRogue.transform.position);
         float distance3 = Vector3.Distance(transform.position, TargetMage.transform.position);
 
-        if (distance1 < distance2 && distance1 < distance3)
+        //find if it is closest to Warrior
+        if (distance1 < distance2 && distance1 < distance3) 
         {
             curDistance = distance1;
             transform.LookAt(TargetWarrior.transform);
             transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
             
         }
+        //find if it is closest to Rogue
         if (distance2 < distance1 && distance2 < distance3)
         {
             curDistance = distance2;
             transform.LookAt(TargetRogue.transform);
             transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
         }
+        //find if it is closest to Mage
         if (distance3 < distance1 && distance3 < distance2)
         {
             curDistance = distance3;
         }
 
-        //if (TargetWarrior != null)
-        //{
-        //    transform.LookAt(TargetWarrior.transform);
-        //    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-            
-        //}
-
-        //if (TargetRogue != null)
-        //{
-        //    transform.LookAt(TargetRogue.transform);
-        //    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-            
-        //}
-
-        if (TargetClosest != null)
-        {
-            transform.LookAt(TargetClosest.transform);
-
-            //move towards player
-            //rb.AddForce(Vector3.forward * Time.deltaTime * mSpeed);
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-        }
-        else
-            Debug.Log("No objects found");
         
     }
-
-
 
 
 
