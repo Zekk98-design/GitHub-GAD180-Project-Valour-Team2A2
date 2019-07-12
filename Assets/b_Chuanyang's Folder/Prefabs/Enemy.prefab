@@ -200,7 +200,7 @@ MonoBehaviour:
   playerTargets:
   - {fileID: 0}
   - {fileID: 0}
-  mSpeed: 3
+  mSpeed: 6
   rb: {fileID: 1239976992924258422}
 --- !u!54 &1239976992924258422
 Rigidbody:

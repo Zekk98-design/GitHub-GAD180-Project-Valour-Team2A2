@@ -4,10 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Player2
-  - Player1
   - Enemy
+<<<<<<< HEAD
   - Players
+  - Warrior
+  - Rogue
+  - Mage
+=======
+>>>>>>> parent of 86fe1bf... Enemy AI
   layers:
   - Default
   - TransparentFX
