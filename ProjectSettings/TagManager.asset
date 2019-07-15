@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Fire
   - Enemy
   - P1Rogue
@@ -15,6 +16,11 @@ TagManager:
   - Warrior
   - Rogue
   - Mage
+=======
+  - Enemy
+  - Player1
+  - Player2
+>>>>>>> e40300c37aa14f0fd7473c73d7064a45f3a573ff
   layers:
   - Default
   - TransparentFX
