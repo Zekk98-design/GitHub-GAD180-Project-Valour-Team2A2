@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class RangedAttack : MonoBehaviour
 {
-    private int playerNo;
+    public int playerNo;
     [SerializeField] private GameObject arrow;
     private Vector3 position;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (gameObject.CompareTag("Player1"))
-        {
-            playerNo = 1;
-        }
+        TagFind();
     }
 
     // Update is called once per frame
@@ -22,8 +19,29 @@ public class RangedAttack : MonoBehaviour
     {
         if (playerNo == 1 & Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(arrow, transform.position, transform.rotation);
-            arrow.GetComponent<Collider>().enabled = true;
+            GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
+            newArrow.GetComponent<Collider>().enabled = true;
+            newArrow.GetComponent<ArrowScript>().owner = gameObject;
+        }
+
+        if (playerNo == 2 & Input.GetKeyDown(KeyCode.O))
+        {
+            GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
+            newArrow.GetComponent<Collider>().enabled = true;
+            newArrow.GetComponent<ArrowScript>().owner = gameObject;
+        }
+    }
+
+    public void TagFind()
+    {
+        if (gameObject.CompareTag("Player1"))
+        {
+            playerNo = 1;
+        }
+
+        if (gameObject.CompareTag("Player2"))
+        {
+            playerNo = 2;
         }
     }
 }
