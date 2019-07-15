@@ -1033,11 +1033,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8396200584707063301, guid: 561f6c5881485474dafbd9f86ce68a77,
         type: 3}
-    - target: {fileID: 7079816324067304313, guid: 3ad934b720d7aa547a69c30707f44689,
-        type: 3}
-      propertyPath: rotSpeed
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad934b720d7aa547a69c30707f44689, type: 3}
 --- !u!1001 &8352841114324888207
