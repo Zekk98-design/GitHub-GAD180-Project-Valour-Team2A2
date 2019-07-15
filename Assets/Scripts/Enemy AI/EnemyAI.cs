@@ -27,9 +27,25 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance1 = Vector3.Distance(transform.position, TargetWarrior.transform.position); // get distance between Enemy and Character
-        float distance2 = Vector3.Distance(transform.position, TargetRogue.transform.position);
-        float distance3 = Vector3.Distance(transform.position, TargetMage.transform.position);
+        float distance1= Mathf.Infinity;
+        float distance2 = Mathf.Infinity;
+        float distance3 = Mathf.Infinity;
+
+        if (TargetWarrior != null)
+        {
+            distance1 = Vector3.Distance(transform.position, TargetWarrior.transform.position); // get distance between Enemy and Character
+        }
+
+        if (TargetRogue != null)
+        {
+            distance2 = Vector3.Distance(transform.position, TargetRogue.transform.position);
+        }
+
+        if (TargetMage != null)
+        {
+            distance3 = Vector3.Distance(transform.position, TargetMage.transform.position);
+        }
+
 
         //find if it is closest to Warrior
         if (distance1 < distance2 && distance1 < distance3) 
