@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharactersMovement : MonoBehaviour
 {
     private CharacterController chaController;
-    private CharacterAnimations playerAnimations;
+    [SerializeField] private CharacterAnimations playerAnimations;
     
 
     public float movement_Speed = 3f;
@@ -37,7 +37,7 @@ public class CharactersMovement : MonoBehaviour
     {
         Move();
         Rotate();
-        AnimateWalk();
+        //AnimateWalk();
     }
 
     void Move()

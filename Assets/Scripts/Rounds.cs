@@ -9,7 +9,7 @@ public class Rounds : MonoBehaviour
     public float timer;
     private int roundCount;
     public EnemySpawn enemySpawn;
-    public Text roundText;
+    public Text timerText;
     private int enemyCount;
 
 
@@ -24,7 +24,9 @@ public class Rounds : MonoBehaviour
     void Update()
     {
         timer = timer - Time.deltaTime;
-        roundText.text = "" + roundCount;
+        int min = Mathf.FloorToInt(timer / 60);
+        int sec = Mathf.FloorToInt(timer % 60);
+        timerText.text = min.ToString("00") + ":" + sec.ToString("00");
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         // reset and increment round counter
