@@ -53,32 +53,57 @@ public class EnemyAI : MonoBehaviour
             curDistance = distance1;
             transform.LookAt(TargetWarrior.transform);
 
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-            
-        }
-        //find if it is closest to Rogue
-        if (distance2 < distance1 && distance2 < distance3)
-        {
-            curDistance = distance2;
-            transform.LookAt(TargetRogue.transform);
+            //transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
+            //rb.AddForce(transform.forward * mSpeed * Time.deltaTime *100);
+            if (distance1 > 2f )
+            {
+                rb.AddForce(transform.forward * mSpeed * Time.deltaTime * 100);
+            }
+            // when close...
+            else
+            {
+                // ...attack
+            }
 
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-            
         }
         //find if it is closest to Rogue
         if (distance2 < distance1 && distance2 < distance3)
         {
             curDistance = distance2;
+
             transform.LookAt(TargetRogue.transform);
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
+            
+            if (distance1 > 3f)
+            {
+                rb.velocity = transform.forward * mSpeed * Time.deltaTime * 100;
+
+            }
+            // when close...
+            else
+            {
+                // ...attack
+            }
+
         }
+
         //find if it is closest to Mage
-        if (distance3 < distance1 && distance3 < distance2)
+        if (distance2 < distance1 && distance2 < distance3)
         {
-            curDistance = distance3;
-        }
+            curDistance = distance2;
 
-        
+            transform.LookAt(TargetMage.transform);
+
+            if (distance1 > 3f)
+            {
+                rb.velocity = transform.forward * mSpeed * Time.deltaTime * 100;
+
+            }
+            // when close...
+            else
+            {
+                // ...attack
+            }
+        }
     }
 
 }

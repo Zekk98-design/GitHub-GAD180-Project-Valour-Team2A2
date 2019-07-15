@@ -197,9 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9428db1c5c45646a0af5e5c234fec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTargets:
-  - {fileID: 0}
-  - {fileID: 0}
+  TargetWarrior: {fileID: 0}
+  TargetRogue: {fileID: 0}
+  TargetMage: {fileID: 0}
   mSpeed: 6
   rb: {fileID: 1239976992924258422}
 --- !u!54 &1239976992924258422
