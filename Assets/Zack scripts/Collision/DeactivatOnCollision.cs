@@ -1,10 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// © 2017 TheFlyingKeyboard and released under MIT License
-// theflyingkeyboard.net
-//Deactivates given GameObject on collision
-public class DeactivateOnCollision3D : MonoBehaviour
+public class DeactivateOnCollision : MonoBehaviour
 {
     [SerializeField] private GameObject objectToDeactivate;
     [SerializeField] private string objectTagName;
