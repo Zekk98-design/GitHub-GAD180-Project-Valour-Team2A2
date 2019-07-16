@@ -16,9 +16,13 @@ public class BasicMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float move = moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
-        float rot = rotSpeed * Input.GetAxis("Horizontal") * Time.deltaTime;
-        transform.Translate(0, 0, move);
-        transform.Rotate(0, rot, 0);
+        float moveHorizontal = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
+        float moveVertical = Input.GetAxisRaw("Vertical") * Time.deltaTime;
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        transform.rotation = Quaternion.LookRotation(movement);
+
+
+        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
+    
     }
 }
