@@ -37,7 +37,7 @@ public class CharactersMovement : MonoBehaviour
     {
         Move();
         Rotate();
-        //AnimateWalk();
+        AnimateWalk();
     }
 
     void Move()
