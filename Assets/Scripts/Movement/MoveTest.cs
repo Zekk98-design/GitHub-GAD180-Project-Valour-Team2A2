@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Movement script with rigidbody, only used for testing purpose atm
+/// </summary>
 public class MoveTest : MonoBehaviour
 {
     public float moveSpeed = 7.0f;
     public float rotateSpeed = 10;
     private Rigidbody rb;
-   
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +20,6 @@ public class MoveTest : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
 
     private void FixedUpdate()
     {
@@ -41,38 +38,32 @@ public class MoveTest : MonoBehaviour
         if (mHorizontal > 0)
         {
             //Rotate to the right
-            rb.rotation = Quaternion.LookRotation(transform.right) ;
+            rb.MoveRotation(Quaternion.LookRotation(Vector3.right));
             //Move always to the forward vector
             rb.MovePosition(transform.position + transform.forward * moveSpeed* Time.deltaTime) ;
         }
         else if (mHorizontal < 0)
         {
             //Rotate to the left
-            transform.rotation = Quaternion.LookRotation(-transform.right * Time.deltaTime);
+            rb.MoveRotation(Quaternion.LookRotation(Vector3.left));
             //Move always to the forward vector
-            rb.MovePosition(transform.position + transform.forward * moveSpeed* Time.deltaTime);
+            rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
         }
-
+            
         if (mVertical > 0)
         {
-            ////Rotate to the right
-            //transform.rotation = Quaternion.LookRotation(transform.right);
+            //Rotate to the up
+            rb.MoveRotation(Quaternion.LookRotation(Vector3.forward));
             //Move always to the forward vector
-            rb.MovePosition(transform.position + transform.forward * moveSpeed* Time.deltaTime);
+            rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
         }
         else if(mVertical < 0)
         {
-            ////Rotate to the left
-            //transform.rotation = Quaternion.LookRotation(-transform.right);
+            //Rotate to the down
+            rb.MoveRotation(Quaternion.LookRotation(Vector3.back));
             //Move always to the forward vector
-            rb.MovePosition(transform.position + transform.forward*-1f * moveSpeed* Time.deltaTime);
+            rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
         }
-
-
-
-
-        //Vector3 movement = moveForward + turnDirection;
-        //rb.MovePosition(rb.position + movement);
     }
     
 
