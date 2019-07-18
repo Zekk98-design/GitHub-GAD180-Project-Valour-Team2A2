@@ -10,6 +10,14 @@ TagManager:
   - Player1
   - Mage
   - Player2
+  - P1Rogue
+  - P1Warrior
+  - P2Mage
+  - P1Mage
+  - P2Rogue
+  - P2Warrior
+  - Fire
+  - HP
   layers:
   - Default
   - TransparentFX

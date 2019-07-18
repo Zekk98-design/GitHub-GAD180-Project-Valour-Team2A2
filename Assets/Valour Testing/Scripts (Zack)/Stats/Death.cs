@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
+    // HealthLoss Script.
+    // Add to enemies so that when they collide with/hit the palyer, the player will lose health.
+
+
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("HAHAHAHAHAHAHAHAH");
-        Debug.Log("Health is currently: [" + GameControlScript.health + "].");
         GameControlScript.health -= 1;
-        Debug.Log("Health is now (after DEATH): [" + GameControlScript.health + "].");
     }
 }

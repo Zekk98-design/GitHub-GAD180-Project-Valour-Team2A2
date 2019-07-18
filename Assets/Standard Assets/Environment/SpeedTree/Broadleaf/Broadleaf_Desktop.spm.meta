@@ -1,88 +1,7 @@
 fileFormatVersion: 2
-guid: 60fbafc1acbf26441b20867f227e9f27
+guid: c91c1eb85782d5748ace27eb4d7415bb
 SpeedTreeImporter:
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Billboard
-    second: {fileID: 2100000, guid: 1810c15d3ab65a943bbaf3d683c42478, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Branches_0_LOD0
-    second: {fileID: 2100000, guid: 0e399a2c386eeab4780872b85ede5e58, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Branches_0_LOD1
-    second: {fileID: 2100000, guid: cf9bf1a0d2396dc4fa301fcd53a06551, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Branches_0_LOD2
-    second: {fileID: 2100000, guid: 8e294f764abef194588c04ed9db3d48d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Branches_1_LOD0
-    second: {fileID: 2100000, guid: 55ff731326b920f419c649dcb1e5c80a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Branches_1_LOD1
-    second: {fileID: 2100000, guid: 407c433b9114a39489edb8cb6013a9c0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Branches_1_LOD2
-    second: {fileID: 2100000, guid: 2f05f80de01ef044999200e29f8ff0c6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FacingLeaves_4_LOD0
-    second: {fileID: 2100000, guid: 6328f0e99b864994caaa5e37de023575, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FacingLeaves_4_LOD1
-    second: {fileID: 2100000, guid: ea6dbf8e29671cc4eae9a88ac9b466c7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FacingLeaves_4_LOD2
-    second: {fileID: 2100000, guid: 2ba0e702b9cd89945afae9227dedca5b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Fronds_2_LOD0
-    second: {fileID: 2100000, guid: 931d34d6a4fe7ab4aa57ee7df39efdc5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Fronds_2_LOD1
-    second: {fileID: 2100000, guid: 615222cb07024814e9ff71be4fcf37f3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Fronds_2_LOD2
-    second: {fileID: 2100000, guid: ccf6f9749b0992742bfe35fd5ed8ad45, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Leaves_3_LOD0
-    second: {fileID: 2100000, guid: 89474ed3b5f269e449d85015b6b40d29, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Leaves_3_LOD1
-    second: {fileID: 2100000, guid: 6d2ad6def8ef1ca44b71bb7bfe2daf0c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Leaves_3_LOD2
-    second: {fileID: 2100000, guid: a48c2c8091fe2ee45987f1b07c8fe9ed, type: 2}
-  serializedVersion: 6
+  serializedVersion: 4
   mainColor: {r: 1, g: 1, b: 1, a: 1}
   hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
   alphaTestRef: 0.33
@@ -96,7 +15,6 @@ SpeedTreeImporter:
     reflectionProbeUsage: 1
     enableBump: 1
     enableHue: 1
-    enableSubsurface: 0
     windQuality: 4
   - height: 0.25
     castShadows: 1
@@ -105,7 +23,6 @@ SpeedTreeImporter:
     reflectionProbeUsage: 1
     enableBump: 1
     enableHue: 1
-    enableSubsurface: 0
     windQuality: 4
   - height: 0.125
     castShadows: 1
@@ -114,7 +31,6 @@ SpeedTreeImporter:
     reflectionProbeUsage: 1
     enableBump: 1
     enableHue: 1
-    enableSubsurface: 0
     windQuality: 4
   - height: 0.01
     castShadows: 0
@@ -123,7 +39,6 @@ SpeedTreeImporter:
     reflectionProbeUsage: 0
     enableBump: 1
     enableHue: 1
-    enableSubsurface: 0
     windQuality: 1
   enableSmoothLODTransition: 1
   animateCrossFading: 1
@@ -131,8 +46,6 @@ SpeedTreeImporter:
   fadeOutWidth: 0.25
   scaleFactor: 0.3048
   materialVersion: 3
-  materialLocation: 0
-  fileIDType: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
