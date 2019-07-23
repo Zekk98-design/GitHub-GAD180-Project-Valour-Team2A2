@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicMove : MonoBehaviour
 {
-    private CharacterAnimations playerAnimations;
+    [SerializeField] private CharacterAnimations playerAnimations;
     private Rigidbody rb;
     public float moveSpeed = 6.0f;
     Quaternion currentRotation = Quaternion.LookRotation(Vector3.zero);

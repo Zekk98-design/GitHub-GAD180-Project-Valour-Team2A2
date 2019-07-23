@@ -5,17 +5,21 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    public Leaderboard lBoard;
     public float maxHealth = 20;
     public float damage = 3;
     public float defence = 20;
     public int state = 1;
     public float health;
     public Text healthText;
-    public bool isPlayer1;
+    private bool isDead = false;
+    private int death;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject EGO = GameObject.Find("EGO Spawn");
+        lBoard = EGO.GetComponent<Leaderboard>();
         health = maxHealth;
     }
 
@@ -24,12 +28,31 @@ public class PlayerStats : MonoBehaviour
     {
         healthText.text = "HP: " + health;
 
-        if (health <= 0)
+        if (health <= 0 & death != 2)
         {
-            health = 0;
+            if (gameObject.CompareTag("Player1"))
+            {
+                ++lBoard.p1Death;
+            }
+            if (gameObject.CompareTag("Player2"))
+            {
+                ++lBoard.p2Death;
+            }
 
-            // play death animation
+            health = maxHealth;
+            ++death;
+        }
 
+        if (health <= 0 & death == 2)
+        {
+            if (gameObject.CompareTag("Player1"))
+            {
+                lBoard.p1Death = lBoard.p1Death + 1;
+            }
+            if (gameObject.CompareTag("Player2"))
+            {
+                lBoard.p2Death = lBoard.p2Death + 1;
+            }
             Destroy(gameObject);
         }
     }

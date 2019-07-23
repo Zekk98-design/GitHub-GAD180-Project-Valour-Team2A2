@@ -394,8 +394,9 @@ GameObject:
   - component: {fileID: 801244464}
   - component: {fileID: 801244463}
   - component: {fileID: 801244462}
+  - component: {fileID: 801244465}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: EGO Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,6 +454,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &801244465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801244461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e99de03ded8564e8042f4302dd9e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p1Dmg: 0
+  p1Kill: 0
+  p1Death: 0
+  p2Dmg: 0
+  p2Kill: 0
+  p2Death: 0
 --- !u!1001 &806077492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,7 +492,7 @@ PrefabInstance:
     - target: {fileID: 7079816324067304316, guid: 3ad934b720d7aa547a69c30707f44689,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.42
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7079816324067304316, guid: 3ad934b720d7aa547a69c30707f44689,
         type: 3}
@@ -483,7 +502,7 @@ PrefabInstance:
     - target: {fileID: 7079816324067304316, guid: 3ad934b720d7aa547a69c30707f44689,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.39
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7079816324067304316, guid: 3ad934b720d7aa547a69c30707f44689,
         type: 3}
@@ -540,6 +559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rotSpeed
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079816324067304313, guid: 3ad934b720d7aa547a69c30707f44689,
+        type: 3}
+      propertyPath: playerAnimations
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad934b720d7aa547a69c30707f44689, type: 3}
@@ -708,6 +732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireball: {fileID: 4799178364964050704, guid: 59fbef3e7ab87dc4cbf4d0b0e2891e4e,
     type: 3}
+  chargeMax: 0
+  charge: 15
 --- !u!1 &1261175251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,12 +1073,27 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1261175253}
+    - target: {fileID: 7079816324067304318, guid: 3ad934b720d7aa547a69c30707f44689,
+        type: 3}
+      propertyPath: defence
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079816324067304318, guid: 3ad934b720d7aa547a69c30707f44689,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7685367653727266577, guid: 3ad934b720d7aa547a69c30707f44689,
         type: 3}
       propertyPath: arrow
       value: 
       objectReference: {fileID: 8396200584707063301, guid: 561f6c5881485474dafbd9f86ce68a77,
         type: 3}
+    - target: {fileID: 7079816324067304313, guid: 3ad934b720d7aa547a69c30707f44689,
+        type: 3}
+      propertyPath: playerAnimations
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad934b720d7aa547a69c30707f44689, type: 3}
 --- !u!1001 &8352841114324888207

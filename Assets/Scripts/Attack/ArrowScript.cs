@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ArrowScript : MonoBehaviour
 {
+    private Leaderboard lBoard;
     public GameObject owner;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject EGO = GameObject.Find("EGO Spawn");
+        lBoard = EGO.GetComponent<Leaderboard>();
         transform.Translate(0, 0, 1.1f);
         gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
         StartCoroutine(waiter());
@@ -27,6 +30,14 @@ public class ArrowScript : MonoBehaviour
             PlayerStats playerStats = owner.GetComponent<PlayerStats>();
             EnemyStats enemyStats = collision.gameObject.GetComponent<EnemyStats>();
             enemyStats.health = enemyStats.health - playerStats.damage;
+            if(owner.CompareTag("Player1"))
+            {
+                lBoard.p1Dmg = lBoard.p1Dmg + playerStats.damage;
+            }
+            if(owner.CompareTag("Player2"))
+            {
+                lBoard.p2Dmg = lBoard.p2Dmg + playerStats.damage;
+            }
             Destroy(gameObject);
         }
 
