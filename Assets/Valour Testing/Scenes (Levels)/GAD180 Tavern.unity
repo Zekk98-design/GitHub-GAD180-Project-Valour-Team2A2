@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 145842486}
   - component: {fileID: 145842485}
   m_Layer: 5
-  m_Name: p2Shield 5
+  m_Name: p2Bar 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2275,7 +2275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.4, y: -18.09}
+  m_AnchoredPosition: {x: -11.200195, y: -18.090027}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145842485
@@ -2859,7 +2859,7 @@ GameObject:
   - component: {fileID: 212637144}
   - component: {fileID: 212637143}
   m_Layer: 5
-  m_Name: p2Shield 4
+  m_Name: p2Bar 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2881,7 +2881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.8, y: -18.09}
+  m_AnchoredPosition: {x: -38.800026, y: -18.09}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &212637143
@@ -3328,7 +3328,7 @@ GameObject:
   - component: {fileID: 261043231}
   - component: {fileID: 261043230}
   m_Layer: 5
-  m_Name: p2Shield 3
+  m_Name: p2Bar 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3350,7 +3350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88.5, y: -18.09}
+  m_AnchoredPosition: {x: -66.400024, y: -18.09}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261043230
@@ -5818,7 +5818,7 @@ GameObject:
   - component: {fileID: 492906774}
   - component: {fileID: 492906773}
   m_Layer: 5
-  m_Name: Shield 5
+  m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5840,7 +5840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.8, y: -17.5}
+  m_AnchoredPosition: {x: -38.6, y: -17.5}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492906773
@@ -5880,61 +5880,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492906771}
   m_CullTransparentMesh: 0
---- !u!1 &496289034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 496289035}
-  - component: {fileID: 496289036}
-  m_Layer: 0
-  m_Name: GameControlShield
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &496289035
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496289034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1145.8431, y: 527.543, z: -860.9167}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &496289036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496289034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2121519c5fcb4004183ee4241a340ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shield1: {fileID: 536903522}
-  shield2: {fileID: 596827863}
-  shield3: {fileID: 2061968688}
-  shield4: {fileID: 759258045}
-  shield5: {fileID: 492906771}
-  shield6: {fileID: 905698648}
-  p2Shield1: {fileID: 1439004213}
-  p2Shield2: {fileID: 261043228}
-  p2Shield3: {fileID: 212637141}
-  p2Shield4: {fileID: 145842483}
-  p2Shield5: {fileID: 590715437}
-  p2Shield6: {fileID: 2144133878}
 --- !u!1001 &526871063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6273,7 +6218,7 @@ GameObject:
   - component: {fileID: 536903525}
   - component: {fileID: 536903524}
   m_Layer: 5
-  m_Name: Shield 4
+  m_Name: Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6295,7 +6240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92, y: -17.5}
+  m_AnchoredPosition: {x: 71.8, y: -17.5}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536903524
@@ -6786,7 +6731,7 @@ GameObject:
   - component: {fileID: 590715440}
   - component: {fileID: 590715439}
   m_Layer: 5
-  m_Name: p2Shield 6
+  m_Name: p2Bar 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6808,7 +6753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.9, y: -18.09}
+  m_AnchoredPosition: {x: 16.399902, y: -18.090038}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590715439
@@ -6860,7 +6805,7 @@ GameObject:
   - component: {fileID: 596827866}
   - component: {fileID: 596827865}
   m_Layer: 5
-  m_Name: Shield 1
+  m_Name: Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6882,7 +6827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.9, y: -17.5}
+  m_AnchoredPosition: {x: 44.199997, y: -17.5}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596827865
@@ -8767,7 +8712,7 @@ GameObject:
   - component: {fileID: 759258048}
   - component: {fileID: 759258047}
   m_Layer: 5
-  m_Name: Shield 3
+  m_Name: Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10152,7 +10097,7 @@ GameObject:
   - component: {fileID: 905698651}
   - component: {fileID: 905698650}
   m_Layer: 5
-  m_Name: Shield 6
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10174,7 +10119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.1, y: -17.5}
+  m_AnchoredPosition: {x: -66.2, y: -17.5}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905698650
@@ -13141,7 +13086,7 @@ GameObject:
   - component: {fileID: 1203399274}
   - component: {fileID: 1203399273}
   m_Layer: 0
-  m_Name: GameControlHealth
+  m_Name: GameControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15358,7 +15303,7 @@ GameObject:
   - component: {fileID: 1439004216}
   - component: {fileID: 1439004215}
   m_Layer: 5
-  m_Name: p2Shield 2
+  m_Name: p2Bar 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15380,7 +15325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120.7, y: -18.09}
+  m_AnchoredPosition: {x: -94.00002, y: -18.09}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1439004215
@@ -21188,7 +21133,7 @@ GameObject:
   - component: {fileID: 2061968691}
   - component: {fileID: 2061968690}
   m_Layer: 5
-  m_Name: Shield 2
+  m_Name: Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21210,7 +21155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.6, y: -17.5}
+  m_AnchoredPosition: {x: 16.599998, y: -17.5}
   m_SizeDelta: {x: 27.6, y: 30.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061968690
@@ -21883,7 +21828,7 @@ GameObject:
   - component: {fileID: 2144133881}
   - component: {fileID: 2144133880}
   m_Layer: 5
-  m_Name: p2Shield 1
+  m_Name: p2Bar 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
