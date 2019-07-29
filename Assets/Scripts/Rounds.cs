@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Rounds : MonoBehaviour
 {
     public float roundTimer = 60.0f;
     public float timer;
-    [SerializeField] private int roundCount;
+    private int roundCount;
     public EnemySpawn enemySpawn;
     public Text timerText;
     private int enemyCount;
-    private int maxRound = 2;
 
 
     // Start is called before the first frame update
@@ -41,16 +39,10 @@ public class Rounds : MonoBehaviour
         }
 
         // spawn BBEG
-        if (roundCount == maxRound & enemySpawn.bbegSpawn < 1)
+        if (roundCount == 2 & enemySpawn.bbegSpawn < 1)
         {
             Instantiate(enemySpawn.bbegModel, transform.position + enemySpawn.spawn, transform.rotation);
             ++enemySpawn.bbegSpawn;
-        }
-
-        // move to Leaderboard
-        if (roundCount > maxRound)
-        {
-            SceneManager.LoadScene(6, LoadSceneMode.Single);
         }
     }
 }
