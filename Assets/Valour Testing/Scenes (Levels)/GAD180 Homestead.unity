@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.2873873, g: 0.3915106, b: 0.5386583, a: 1}
+  m_IndirectSpecularColor: {r: 0.2873942, g: 0.39151895, b: 0.5386572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4317,9 +4317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3763b56068c1e444a94b4daf4e522927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Warrior: {fileID: 4589430814496896665, guid: ee453419c034fda4ca3bb2efc8cb94a8, type: 3}
-  Rogue: {fileID: 7730389586953042286, guid: 5a43879fa1a85564b82ccdddb0f94206, type: 3}
-  Mage: {fileID: 7085735792086330830, guid: e1200a31b062f4245b60978d9a2585e9, type: 3}
+  Warrior: {fileID: 2391504002464795501, guid: 1c03d3ee9336e96459aceb4ae7cb00d8, type: 3}
+  Rogue: {fileID: 5094077572999888843, guid: 76805e68d8053c8438a960a3c36756e5, type: 3}
+  Mage: {fileID: 5002078922731941674, guid: 4fc3cd7ce4ab40f408c46190dd29152b, type: 3}
 --- !u!4 &450416174
 Transform:
   m_ObjectHideFlags: 0
