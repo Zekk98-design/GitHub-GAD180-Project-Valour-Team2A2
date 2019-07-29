@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 8864033559356142785}
   - component: {fileID: 1822834714655199151}
   m_Layer: 0
-  m_Name: Mage
+  m_Name: mage
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1620,6 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df29e537f79df1d44a2273d9ae029677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimations: {fileID: 0}
   moveSpeed: 6
 --- !u!114 &3002144217016514155
 MonoBehaviour:

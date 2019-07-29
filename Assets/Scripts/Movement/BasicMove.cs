@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicMove : MonoBehaviour
 {
-    [SerializeField] private CharacterAnimations playerAnimations;
+    private CharacterAnimations playerAnimations;
     private Rigidbody rb;
     public float moveSpeed = 6.0f;
     Quaternion currentRotation = Quaternion.LookRotation(Vector3.zero);
@@ -54,33 +54,33 @@ public class BasicMove : MonoBehaviour
         else
         {   transform.rotation = Quaternion.LookRotation(movement);
             transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
-            Debug.Log("Moving");
+            //Debug.Log("Moving");
         }
 
         // when rotate to right, face right
         if (transform.eulerAngles.y == 90.0f)
         {
             currentRotation = Quaternion.LookRotation(Vector3.right);
-            Debug.Log("give me Right currentRotation.y: " + transform.eulerAngles.y);
+            //Debug.Log("give me Right currentRotation.y: " + transform.eulerAngles.y);
         }
         // when rotate to left, face left
         if (transform.eulerAngles.y == 270f)
         {
             currentRotation = Quaternion.LookRotation(Vector3.left);
-            Debug.Log("give me Left currentRotation.y: " + transform.eulerAngles.y);
+            //Debug.Log("give me Left currentRotation.y: " + transform.eulerAngles.y);
         }
         // when rotate to up, face it
         if (transform.eulerAngles.y == 0.0f)
         {
             currentRotation = Quaternion.LookRotation(Vector3.forward);
 
-            Debug.Log("give me Up currentRotation.y: " + transform.eulerAngles.y);
+            //Debug.Log("give me Up currentRotation.y: " + transform.eulerAngles.y);
         }
         // when rotate to down, face it
         if (transform.eulerAngles.y == 180f)
         {
             currentRotation = Quaternion.LookRotation(Vector3.back);
-            Debug.Log("give me Down currentRotation.y: " + transform.eulerAngles.y);
+            //Debug.Log("give me Down currentRotation.y: " + transform.eulerAngles.y);
         }
     }
 
