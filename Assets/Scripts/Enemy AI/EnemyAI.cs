@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy AI for Normal monsters and Boss.
+/// Attach this to enemy prefabs
+/// </summary>
+
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private GameObject TargetWarrior;
