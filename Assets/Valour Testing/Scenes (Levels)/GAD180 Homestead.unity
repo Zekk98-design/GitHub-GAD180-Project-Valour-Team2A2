@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.2873873, g: 0.3915106, b: 0.5386583, a: 1}
+  m_IndirectSpecularColor: {r: 0.28735608, g: 0.39150274, b: 0.5386594, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4317,9 +4317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3763b56068c1e444a94b4daf4e522927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Warrior: {fileID: 4589430814496896665, guid: ee453419c034fda4ca3bb2efc8cb94a8, type: 3}
-  Rogue: {fileID: 7730389586953042286, guid: 5a43879fa1a85564b82ccdddb0f94206, type: 3}
-  Mage: {fileID: 7085735792086330830, guid: e1200a31b062f4245b60978d9a2585e9, type: 3}
+  Warrior: {fileID: 2391504002464795501, guid: 1c03d3ee9336e96459aceb4ae7cb00d8, type: 3}
+  Rogue: {fileID: 5094077572999888843, guid: 76805e68d8053c8438a960a3c36756e5, type: 3}
+  Mage: {fileID: 5002078922731941674, guid: 4fc3cd7ce4ab40f408c46190dd29152b, type: 3}
 --- !u!4 &450416174
 Transform:
   m_ObjectHideFlags: 0
@@ -17933,26 +17933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d486ac0d789b246b94d1d3c3b54e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar1: {fileID: 42011810}
-  bar2: {fileID: 917091270}
-  bar3: {fileID: 1556830701}
-  bar4: {fileID: 241880942}
-  bar5: {fileID: 268697747}
-  bar6: {fileID: 1591361333}
-  bar7: {fileID: 1894444665}
-  bar8: {fileID: 494634020}
-  bar9: {fileID: 1747266737}
-  gameOver: {fileID: 1052743171}
-  p2Bar1: {fileID: 334412753}
-  p2Bar2: {fileID: 22163819}
-  p2Bar3: {fileID: 259876122}
-  p2Bar4: {fileID: 934797210}
-  p2Bar5: {fileID: 647674555}
-  p2Bar6: {fileID: 117124563}
-  p2Bar7: {fileID: 1604800292}
-  p2Bar8: {fileID: 1878452975}
-  p2Bar9: {fileID: 1715039411}
-  p2GameOver: {fileID: 1325621629}
 --- !u!4 &2136239228
 Transform:
   m_ObjectHideFlags: 0
