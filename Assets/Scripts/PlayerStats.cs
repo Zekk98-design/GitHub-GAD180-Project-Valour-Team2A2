@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "HP: " + health;
+        //healthText.text = "HP: " + health;
 
         if (health <= 0 & death != 2)
         {

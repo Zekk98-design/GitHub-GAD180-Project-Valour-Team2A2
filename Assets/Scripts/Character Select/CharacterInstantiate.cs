@@ -17,8 +17,8 @@ public class CharacterInstantiate : MonoBehaviour
     void Start()
     {
         charSelect = GameObject.Find("EGO Select").GetComponent<CharacterSelect>();
-        p1Spawn = transform.position + new Vector3(1, 0, 1);
-        p2Spawn = transform.position + new Vector3(-1, 0, -1);
+        p1Spawn = transform.position + new Vector3(0, 0, 0);
+        p2Spawn = transform.position + new Vector3(1, 0, 1);
 
         if (charSelect.p1Char == "P1Warrior")
         {

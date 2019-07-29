@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Leaderboard : MonoBehaviour
 {
-    [SerializeField] private string currentScene;
     public float p1Dmg;
     public int p1Kill;
     public int p1Death;
@@ -33,11 +32,6 @@ public class Leaderboard : MonoBehaviour
     void Start()
     {
         PlayerSet();
-        currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene == "Leaderboard")
-        {
-            print("Leaderboard");
-        }
     }
 
     // Update is called once per frame
