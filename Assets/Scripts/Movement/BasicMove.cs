@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(CharacterAnimations))]
+[RequireComponent(typeof(Rigidbody))]
 
 public class BasicMove : MonoBehaviour
 {
     private CharacterAnimations playerAnimations;
     private Rigidbody rb;
     public float moveSpeed = 6.0f;
-    Quaternion currentRotation = Quaternion.LookRotation(Vector3.zero);
+    Quaternion currentRotation = Quaternion.LookRotation(Vector3.up);
     Vector3 movement;  // used in Character selection logic as well
    
 
@@ -23,7 +25,7 @@ public class BasicMove : MonoBehaviour
     void Update()
     {
         Move();
-        AnimationPlay();
+        WalkAnimation();
     }
 
     void Move()
@@ -85,7 +87,7 @@ public class BasicMove : MonoBehaviour
     }
 
 
-    void AnimationPlay()
+    void WalkAnimation()
     {
         // when there is velocity, play Walk animation
         if (movement.sqrMagnitude != 0f)

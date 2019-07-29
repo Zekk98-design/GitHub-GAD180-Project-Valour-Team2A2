@@ -6,25 +6,24 @@ using UnityEngine;
 /// Enemy AI for Normal monsters and Boss.
 /// Attach this to enemy prefabs
 /// </summary>
+[RequireComponent(typeof(Rigidbody))]
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private GameObject TargetWarrior;
-    [SerializeField] private GameObject TargetRogue;
-    [SerializeField] private GameObject TargetMage;
+    [SerializeField] private GameObject Player1;
+    [SerializeField] private GameObject Player2;
    
-    [SerializeField] private float mSpeed= 5f; // enemy speed
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] private float mSpeed= 3f; // enemy speed
 
+    private Rigidbody rb;
     private float curDistance = 1000f;
 
 
     // Start is called before the first frame update
     void Start()
     {   //find characters with matched tag
-        TargetWarrior = GameObject.FindGameObjectWithTag("Warrior");
-        TargetRogue = GameObject.FindGameObjectWithTag("Rogue");
-        TargetMage = GameObject.FindGameObjectWithTag("Mage");
+        Player1 = GameObject.FindGameObjectWithTag("Player1");
+        Player2 = GameObject.FindGameObjectWithTag("Player2");
 
         rb = GetComponent<Rigidbody>();
     }
@@ -34,34 +33,28 @@ public class EnemyAI : MonoBehaviour
     {
         float distance1= Mathf.Infinity;
         float distance2 = Mathf.Infinity;
-        float distance3 = Mathf.Infinity;
 
-        if (TargetWarrior != null)
+
+        if (Player1 != null)
         {
-            distance1 = Vector3.Distance(transform.position, TargetWarrior.transform.position); // get distance between Enemy and Character
+            distance1 = Vector3.Distance(transform.position, Player1.transform.position); // get distance between Enemy and Character
         }
 
-        if (TargetRogue != null)
+        if (Player2 != null)
         {
-            distance2 = Vector3.Distance(transform.position, TargetRogue.transform.position);
-        }
-
-        if (TargetMage != null)
-        {
-            distance3 = Vector3.Distance(transform.position, TargetMage.transform.position);
+            distance2 = Vector3.Distance(transform.position, Player2.transform.position);
         }
 
 
-        //find if it is closest to Warrior
-        if (distance1 < distance2 && distance1 < distance3) 
+        //find if it is closest to P1
+        if (distance1 < distance2) 
         {
             curDistance = distance1;
-            transform.LookAt(TargetWarrior.transform);
-
-            //transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-            //rb.AddForce(transform.forward * mSpeed * Time.deltaTime *100);
+            transform.LookAt(Player1.transform);
+            //move to player 
             if (distance1 > 2f )
             {
+
                 rb.AddForce(transform.forward * mSpeed * Time.deltaTime * 100);
             }
             // when close...
@@ -71,16 +64,17 @@ public class EnemyAI : MonoBehaviour
             }
 
         }
-        //find if it is closest to Rogue
-        if (distance2 < distance1 && distance2 < distance3)
+        //find if it is closest to P2
+        if (distance2 < distance1)
         {
             curDistance = distance2;
 
-            transform.LookAt(TargetRogue.transform);
+            transform.LookAt(Player2.transform);
             
-            if (distance1 > 3f)
+            if (curDistance > 2f)
             {
-                rb.velocity = transform.forward * mSpeed * Time.deltaTime * 100;
+                //rb.velocity = transform.forward * mSpeed * Time.deltaTime * 100;
+                rb.AddForce(transform.forward * mSpeed * Time.deltaTime * 100);
 
             }
             // when close...
@@ -89,25 +83,6 @@ public class EnemyAI : MonoBehaviour
                 // ...attack
             }
 
-        }
-
-        //find if it is closest to Mage
-        if (distance2 < distance1 && distance2 < distance3)
-        {
-            curDistance = distance2;
-
-            transform.LookAt(TargetMage.transform);
-
-            if (distance1 > 3f)
-            {
-                rb.velocity = transform.forward * mSpeed * Time.deltaTime * 100;
-
-            }
-            // when close...
-            else
-            {
-                // ...attack
-            }
         }
     }
 

@@ -1,31 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/// <summary>
+/// Originally created by Charlie.
+/// Bruce made some modifications
+/// </summary>
+
+[RequireComponent(typeof(CharacterAnimations))]  //added by Bruce
+[RequireComponent(typeof(PlayerStats))]  //added by Bruce
 
 public class Abilities : MonoBehaviour
 {
     [SerializeField] private GameObject fireball;
     [SerializeField] private int chargeMax;
-    public int charge = 15;
-    private string warrior = "Warrior Tpose";
-    private string rogue = "Rogue Tpose";
-    private string mage = "Mage Tpose";
+    CharacterAnimations playerAtkAnimations;
+    
 
-    // Start is called before the first frame update
+    public int charge = 15;
+    
     void Start()
     {
-        if (gameObject.name == warrior)
+        if (gameObject.name == "warrior")
         {
             chargeMax = 15;
         }
-        if (gameObject.name == rogue)
+        if (gameObject.name == "rogue")
         {
             chargeMax = 10;
         }
-        if (gameObject.name == mage)
+        if (gameObject.name == "mage")
         {
             chargeMax = 15;
         }
+
+        playerAtkAnimations = GetComponent<CharacterAnimations>(); //added by bruce
+        //playerStats = gameObject.GetComponent<PlayerStats>(); //added by bruce
     }
 
     // Update is called once per frame
@@ -35,15 +44,19 @@ public class Abilities : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                if (gameObject.name == warrior)     // Warrior Weapon Switch
+                if (gameObject.name == "warrior")     // Warrior Weapon Switch
                 {
                     if (charge == chargeMax)
                     {
-                        PlayerStats playerStats = gameObject.GetComponent<PlayerStats>();
+                        PlayerStats playerStats = gameObject.GetComponent<PlayerStats>(); 
+
+                        playerAtkAnimations.Ability_Atk_Warrior(); //added by bruce
 
                         if (playerStats.state == 1)
                         {
                             playerStats.damage = playerStats.damage + 10;
+
+                            
 
                             if (playerStats.defence > 80)
                             {
@@ -61,19 +74,21 @@ public class Abilities : MonoBehaviour
                     }
                 }
 
-                if (gameObject.name == rogue)       // Rogue Dodge skill
+                if (gameObject.name == "rogue")       // Rogue Dodge skill
                 {
                     if (charge == chargeMax)
                     {
-                        transform.Translate(0, 0, 2.0f);
+                        playerAtkAnimations.Dodge(); //added bu Bruce
+                        transform.Translate(0, 0, -3.0f);
                         charge = 0;
                     }
                 }
 
-                if (gameObject.name == mage)        //Mage Fireball skill
+                if (gameObject.name == "mage")        //Mage Fireball skill
                 {
                     if (charge == chargeMax)
                     {
+                        playerAtkAnimations.Fireball(); //added by bruce
                         GameObject newFire = Instantiate(fireball, transform.position, transform.rotation);
                         newFire.GetComponent<Collider>().enabled = true;
                         newFire.GetComponent<Fireball>().owner = gameObject;
@@ -87,11 +102,12 @@ public class Abilities : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.U))
             {
-                if (gameObject.name == warrior)     // Warrior Weapon Switch
+                if (gameObject.name == "warrior")     // Warrior Weapon Switch
                 {
                     if (charge == chargeMax)
                     {
                         PlayerStats playerStats = gameObject.GetComponent<PlayerStats>();
+                        playerAtkAnimations.Ability_Atk_Warrior(); //added by bruce
 
                         if (playerStats.state == 1)
                         {
@@ -113,19 +129,21 @@ public class Abilities : MonoBehaviour
                     }
                 }
 
-                if (gameObject.name == rogue)       // Rogue Dodge skill
+                if (gameObject.name == "rogue")       // Rogue Dodge skill
                 {
                     if (charge == chargeMax)
                     {
-                        transform.Translate(0, 0, 2.0f);
+                        playerAtkAnimations.Dodge(); //added bu Bruce
+                        transform.Translate(0, 0, -3.0f);
                         charge = 0;
                     }
                 }
 
-                if (gameObject.name == mage)        //Mage Fireball skill
+                if (gameObject.name == "mage")        //Mage Fireball skill
                 {
                     if (charge == chargeMax)
                     {
+                        playerAtkAnimations.Fireball(); //added by bruce
                         GameObject newFire = Instantiate(fireball, transform.position, transform.rotation);
                         newFire.GetComponent<Collider>().enabled = true;
                         newFire.GetComponent<Fireball>().owner = gameObject;

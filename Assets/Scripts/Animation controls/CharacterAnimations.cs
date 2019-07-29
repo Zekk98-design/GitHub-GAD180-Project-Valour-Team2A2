@@ -7,6 +7,7 @@ using UnityEngine;
 /// Attach this code to characters
 /// </summary>
 
+[RequireComponent(typeof(Animator))]
 
 public class CharacterAnimations : MonoBehaviour
 {
@@ -19,31 +20,29 @@ public class CharacterAnimations : MonoBehaviour
     }
 
     // Set the condition value for Walk animation, 
-    // so Walk animation plays
     public void Walk(bool walk)
     {
         anim.SetBool("Walk", walk);
     }
 
     //******************************** Animations for Warrior ************************************************* //
-    #region Animations for Warrior .................
+    #region Animations for Warrior ...
 
     //set the condition value for Warrior attack
-    public void Attack_Warrior()
+    public void Atk_Warrior()
     {
         anim.SetTrigger("Attack Warrior");
     }
-
-    //set the condition value for Warrior DEFEND
-    public void Defend(bool defend)
+    //Ability attack
+    public void Ability_Atk_Warrior()
     {
-        anim.SetBool("Defend", defend);
+        anim.SetTrigger("Ability Warrior");
     }
 
     #endregion
 
     //******************************** Animations for Rogue ************************************************* //
-    #region Animations for Rogue ...................
+    #region Animations for Rogue ...
 
     //set the condition value for Rogue attack
     public void Attack_Rogue()
@@ -52,15 +51,16 @@ public class CharacterAnimations : MonoBehaviour
     }
 
 
-    public void Attack_Shoot()
+    public void Dodge()
     {
-        anim.SetTrigger("Attack Shoot");
+        anim.SetTrigger("Dodge");
+
     }
 
     #endregion
 
     //******************************** Animations for Mage ************************************************* //
-    #region Animations for Mage ....................
+    #region Animations for Mage ...
 
     //set the condition value for Mage Attack
     public void Attack_Mage()
@@ -68,9 +68,9 @@ public class CharacterAnimations : MonoBehaviour
         anim.SetTrigger("Attack Mage");
     }
 
-    public void Cast_Mage()
+    public void Fireball()
     {
-        anim.SetTrigger("Cast Mage");
+        anim.SetTrigger("Fireball");
     }
 
     #endregion
