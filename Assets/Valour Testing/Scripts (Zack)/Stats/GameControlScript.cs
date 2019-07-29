@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameControlScript : MonoBehaviour
 {
+    // Controls player health UI; activation and deactivation of images/bars to show health gain and loss.
+    // Attach to empty game object in both level scenes.
+    // References health gain (red potions) and death (enemies) scripts.
+
     public GameObject bar1, bar2, bar3, bar4, bar5, bar6, bar7, bar8, bar9, gameOver;
     public GameObject p2Bar1, p2Bar2, p2Bar3, p2Bar4, p2Bar5, p2Bar6, p2Bar7, p2Bar8, p2Bar9, p2GameOver;
     public static int health;
