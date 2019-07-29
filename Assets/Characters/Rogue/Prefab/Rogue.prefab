@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 5094077572999888842}
   - component: {fileID: 5094077572999888840}
   m_Layer: 0
-  m_Name: Rogue
+  m_Name: rogue
   m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,8 +615,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6131544, y: 1.3971632, z: 1}
-  m_Center: {x: 0.025445461, y: 0.7314185, z: 0}
+  m_Size: {x: 0.6131544, y: 1.4175586, z: 0.43253186}
+  m_Center: {x: 0.025445461, y: 0.7212208, z: 0.054499373}
 --- !u!114 &5094077572999888842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,7 +642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  isPlayer1: 1
 --- !u!1 &5094077573037395168
 GameObject:
   m_ObjectHideFlags: 0

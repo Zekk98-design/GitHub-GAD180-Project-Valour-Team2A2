@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 8410380344273885309}
   - component: {fileID: 3903768794212960948}
   m_Layer: 0
-  m_Name: Warrior
+  m_Name: warrior
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -655,8 +655,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.9262786, z: 0.35826397}
+  m_Center: {x: 0, y: 0.98035574, z: 0.08527455}
 --- !u!114 &3903768794212960948
 MonoBehaviour:
   m_ObjectHideFlags: 0

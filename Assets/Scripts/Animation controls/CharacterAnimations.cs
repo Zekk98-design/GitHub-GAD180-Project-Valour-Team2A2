@@ -25,6 +25,7 @@ public class CharacterAnimations : MonoBehaviour
         anim.SetBool("Walk", walk);
     }
 
+    //******************************** Animations for Warrior ************************************************* //
     #region Animations for Warrior .................
 
     //set the condition value for Warrior attack
@@ -41,6 +42,7 @@ public class CharacterAnimations : MonoBehaviour
 
     #endregion
 
+    //******************************** Animations for Rogue ************************************************* //
     #region Animations for Rogue ...................
 
     //set the condition value for Rogue attack
@@ -57,6 +59,7 @@ public class CharacterAnimations : MonoBehaviour
 
     #endregion
 
+    //******************************** Animations for Mage ************************************************* //
     #region Animations for Mage ....................
 
     //set the condition value for Mage Attack

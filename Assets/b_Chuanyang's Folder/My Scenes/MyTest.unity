@@ -329,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 5002078922731941674, guid: 4fc3cd7ce4ab40f408c46190dd29152b,
         type: 3}
       propertyPath: m_Name
-      value: Mage
+      value: mage
       objectReference: {fileID: 0}
     - target: {fileID: 8300606489860578617, guid: 4fc3cd7ce4ab40f408c46190dd29152b,
         type: 3}
@@ -572,7 +572,7 @@ PrefabInstance:
     - target: {fileID: 2391504002464795501, guid: 1c03d3ee9336e96459aceb4ae7cb00d8,
         type: 3}
       propertyPath: m_Name
-      value: Warrior
+      value: warrior
       objectReference: {fileID: 0}
     - target: {fileID: 2391504002464795496, guid: 1c03d3ee9336e96459aceb4ae7cb00d8,
         type: 3}
@@ -582,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 2391504002464795496, guid: 1c03d3ee9336e96459aceb4ae7cb00d8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2391504002464795496, guid: 1c03d3ee9336e96459aceb4ae7cb00d8,
         type: 3}
@@ -641,7 +641,7 @@ PrefabInstance:
     - target: {fileID: 5094077572999888843, guid: 76805e68d8053c8438a960a3c36756e5,
         type: 3}
       propertyPath: m_Name
-      value: Rogue
+      value: rogue
       objectReference: {fileID: 0}
     - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
         type: 3}
