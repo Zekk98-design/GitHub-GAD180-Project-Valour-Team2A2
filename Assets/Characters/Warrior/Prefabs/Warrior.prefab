@@ -574,9 +574,6 @@ GameObject:
   - component: {fileID: 7644393799601440334}
   - component: {fileID: 8410380344273885309}
   - component: {fileID: 3903768794212960948}
-  - component: {fileID: 5596271232996074833}
-  - component: {fileID: 2808058376513144769}
-  - component: {fileID: 10947451744245838}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Player2
@@ -672,58 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df29e537f79df1d44a2273d9ae029677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimations: {fileID: 0}
   moveSpeed: 6
---- !u!114 &5596271232996074833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2391504002464795501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b699f9bf09ca3a84090c768bc04a59f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lBoard: {fileID: 0}
-  maxHealth: 100
-  damage: 80
-  defence: 90
-  state: 1
-  health: 0
-  healthText: {fileID: 0}
---- !u!114 &2808058376513144769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2391504002464795501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ae9568492deaa4586f17c09c159213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lBoard: {fileID: 0}
-  playerStats: {fileID: 5596271232996074833}
-  isWeapon: 0
---- !u!114 &10947451744245838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2391504002464795501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d23f00362552054892369b5f78cb039, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireball: {fileID: 4799178364964050704, guid: 59fbef3e7ab87dc4cbf4d0b0e2891e4e,
-    type: 3}
-  chargeMax: 0
-  charge: 15
 --- !u!1 &2391504002470974262
 GameObject:
   m_ObjectHideFlags: 0

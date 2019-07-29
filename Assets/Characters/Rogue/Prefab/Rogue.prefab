@@ -546,9 +546,6 @@ GameObject:
   - component: {fileID: 5094077572999888844}
   - component: {fileID: 5094077572999888842}
   - component: {fileID: 5094077572999888840}
-  - component: {fileID: 6000489060158874587}
-  - component: {fileID: 8813835948118671860}
-  - component: {fileID: 1062033705381091167}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Player1
@@ -644,57 +641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df29e537f79df1d44a2273d9ae029677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimations: {fileID: 0}
   moveSpeed: 5
---- !u!114 &6000489060158874587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094077572999888843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b699f9bf09ca3a84090c768bc04a59f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lBoard: {fileID: 0}
-  maxHealth: 90
-  damage: 70
-  defence: 80
-  state: 1
-  health: 0
-  healthText: {fileID: 0}
---- !u!114 &8813835948118671860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094077572999888843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891cffc5af8ad78468b555e76eaf4bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNo: 0
-  arrow: {fileID: 8396200584707063301, guid: 561f6c5881485474dafbd9f86ce68a77, type: 3}
---- !u!114 &1062033705381091167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094077572999888843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d23f00362552054892369b5f78cb039, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireball: {fileID: 4799178364964050704, guid: 59fbef3e7ab87dc4cbf4d0b0e2891e4e,
-    type: 3}
-  chargeMax: 0
-  charge: 10
+  isPlayer1: 1
 --- !u!1 &5094077573037395168
 GameObject:
   m_ObjectHideFlags: 0
