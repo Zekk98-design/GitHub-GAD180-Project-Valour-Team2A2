@@ -26,7 +26,7 @@ public class Abilities : MonoBehaviour
         }
         if (gameObject.name == "rogue")
         {
-            chargeMax = 10;
+            chargeMax = 15;
         }
         if (gameObject.name == "mage")
         {
