@@ -4525,7 +4525,7 @@ MonoBehaviour:
   maxSpawn: 3
   iniSpawn: 1
   bbegSpawn: 0
-  spawnRadius: 3
+  spawnRadius: 25
   charModel: {fileID: 1280965265835471432, guid: f0edcbfc13a486f49a809f68b40f46ee,
     type: 3}
   bbegModel: {fileID: -927199367670048503, guid: 008e82bc79231cb44adf8fe414cd1219,
