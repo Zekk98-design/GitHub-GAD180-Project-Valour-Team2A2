@@ -98,7 +98,7 @@ public class GameControlScriptShield : MonoBehaviour
         //p2
         if (p2Shield > 6)
             p2Shield = 6;
-        switch (shield)
+        switch (p2Shield)
         {
             case 6:
                 p2Shield1.gameObject.SetActive(true);
