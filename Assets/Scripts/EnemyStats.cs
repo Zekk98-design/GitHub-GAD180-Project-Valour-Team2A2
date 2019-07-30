@@ -23,7 +23,7 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health == 0)
+        if (health <= 0)
         {
             if (owner.CompareTag("Player1"))
             {
@@ -46,7 +46,7 @@ public class EnemyStats : MonoBehaviour
         {
             owner = collision.gameObject;
         }
-        else
+        if (collision.gameObject.name == "arrow")
         {
             GameObject arrow = collision.gameObject;
             owner = collision.gameObject.GetComponent<ArrowScript>().owner;

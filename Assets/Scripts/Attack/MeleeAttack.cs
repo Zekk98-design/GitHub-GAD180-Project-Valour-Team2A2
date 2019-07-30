@@ -14,11 +14,11 @@ public class MeleeAttack : MonoBehaviour
         lBoard = EGO.GetComponent<Leaderboard>();
     }
 
-    private void OnCollisionEnter(Collision collision)                                      // Check collision
+    private void OnTriggerEnter(Collider other)                                      // Check collision
     {
-        if (collision.gameObject.tag == "Enemy")                                            // Compare collision with tag
+        if (other.gameObject.tag == "Enemy")                                            // Compare collision with tag
         {
-            EnemyStats enemyStats = collision.gameObject.GetComponent<EnemyStats>();        // Get stats on collided enemy
+            EnemyStats enemyStats = other.gameObject.GetComponent<EnemyStats>();        // Get stats on collided enemy
 
             if (isWeapon == true & enemyStats.defence > 0)
             {
@@ -33,7 +33,7 @@ public class MeleeAttack : MonoBehaviour
                 }
             }
 
-            if (isWeapon == true & enemyStats.defence < 0)
+            if (isWeapon == true & enemyStats.defence <= 0)
             {
                 enemyStats.health = enemyStats.health - playerStats.damage;                 // if weapon, deal damage
                 if (gameObject.CompareTag("Player1"))
@@ -55,6 +55,10 @@ public class MeleeAttack : MonoBehaviour
             {
                 playerStats.health = playerStats.health - enemyStats.damage;
             }
+        }
+        else
+        {
+            return;
         }
     }
 }
