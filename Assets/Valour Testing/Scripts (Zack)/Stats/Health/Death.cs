@@ -9,6 +9,9 @@ public class Death : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        GameControlScript.health -= 1;
+        if (GameControlScriptShield.shield < 1)
+        {
+            GameControlScript.health -= 1;
+        }
     }
 }

@@ -10,6 +10,9 @@ public class P2Death : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        GameControlScript.p2Health -= 1;
+        if (GameControlScriptShield.p2Shield < 1)
+        {
+            GameControlScript.p2Health -= 1;
+        }
     }
 }
