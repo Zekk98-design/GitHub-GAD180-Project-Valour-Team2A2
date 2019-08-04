@@ -46,7 +46,7 @@ public class EnemyStats : MonoBehaviour
         {
             owner = collision.gameObject;
         }
-        if (collision.gameObject.name == "arrow")
+        if (collision.gameObject.name == "Arrow(Clone)")
         {
             GameObject arrow = collision.gameObject;
             owner = collision.gameObject.GetComponent<ArrowScript>().owner;
