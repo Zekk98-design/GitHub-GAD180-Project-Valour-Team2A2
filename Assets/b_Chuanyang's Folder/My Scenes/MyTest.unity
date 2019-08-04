@@ -223,11 +223,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: mage
       objectReference: {fileID: 0}
-    - target: {fileID: 5002078922731941674, guid: 4fc3cd7ce4ab40f408c46190dd29152b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8300606489860578617, guid: 4fc3cd7ce4ab40f408c46190dd29152b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -475,7 +470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1898251980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +487,7 @@ MonoBehaviour:
   spawnTimerReset: 3
   enemyPrefab: {fileID: 1239976992924258428, guid: 018c064b3816e2a47bacaa40130a8733,
     type: 3}
+  enemyCounter: 0
 --- !u!4 &1898251982
 Transform:
   m_ObjectHideFlags: 0

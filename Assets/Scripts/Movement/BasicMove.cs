@@ -10,7 +10,7 @@ public class BasicMove : MonoBehaviour
     private Rigidbody rb;
     public float moveSpeed = 6.0f;
     Quaternion currentRotation = Quaternion.LookRotation(Vector3.up);
-    Vector3 movement;  // used in Character selection logic as well
+    public Vector3 movement;  // used in Character selection logic as well
    
 
     void Start()

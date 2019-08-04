@@ -8,13 +8,14 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterAnimations))]  //added by Bruce
 [RequireComponent(typeof(PlayerStats))]  //added by Bruce
+[RequireComponent(typeof (BasicMove))] //added by Bruce
 
 public class Abilities : MonoBehaviour
 {
     [SerializeField] private GameObject fireball;
     [SerializeField] private int chargeMax;
     CharacterAnimations playerAtkAnimations;
-    
+    BasicMove basicMove;  //added by Bruce
 
     public int charge = 15;
     
@@ -34,7 +35,7 @@ public class Abilities : MonoBehaviour
         }
 
         playerAtkAnimations = GetComponent<CharacterAnimations>(); //added by bruce
-        //playerStats = gameObject.GetComponent<PlayerStats>(); //added by bruce
+        basicMove = GetComponent<BasicMove>();
     }
 
     // Update is called once per frame
@@ -50,7 +51,7 @@ public class Abilities : MonoBehaviour
                     {
                         PlayerStats playerStats = gameObject.GetComponent<PlayerStats>(); 
 
-                        playerAtkAnimations.Ability_Atk_Warrior(); //added by bruce
+                        playerAtkAnimations.Ability_Atk_Warrior(); //play animation added by bruce
 
                         if (playerStats.state == 1)
                         {
@@ -80,6 +81,7 @@ public class Abilities : MonoBehaviour
                     {
                         playerAtkAnimations.Dodge(); //added bu Bruce
                         transform.Translate(0, 0, -3.0f);
+                        transform.rotation = Quaternion.LookRotation(basicMove.movement); //added bu Bruce
                         charge = 0;
                     }
                 }
@@ -107,7 +109,7 @@ public class Abilities : MonoBehaviour
                     if (charge == chargeMax)
                     {
                         PlayerStats playerStats = gameObject.GetComponent<PlayerStats>();
-                        playerAtkAnimations.Ability_Atk_Warrior(); //added by bruce
+                        playerAtkAnimations.Ability_Atk_Warrior(); //play animation added by bruce
 
                         if (playerStats.state == 1)
                         {
@@ -135,6 +137,7 @@ public class Abilities : MonoBehaviour
                     {
                         playerAtkAnimations.Dodge(); //added bu Bruce
                         transform.Translate(0, 0, -3.0f);
+                        transform.rotation = Quaternion.LookRotation(basicMove.movement); //added bu Bruce
                         charge = 0;
                     }
                 }
