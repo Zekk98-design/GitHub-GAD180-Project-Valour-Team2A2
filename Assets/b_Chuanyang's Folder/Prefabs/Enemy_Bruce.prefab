@@ -105,9 +105,10 @@ GameObject:
   - component: {fileID: 1239976992924258426}
   - component: {fileID: 1239976992924258427}
   - component: {fileID: 1239976992924258422}
+  - component: {fileID: 8194608963634095428}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
+  m_Name: Enemy_Bruce
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,11 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9428db1c5c45646a0af5e5c234fec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetWarrior: {fileID: 0}
-  TargetRogue: {fileID: 0}
-  TargetMage: {fileID: 0}
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
   mSpeed: 6
-  rb: {fileID: 1239976992924258422}
 --- !u!54 &1239976992924258422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -218,3 +217,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8194608963634095428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239976992924258428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8296724c90348d14cbdd604a90999601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  lBoard: {fileID: 0}
+  maxHealth: 10
+  damage: 1
+  health: 10
+  defence: 3
