@@ -1624,6 +1624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &3002144217016514155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1694,7 +1695,7 @@ MonoBehaviour:
   damage: 3
   defence: 20
   state: 1
-  health: 0
+  health: 20
   healthText: {fileID: 0}
 --- !u!114 &4543277692453494352
 MonoBehaviour:

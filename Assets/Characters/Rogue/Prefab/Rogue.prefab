@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 6187311545029578027}
   - component: {fileID: 1201005324473540725}
   - component: {fileID: 1665558290121936632}
+  - component: {fileID: 791591119}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Player2
@@ -647,6 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
+  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &817373081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,6 +725,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNo: 0
   arrow: {fileID: 8396200584707063301, guid: 561f6c5881485474dafbd9f86ce68a77, type: 3}
+--- !u!114 &791591119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094077572999888843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d373b329a4984c41868d32ad9b9b160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
 --- !u!1 &5094077573037395168
 GameObject:
   m_ObjectHideFlags: 0

@@ -675,6 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &1159402578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,7 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lBoard: {fileID: 0}
   maxHealth: 100
-  damage: 80
+  damage: 8
   defence: 90
   state: 1
   health: 100

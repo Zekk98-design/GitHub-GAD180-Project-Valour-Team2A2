@@ -26,7 +26,7 @@ public class EnemyRespawn : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             GameObject newChicken = Instantiate(enemyPrefab, transform.position + new Vector3(Random.Range(-30, 30), 0, Random.Range(-20, 20)), Quaternion.identity) as GameObject;
-            newChicken.name = "Chicken " + enemyCounter;
+            newChicken.name = "Chicken" + enemyCounter;
             enemyCounter++;
 
         }
