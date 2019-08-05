@@ -34,12 +34,12 @@ public class RangedAttack : MonoBehaviour
 
     public void TagFind()
     {
-        if (gameObject.CompareTag("Player1"))
+        if (gameObject.transform.parent.CompareTag("Player1"))
         {
             playerNo = 1;
         }
 
-        if (gameObject.CompareTag("Player2"))
+        if (gameObject.transform.parent.CompareTag("Player2"))
         {
             playerNo = 2;
         }

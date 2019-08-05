@@ -716,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 1065260098895959544, guid: 2b00e1bea2500f943a0d128fb928df7a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1065260098895959544, guid: 2b00e1bea2500f943a0d128fb928df7a,
         type: 3}
@@ -983,6 +983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
+  tempTimer: {fileID: 0}
+  temp: {fileID: 0}
   pots: {fileID: 4433621922011178535, guid: 9bc5ecb9e748605439e5c4c7c0bca80a, type: 3}
 --- !u!1 &2104059895
 GameObject:

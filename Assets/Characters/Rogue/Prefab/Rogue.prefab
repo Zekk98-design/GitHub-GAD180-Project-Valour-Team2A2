@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3744696968917380378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4524687272449915643}
+  - component: {fileID: 7580480483806112293}
+  m_Layer: 0
+  m_Name: ArrowSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4524687272449915643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744696968917380378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5094077572999888847}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7580480483806112293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744696968917380378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891cffc5af8ad78468b555e76eaf4bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNo: 0
+  arrow: {fileID: 8396200584707063301, guid: 561f6c5881485474dafbd9f86ce68a77, type: 3}
 --- !u!1 &5094077572384658537
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,8 +595,6 @@ GameObject:
   - component: {fileID: 6137437897238128337}
   - component: {fileID: 6187311545029578027}
   - component: {fileID: 1201005324473540725}
-  - component: {fileID: 1665558290121936632}
-  - component: {fileID: 791591119}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Player2
@@ -572,6 +615,7 @@ Transform:
   m_Children:
   - {fileID: 5094077572523323230}
   - {fileID: 5094077573925176705}
+  - {fileID: 4524687272449915643}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -711,33 +755,6 @@ MonoBehaviour:
     type: 3}
   chargeMax: 0
   charge: 15
---- !u!114 &1665558290121936632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094077572999888843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891cffc5af8ad78468b555e76eaf4bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNo: 0
-  arrow: {fileID: 8396200584707063301, guid: 561f6c5881485474dafbd9f86ce68a77, type: 3}
---- !u!114 &791591119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094077572999888843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d373b329a4984c41868d32ad9b9b160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: {fileID: 0}
 --- !u!1 &5094077573037395168
 GameObject:
   m_ObjectHideFlags: 0

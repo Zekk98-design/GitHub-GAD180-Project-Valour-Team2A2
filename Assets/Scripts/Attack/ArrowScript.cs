@@ -12,7 +12,6 @@ public class ArrowScript : MonoBehaviour
     {
         GameObject EGO = GameObject.Find("EGO Spawn");
         lBoard = EGO.GetComponent<Leaderboard>();
-        transform.Translate(0, 0, 1.1f);
         gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
         StartCoroutine(waiter());
     }
