@@ -409,13 +409,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801244461}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 095956cd57b74604592da65dda575d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpawn: 3
-  iniSpawn: 1
+  iniSpawn: 0
   bbegSpawn: 0
   spawnRadius: 40
   charModel: {fileID: 8352841114146615246, guid: 6439288ab2dc36c4dbd297e843561138,
@@ -424,6 +424,7 @@ MonoBehaviour:
     type: 3}
   spawn: {x: 0, y: 0, z: 0}
   rounds: {fileID: 801244463}
+  upperLimit: 10
 --- !u!114 &801244463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,7 +806,7 @@ PrefabInstance:
     - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.535676
+      value: 1.048
       objectReference: {fileID: 0}
     - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
         type: 3}
@@ -815,7 +816,7 @@ PrefabInstance:
     - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5524406
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
         type: 3}
@@ -957,19 +958,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1330768439}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &1916529696
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916529695}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1916529700
 MonoBehaviour:
   m_ObjectHideFlags: 0
