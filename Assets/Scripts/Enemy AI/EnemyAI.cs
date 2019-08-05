@@ -10,6 +10,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public MenuPauser menu;
     [SerializeField] private GameObject Player1;
     [SerializeField] private GameObject Player2;
    
@@ -25,6 +26,9 @@ public class EnemyAI : MonoBehaviour
         Player1 = GameObject.FindGameObjectWithTag("Player1");
         Player2 = GameObject.FindGameObjectWithTag("Player2");
 
+        GameObject Spawn = GameObject.Find("EGO Spawn");
+        menu = Spawn.GetComponent<MenuPauser>();
+
         rb = GetComponent<Rigidbody>();
     }
 
@@ -34,56 +38,61 @@ public class EnemyAI : MonoBehaviour
         float distance1= Mathf.Infinity;
         float distance2 = Mathf.Infinity;
 
-
-        if (Player1 != null)
+        if (menu.eAI == true)
         {
-            distance1 = Vector3.Distance(transform.position, Player1.transform.position); // get distance between Enemy and Character
+            if (Player1 != null)
+            {
+                distance1 = Vector3.Distance(transform.position, Player1.transform.position); // get distance between Enemy and Character
+            }
+
+            if (Player2 != null)
+            {
+                distance2 = Vector3.Distance(transform.position, Player2.transform.position);
+            }
+
+
+            //find if it is closest to P1
+            if (distance1 < distance2)
+            {
+                curDistance = distance1;
+                transform.LookAt(Player1.transform);
+                //move to player 
+                if (distance1 > 2f)
+                {
+
+                    rb.AddForce(transform.forward * mSpeed * Time.deltaTime * 100);
+                }
+                // when close...
+                else
+                {
+                    // ...attack
+                }
+
+            }
+            //find if it is closest to P2
+            if (distance2 < distance1)
+            {
+                curDistance = distance2;
+
+                transform.LookAt(Player2.transform);
+
+                if (curDistance > 2f)
+                {
+                    //rb.velocity = transform.forward * mSpeed * Time.deltaTime * 100;
+                    rb.AddForce(transform.forward * mSpeed * Time.deltaTime * 100);
+
+                }
+                // when close...
+                else
+                {
+                    // ...attack
+                }
+            }
         }
-
-        if (Player2 != null)
+        if (menu.eAI == false)
         {
-            distance2 = Vector3.Distance(transform.position, Player2.transform.position);
-        }
-
-
-        //find if it is closest to P1
-        if (distance1 < distance2) 
-        {
-            curDistance = distance1;
-            transform.LookAt(Player1.transform);
-            //move to player 
-            if (distance1 > 2f )
-            {
-
-                rb.AddForce(transform.forward * mSpeed * Time.deltaTime * 100);
-            }
-            // when close...
-            else
-            {
-                // ...attack
-            }
-
-        }
-        //find if it is closest to P2
-        if (distance2 < distance1)
-        {
-            curDistance = distance2;
-
-            transform.LookAt(Player2.transform);
-            
-            if (curDistance > 2f)
-            {
-                //rb.velocity = transform.forward * mSpeed * Time.deltaTime * 100;
-                rb.AddForce(transform.forward * mSpeed * Time.deltaTime * 100);
-
-            }
-            // when close...
-            else
-            {
-                // ...attack
-            }
-
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
     }
-
 }

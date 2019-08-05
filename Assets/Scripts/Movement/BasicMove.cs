@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class BasicMove : MonoBehaviour
 {
+    public MenuPauser menu;
     private CharacterAnimations playerAnimations;
     private Rigidbody rb;
     public float moveSpeed = 6.0f;
@@ -15,6 +16,10 @@ public class BasicMove : MonoBehaviour
 
     void Start()
     {
+        //setting menu script on EGO Spawn
+        GameObject temp = GameObject.Find("EGO Spawn");
+        menu = temp.GetComponent<MenuPauser>();
+
         rb = GetComponent<Rigidbody>();
         // fetch the AnimationController component
         playerAnimations = GetComponent<CharacterAnimations>();
@@ -24,8 +29,11 @@ public class BasicMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        WalkAnimation();
+        if (menu.pControl == true)
+        {
+            Move();
+            WalkAnimation();
+        }
     }
 
     void Move()
