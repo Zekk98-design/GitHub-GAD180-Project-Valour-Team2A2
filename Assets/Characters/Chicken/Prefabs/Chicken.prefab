@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4805665493178042204}
   - component: {fileID: 1916873651348989497}
   m_Layer: 0
-  m_Name: Chicken 1
+  m_Name: Chicken
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1020065271607171432}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.9449606, y: 0, z: 4.801318}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5175312760035881156}
   - {fileID: 2297144681935049127}
