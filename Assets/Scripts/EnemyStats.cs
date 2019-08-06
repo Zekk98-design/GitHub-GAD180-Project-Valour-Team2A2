@@ -11,6 +11,9 @@ public class EnemyStats : MonoBehaviour
     public float damage = 1;
     public float health = 10;
     public float defence = 3;
+    public bool healthBar;
+    public GameObject healthBarUI;
+    public Slider slider;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +21,19 @@ public class EnemyStats : MonoBehaviour
         GameObject EGO = GameObject.Find("EGO Spawn");
         lBoard = EGO.GetComponent<Leaderboard>();
         health = maxHealth;
+        slider.value = calculateHealth();
     }
 
     // Update is called once per frame
     void Update()
     {
+        slider.value = calculateHealth();
+        if (health < maxHealth)
+        {
+
+            healthBarUI.SetActive(true);
+
+        }
         if (health <= 0)
         {
             if (owner.CompareTag("Player1"))
@@ -35,6 +46,19 @@ public class EnemyStats : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        if (health > maxHealth)
+        {
+
+            health = maxHealth;
+
+        }
+        
+    }
+    float calculateHealth()
+    {
+
+        return health / maxHealth;
+
     }
     private void OnCollisionEnter(Collision collision)
     {
