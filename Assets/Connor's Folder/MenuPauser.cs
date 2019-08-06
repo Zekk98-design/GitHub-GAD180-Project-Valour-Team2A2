@@ -9,6 +9,7 @@ public class MenuPauser : MonoBehaviour
     public bool eAI = true;
     public bool pControl = true;
 
+    //switching bool status for controls and ai
     public void Switch()
     {
         timer = !timer;

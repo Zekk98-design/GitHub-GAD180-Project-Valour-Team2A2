@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095956cd57b74604592da65dda575d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
   maxSpawn: 3
   iniSpawn: 0
   bbegSpawn: 0
@@ -437,8 +438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b198f78537ee3489f66394dce5a371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
   roundTimer: 90
   timer: 0
+  roundCount: 0
   enemySpawn: {fileID: 801244462}
   timerText: {fileID: 1027006891}
 --- !u!4 &801244464
@@ -473,6 +476,12 @@ MonoBehaviour:
   p2Dmg: 0
   p2Kill: 0
   p2Death: 0
+  p1DmgT: {fileID: 0}
+  p1KillT: {fileID: 0}
+  p1DeathT: {fileID: 0}
+  p2DmgT: {fileID: 0}
+  p2KillT: {fileID: 0}
+  p2DeathT: {fileID: 0}
 --- !u!1 &854537064
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +866,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094077572999888847, guid: 76805e68d8053c8438a960a3c36756e5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76805e68d8053c8438a960a3c36756e5, type: 3}

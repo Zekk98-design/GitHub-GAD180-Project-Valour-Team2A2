@@ -13,19 +13,24 @@ public class PotionTimer : MonoBehaviour
 
     private void Start()
     {
+        //maxing timer
         timer = upTimer;
+        //setting name to EGO Pots
         ego = GameObject.FindGameObjectsWithTag("EGO Pots").Length;
         gameObject.name = "EGO Pots";
     }
 
     void Update()
     {
+        //start timer
         timer = timer - Time.deltaTime;
+        //get bool change to start countdown
         if (start == true)
         {
             owner.SetActive(false);
             start = false;
         }
+        //re-enable owner, then destroy
         if (timer <= 0)
         {
             owner.SetActive(true);
