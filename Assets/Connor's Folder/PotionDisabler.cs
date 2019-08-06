@@ -15,9 +15,11 @@ public class PotionDisabler : MonoBehaviour
         GameObject egoPots = Instantiate(pots, transform.position, transform.rotation);
         temp = egoPots;
         int egoCount = GameObject.FindGameObjectsWithTag("EGO Pots").Length;
+        //checking the temp object for a variable to be false
         for (int i = 0; i < egoCount; i++)
         {
             tempTimer = temp.GetComponent<PotionTimer>();
+            //once found, start disabled timer
             if (tempTimer.start == false)
             {
                 timer = tempTimer;

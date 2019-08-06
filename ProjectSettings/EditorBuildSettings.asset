@@ -14,13 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Valour Testing/Menus/Level select menu.unity
     guid: c8fbcf0d98fb0324f8ad7563cdd847be
-  - enabled: 1
-    path: Assets/Valour Testing/Scenes (Levels)/GAD180 Homestead.unity
-    guid: 17c44cf6de6d80d47a50d667ef959417
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Valour Testing/Scenes (Levels)/GAD180 Tavern.unity
     guid: acd6c950a353a4a429829773f4cb048a
   - enabled: 1
     path: Assets/Valour Testing/Menus/iNFO.unity
     guid: 80a1dafd205c5d34d908109790d6448c
+  - enabled: 1
+    path: Assets/Connor's Folder/Leaderboard.unity
+    guid: 25871a3d9c34db140a4213d4fe0c024a
   m_configObjects: {}
