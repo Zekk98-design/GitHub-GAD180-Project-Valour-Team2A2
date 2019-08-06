@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
+    public MenuPauser menu;
     public int maxSpawn = 3;
     public int iniSpawn = 0;
     public int bbegSpawn = 0;
@@ -18,12 +19,15 @@ public class EnemySpawn : MonoBehaviour
 
     void Update()
     {
-        spawnTimer = spawnTimer - Time.deltaTime;
-        maxSpawn = upperLimit - GameObject.FindGameObjectsWithTag("Enemy").Length;
-        if (spawnTimer <= 0 & rounds.timer > 0)
+        if (menu.eSpawn == true)
         {
-            GetLocation();
-            spawnTimer = 10.0f;
+            spawnTimer = spawnTimer - Time.deltaTime;
+            maxSpawn = upperLimit - GameObject.FindGameObjectsWithTag("Enemy").Length;
+            if (spawnTimer <= 0 & rounds.timer > 0)
+            {
+                GetLocation();
+                spawnTimer = 10.0f;
+            }
         }
     }
 
