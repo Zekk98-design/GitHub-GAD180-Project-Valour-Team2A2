@@ -75,6 +75,23 @@ public class CharacterAnimations : MonoBehaviour
 
     #endregion
 
+    //******************************** Animations Patron ************************************************* //
+    public void Atk_Patron()
+    {
+        anim.SetTrigger("Attack Patron");
+    }
+
+
+    //******************************** Animations for Bartender ************************************************* //
+    public void Atk_Bartender()
+    {
+        anim.SetTrigger("Attack Bartender");
+    }
+    //Ability attack
+    public void Ability_Bartender()
+    {
+        anim.SetTrigger("Ability Bartender");
+    }
 
 
 
