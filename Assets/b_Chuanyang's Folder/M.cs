@@ -6,6 +6,7 @@ public class M : MonoBehaviour
 {
     public MenuPauser menu;
     private CharacterAnimations playerAnimations;
+    public CameraScript cameraScript; // drag Main camera in 
     private Rigidbody rb;
     public float moveSpeed = 6.0f;
     Quaternion currentRotation = Quaternion.LookRotation(Vector3.up);
@@ -20,16 +21,14 @@ public class M : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         // fetch the AnimationController component
-        playerAnimations = GetComponent<CharacterAnimations>();
-
+        playerAnimations = GetComponent<CharacterAnimations>();  
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-            Move();
-            WalkAnimation();
+       Move();
+       WalkAnimation();
         
     }
 
@@ -41,7 +40,36 @@ public class M : MonoBehaviour
                 //Read inputs from Player 1
                 float mHorizontal = Input.GetAxisRaw("Horizontal");
                 float mVertical = Input.GetAxisRaw("Vertical");
-                movement = new Vector3(mHorizontal, 0.0f, mVertical);
+
+                //Player 1 at top boarder
+                if (cameraScript._playerActivated == "Top")
+                {                   
+                    //stop Player1's upward movment
+                    movement = new Vector3(mHorizontal, 0.0f, -1.0f);
+                }
+                //Player 1 at bottom boarder
+                if (cameraScript._playerActivated == "Bottom")
+                {        
+                    //stop Player1's downward movment
+                    movement = new Vector3(mHorizontal, 0.0f, 1.0f);
+                }
+                //P1 at right
+                if (cameraScript._playerActivated == "Right")
+                {
+                    //stop Player1's Right movment
+                    movement = new Vector3(-1.0f, 0.0f, mVertical);
+                }
+                //P1 at Left
+                if (cameraScript._playerActivated == "Left")
+                {
+                    //stop Player1's Left movment
+                    movement = new Vector3(1.0f, 0.0f, mVertical);
+                }
+                // Normal movement 
+                if (cameraScript._playerActivated == "Null")
+                {
+                    movement = new Vector3(mHorizontal, 0.0f, mVertical);
+                }             
                 break;
 
             case "Player2":
@@ -55,7 +83,7 @@ public class M : MonoBehaviour
                 break;
         } //Chose player inputs based on Tag
 
-        //When no inputs
+        //When no input
         if (movement == Vector3.zero) { transform.rotation = currentRotation; }
 
         else

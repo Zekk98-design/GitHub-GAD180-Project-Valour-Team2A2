@@ -8,6 +8,8 @@ public class BasicMove : MonoBehaviour
 {
     public MenuPauser menu;
     private CharacterAnimations playerAnimations;
+    CameraScript cameraScript;
+
     private Rigidbody rb;
     public float moveSpeed = 6.0f;
     Quaternion currentRotation = Quaternion.LookRotation(Vector3.up);
@@ -21,9 +23,9 @@ public class BasicMove : MonoBehaviour
         menu = temp.GetComponent<MenuPauser>();
 
         rb = GetComponent<Rigidbody>();
-        // fetch the AnimationController component
+
         playerAnimations = GetComponent<CharacterAnimations>();
-        
+        cameraScript = GetComponent<CameraScript>();
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class BasicMove : MonoBehaviour
     {
         switch (tag)
         {
-            case "Player1" :
+            case "Player1":
                 //Read inputs from Player 1
                 float mHorizontal = Input.GetAxisRaw("Horizontal");
                 float mVertical = Input.GetAxisRaw("Vertical");
