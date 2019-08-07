@@ -76,7 +76,39 @@ public class M : MonoBehaviour
                 //Read inputs from Player 2
                 float mHorizontal_2 = Input.GetAxisRaw("Horizontal_Player2");
                 float mVertical_2 = Input.GetAxisRaw("Vertical_Player2");
-                movement = new Vector3(mHorizontal_2, 0.0f, mVertical_2);
+
+                //Player 2 at Bottom boarder
+                if (cameraScript._playerActivated_2 == "Bottom")
+                {
+                    //stop Player2's downward movment
+                    movement = new Vector3(mHorizontal_2, 0.0f, 1.0f);
+                }
+                //Player 2 at Top boarder
+                if (cameraScript._playerActivated_2 == "Top")
+                {
+                    //stop Player2's upwnward movment
+                    movement = new Vector3(mHorizontal_2, 0.0f, -1.0f);
+                }
+                //P2 at Left
+                if (cameraScript._playerActivated_2 == "Left")
+                {
+                    //stop Player2's left movment
+                    movement = new Vector3(1.0f, 0.0f, mVertical_2);
+                }
+                //P2 at Right
+                if (cameraScript._playerActivated_2 == "Right")
+                {
+                    //stop Player2's Right movment
+                    movement = new Vector3(-1.0f, 0.0f, mVertical_2);
+                }
+
+                // Normal movement 
+                if (cameraScript._playerActivated_2 == "Null")
+                {
+                    movement = new Vector3(mHorizontal_2, 0.0f, mVertical_2);
+                }
+
+                //movement = new Vector3(mHorizontal_2, 0.0f, mVertical_2);
                 break;
 
             default:
