@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300452, g: 0.4921977, b: 0.5719268, a: 1}
+  m_IndirectSpecularColor: {r: 0.44300425, g: 0.49219704, b: 0.5719261, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15587,6 +15587,7 @@ GameObject:
   - component: {fileID: 1442085071}
   - component: {fileID: 1442085070}
   - component: {fileID: 1442085072}
+  - component: {fileID: 1442085073}
   m_Layer: 0
   m_Name: EGO Spawn
   m_TagString: Untagged
@@ -15641,6 +15642,12 @@ MonoBehaviour:
   p2Dmg: 0
   p2Kill: 0
   p2Death: 0
+  p1DmgT: {fileID: 0}
+  p1KillT: {fileID: 0}
+  p1DeathT: {fileID: 0}
+  p2DmgT: {fileID: 0}
+  p2KillT: {fileID: 0}
+  p2DeathT: {fileID: 0}
 --- !u!114 &1442085071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15653,6 +15660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095956cd57b74604592da65dda575d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 1442085073}
   maxSpawn: 3
   iniSpawn: 1
   bbegSpawn: 0
@@ -15663,6 +15671,7 @@ MonoBehaviour:
     type: 3}
   spawn: {x: 0, y: 0, z: 0}
   rounds: {fileID: 1442085072}
+  upperLimit: 10
 --- !u!114 &1442085072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15675,10 +15684,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b198f78537ee3489f66394dce5a371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 1442085073}
   roundTimer: 60
   timer: 0
+  roundCount: 0
   enemySpawn: {fileID: 1442085071}
   timerText: {fileID: 1569517779}
+--- !u!114 &1442085073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442085067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32d86832f4de1b48bc2fdb3d12ba3c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
+  eSpawn: 1
+  eAI: 1
+  pControl: 1
 --- !u!1001 &1443669667
 PrefabInstance:
   m_ObjectHideFlags: 0
