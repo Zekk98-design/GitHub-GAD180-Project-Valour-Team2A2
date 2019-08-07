@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.28738877, g: 0.39151746, b: 0.53865856, a: 1}
+  m_IndirectSpecularColor: {r: 0.28740415, g: 0.39151573, b: 0.538657, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4878,7 +4878,7 @@ MonoBehaviour:
   iniSpawn: 1
   bbegSpawn: 0
   spawnRadius: 25
-  charModel: {fileID: 1280965265835471432, guid: f0edcbfc13a486f49a809f68b40f46ee,
+  charModel: {fileID: 1020065271607171432, guid: 8cb09e19e13b859429cdf17fcccb7d1a,
     type: 3}
   bbegModel: {fileID: -927199367670048503, guid: 008e82bc79231cb44adf8fe414cd1219,
     type: 3}
