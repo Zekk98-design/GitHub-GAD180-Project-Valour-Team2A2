@@ -691,6 +691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df29e537f79df1d44a2273d9ae029677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
+  cameraScript: {fileID: 0}
   moveSpeed: 6
   movement: {x: 0, y: 0, z: 0}
 --- !u!114 &817373081
@@ -2787,6 +2789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5094077573324777182}
     m_Modifications:
+    - target: {fileID: 101924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
+      propertyPath: m_Name
+      value: bow
+      objectReference: {fileID: 0}
     - target: {fileID: 401924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1
@@ -2842,10 +2848,6 @@ PrefabInstance:
     - target: {fileID: 401924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
       propertyPath: m_LocalScale.z
       value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 101924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
-      propertyPath: m_Name
-      value: bow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}

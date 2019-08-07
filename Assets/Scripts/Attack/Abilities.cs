@@ -21,15 +21,15 @@ public class Abilities : MonoBehaviour
     
     void Start()
     {
-        if (gameObject.name == "warrior")
+        if (gameObject.name == "Warrior")
         {
             chargeMax = 15;
         }
-        if (gameObject.name == "rogue")
+        if (gameObject.name == "Rogue")
         {
             chargeMax = 15;
         }
-        if (gameObject.name == "mage")
+        if (gameObject.name == "Mage")
         {
             chargeMax = 15;
         }
@@ -45,7 +45,7 @@ public class Abilities : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                if (gameObject.name == "warrior")     // Warrior Weapon Switch
+                if (gameObject.name == "Warrior")     // Warrior Weapon Switch
                 {
                     if (charge == chargeMax)
                     {
@@ -75,7 +75,7 @@ public class Abilities : MonoBehaviour
                     }
                 }
 
-                if (gameObject.name == "rogue")       // Rogue Dodge skill
+                if (gameObject.name == "Rogue")       // Rogue Dodge skill
                 {
                     if (charge == chargeMax)
                     {
@@ -86,7 +86,7 @@ public class Abilities : MonoBehaviour
                     }
                 }
 
-                if (gameObject.name == "mage")        //Mage Fireball skill
+                if (gameObject.name == "Mage")        //Mage Fireball skill
                 {
                     if (charge == chargeMax)
                     {
@@ -104,7 +104,7 @@ public class Abilities : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.U))
             {
-                if (gameObject.name == "warrior")     // Warrior Weapon Switch
+                if (gameObject.name == "Warrior")     // Warrior Weapon Switch
                 {
                     if (charge == chargeMax)
                     {
@@ -131,7 +131,7 @@ public class Abilities : MonoBehaviour
                     }
                 }
 
-                if (gameObject.name == "rogue")       // Rogue Dodge skill
+                if (gameObject.name == "Rogue")       // Rogue Dodge skill
                 {
                     if (charge == chargeMax)
                     {
@@ -142,7 +142,7 @@ public class Abilities : MonoBehaviour
                     }
                 }
 
-                if (gameObject.name == "mage")        //Mage Fireball skill
+                if (gameObject.name == "Mage")        //Mage Fireball skill
                 {
                     if (charge == chargeMax)
                     {

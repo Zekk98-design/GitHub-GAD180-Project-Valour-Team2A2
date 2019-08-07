@@ -5,25 +5,24 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    GameObject   _player1;
-    GameObject   _player2;
-    Vector3     _posCamLookAt;
-    Vector3     _midPoint;
+    private GameObject      _player1;
+    private GameObject      _player2;
 
-    public bool     _camPlayerPosStop =false;   // used to restrain player movement on screen edge
-    public string     _playerActivated = "Null";       // used to restrain player movement on screen edge
-    public string _playerActivated_2 = "Null_2";
+    public string           _playerActivated = "Null" ;          //used to restrain player movement on screen edge
+    public string           _playerActivated_2 = "Null" ;
+    public float            _height=14f;
 
-    public float    _height=14f;
-    float           _distanceBtPlayers;
+    private Vector3         _posCamLookAt;
+    private Vector3         _midPoint;
+    private float           _distanceBtPlayers;
 
-    private void Awake()
+
+    private void Start()
     {
         _player1 = GameObject.FindGameObjectWithTag("Player1");
         _player2 = GameObject.FindGameObjectWithTag("Player2");
         Debug.Log("player:  " + _player1.ToString() + " and " + _player2.ToString() + "are found.");
 
-        _playerActivated = "Null";
     }
 
     private void LateUpdate()

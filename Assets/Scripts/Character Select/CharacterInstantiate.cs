@@ -24,42 +24,42 @@ public class CharacterInstantiate : MonoBehaviour
         {
             GameObject P1 = Instantiate(Warrior, p1Spawn, transform.rotation);
             P1.gameObject.tag = "Player1";
-            P1.gameObject.name = "warrior"; //added by Bruce
+            P1.gameObject.name = "Warrior"; //added by Bruce
 ;        }
 
         if (charSelect.p2Char == "P2Warrior")
         {
             GameObject P1 = Instantiate(Warrior, p2Spawn, transform.rotation);
             P1.gameObject.tag = "Player2";
-            P1.gameObject.name = "warrior"; //added by Bruce
+            P1.gameObject.name = "Warrior"; //added by Bruce
         }
 
         if (charSelect.p1Char == "P1Rogue")
         {
             GameObject P1 = Instantiate(Rogue, p1Spawn, transform.rotation);
             P1.gameObject.tag = "Player1";
-            P1.gameObject.name = "rogue"; //added by Bruce
+            P1.gameObject.name = "Rogue"; //added by Bruce
         }
 
         if (charSelect.p2Char == "P2Rogue")
         {
             GameObject P1 = Instantiate(Rogue, p2Spawn, transform.rotation);
             P1.gameObject.tag = "Player2";
-            P1.gameObject.name = "rogue"; //added by Bruce
+            P1.gameObject.name = "Rogue"; //added by Bruce
         }
 
         if (charSelect.p1Char == "P1Mage")
         {
             GameObject P1 = Instantiate(Mage, p1Spawn, transform.rotation);
             P1.gameObject.tag = "Player1";
-            P1.gameObject.name = "mage"; //added by Bruce
+            P1.gameObject.name = "Mage"; //added by Bruce
         }
 
         if (charSelect.p2Char == "P2Mage")
         {
             GameObject P1 = Instantiate(Mage, p2Spawn, transform.rotation);
             P1.gameObject.tag = "Player2";
-            P1.gameObject.name = "mage"; //added by Bruce
+            P1.gameObject.name = "Mage"; //added by Bruce
         }
     }
 }

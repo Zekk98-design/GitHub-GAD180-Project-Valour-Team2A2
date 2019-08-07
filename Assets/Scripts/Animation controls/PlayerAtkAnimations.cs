@@ -34,15 +34,15 @@ public class PlayerAtkAnimations : MonoBehaviour
             {
                 switch (gameObject.name)
                 {
-                    case "warrior" :
+                    case "Warrior" :
                         playerAtkAnimations.Atk_Warrior();
                         break;
 
-                    case "rogue":
+                    case "Rogue":
                         playerAtkAnimations.Attack_Rogue();
                         break;
 
-                    case "mage":
+                    case "Mage":
                         playerAtkAnimations.Attack_Mage();
                         break;
                 }
@@ -55,15 +55,15 @@ public class PlayerAtkAnimations : MonoBehaviour
             {
                 switch (gameObject.name)
                 {
-                    case "warrior":
+                    case "Warrior":
                         playerAtkAnimations.Atk_Warrior();
                         break;
 
-                    case "rogue":
+                    case "Rogue":
                         playerAtkAnimations.Attack_Rogue();
                         break;
 
-                    case "mage":
+                    case "Mage":
                         playerAtkAnimations.Attack_Mage();
                         break;
                 }

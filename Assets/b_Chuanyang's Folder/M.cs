@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(CharacterAnimations))]
+[RequireComponent(typeof(Rigidbody))]
 
 public class M : MonoBehaviour
 {
-    public MenuPauser menu;
+    public MenuPauser           menu;
+    public CameraScript         cameraScript;           // drag Main camera in 
     private CharacterAnimations playerAnimations;
-    public CameraScript cameraScript; // drag Main camera in 
-    private Rigidbody rb;
-    public float moveSpeed = 6.0f;
-    Quaternion currentRotation = Quaternion.LookRotation(Vector3.up);
-    public Vector3 movement;  // used in Character selection logic as well
+    private Rigidbody           rb;
+
+    public float                moveSpeed = 6.0f;
+    public Vector3              movement;               // used in Character selection logic as well
+    private Quaternion          currentRotation;
+
+
 
 
     void Start()
@@ -20,8 +25,8 @@ public class M : MonoBehaviour
         menu = temp.GetComponent<MenuPauser>();
 
         rb = GetComponent<Rigidbody>();
-        // fetch the AnimationController component
-        playerAnimations = GetComponent<CharacterAnimations>();  
+        playerAnimations = GetComponent<CharacterAnimations>();
+        currentRotation = Quaternion.LookRotation(Vector3.up);
     }
 
     // Update is called once per frame
