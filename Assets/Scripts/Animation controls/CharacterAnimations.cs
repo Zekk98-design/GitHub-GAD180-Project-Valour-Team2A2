@@ -93,7 +93,4 @@ public class CharacterAnimations : MonoBehaviour
         anim.SetTrigger("Ability Bartender");
     }
 
-
-
-
 }

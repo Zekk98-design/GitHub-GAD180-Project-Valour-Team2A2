@@ -292,8 +292,9 @@ GameObject:
   - component: {fileID: 6093032537258059967}
   - component: {fileID: 2614049269812778217}
   - component: {fileID: 3120647104188934831}
-  - component: {fileID: 3363747619145659626}
   - component: {fileID: 8041085992815781868}
+  - component: {fileID: 8453627785218147830}
+  - component: {fileID: 3363747619145659627}
   m_Layer: 0
   m_Name: Patron
   m_TagString: Enemy
@@ -364,21 +365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa958bbe3f66a3e4eade3a38a92e7f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3363747619145659626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891597098010261462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df29e537f79df1d44a2273d9ae029677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 0}
-  moveSpeed: 6
-  movement: {x: 0, y: 0, z: 0}
 --- !u!65 &8041085992815781868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -390,8 +376,45 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.98853016, y: 1.8601611, z: 0.620831}
-  m_Center: {x: -0.0057349205, y: 0.9418179, z: 0.027026415}
+  m_Size: {x: 0.98853016, y: 1.7839291, z: 0.620831}
+  m_Center: {x: -0.0057349205, y: 0.97993386, z: 0.027026415}
+--- !u!114 &8453627785218147830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891597098010261462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9428db1c5c45646a0af5e5c234fec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 0}
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
+  mSpeed: 2
+--- !u!114 &3363747619145659627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891597098010261462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8296724c90348d14cbdd604a90999601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  lBoard: {fileID: 0}
+  maxHealth: 10
+  damage: 1
+  health: 10
+  defence: 3
+  healthBar: 0
+  healthBarUI: {fileID: 0}
+  slider: {fileID: 0}
 --- !u!1 &1083414367831439895
 GameObject:
   m_ObjectHideFlags: 0

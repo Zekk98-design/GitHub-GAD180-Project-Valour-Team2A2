@@ -9,8 +9,8 @@ public class CameraScript : MonoBehaviour
     private GameObject      _player2;
 
     public string           _playerActivated = "Null" ;          //used to restrain player movement on screen edge
-    public string           _playerActivated_2 = "Null" ;
-    public float            _height=14f;
+    public string           _playerActivated_2 = "Null";
+    public float            _height;
 
     private Vector3         _posCamLookAt;
     private Vector3         _midPoint;
@@ -23,10 +23,14 @@ public class CameraScript : MonoBehaviour
         _player2 = GameObject.FindGameObjectWithTag("Player2");
         Debug.Log("player:  " + _player1.ToString() + " and " + _player2.ToString() + "are found.");
 
+        _height = 18f;
     }
 
     private void LateUpdate()
     {
+        _player1 = GameObject.FindGameObjectWithTag("Player1");
+        _player2 = GameObject.FindGameObjectWithTag("Player2");
+
         _midPoint = (_player1.transform.position + _player2.transform.position) / 2;
        _posCamLookAt = _midPoint;
 
