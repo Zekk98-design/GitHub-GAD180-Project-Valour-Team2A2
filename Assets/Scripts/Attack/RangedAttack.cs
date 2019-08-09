@@ -21,14 +21,14 @@ public class RangedAttack : MonoBehaviour
         {
             GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
             newArrow.GetComponent<Collider>().enabled = true;
-            newArrow.GetComponent<ArrowScript>().owner = gameObject;
+            newArrow.GetComponent<ArrowScript>().owner = GameObject.FindWithTag("Player1");
         }
 
         if (playerNo == 2 & Input.GetKeyDown(KeyCode.O))
         {
             GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
             newArrow.GetComponent<Collider>().enabled = true;
-            newArrow.GetComponent<ArrowScript>().owner = gameObject;
+            newArrow.GetComponent<ArrowScript>().owner = GameObject.FindWithTag("Player2");
         }
     }
 
