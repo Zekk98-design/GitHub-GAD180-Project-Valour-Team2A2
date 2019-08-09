@@ -36,11 +36,11 @@ public class EnemyStats : MonoBehaviour
         }
         if (health <= 0)
         {
-            if (owner.CompareTag("Player1"))
+            if (owner.transform.parent.CompareTag("Player1"))
             {
                 ++lBoard.p1Kill;
             }
-            if (owner.CompareTag("Player2"))
+            if (owner.transform.parent.CompareTag("Player2"))
             {
                 ++lBoard.p2Kill;
             }
@@ -54,12 +54,14 @@ public class EnemyStats : MonoBehaviour
         }
         
     }
+
     float calculateHealth()
     {
 
         return health / maxHealth;
 
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player1"))

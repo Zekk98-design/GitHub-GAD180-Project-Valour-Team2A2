@@ -6,6 +6,7 @@ public class ArrowScript : MonoBehaviour
 {
     private Leaderboard lBoard;
     public GameObject owner;
+    public EnemyStats enemyStats;
 
     // Start is called before the first frame update
     void Start()
@@ -27,13 +28,13 @@ public class ArrowScript : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             PlayerStats playerStats = owner.GetComponent<PlayerStats>();
-            EnemyStats enemyStats = collision.gameObject.GetComponent<EnemyStats>();
+            enemyStats = collision.gameObject.GetComponent<EnemyStats>();
             enemyStats.health = enemyStats.health - playerStats.damage;
-            if(owner.CompareTag("Player1"))
+            if(owner.transform.root.CompareTag("Player1"))
             {
                 lBoard.p1Dmg = lBoard.p1Dmg + playerStats.damage;
             }
-            if(owner.CompareTag("Player2"))
+            if(owner.transform.root.CompareTag("Player2"))
             {
                 lBoard.p2Dmg = lBoard.p2Dmg + playerStats.damage;
             }
