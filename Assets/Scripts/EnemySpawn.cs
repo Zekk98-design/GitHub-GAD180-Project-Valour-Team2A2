@@ -16,7 +16,13 @@ public class EnemySpawn : MonoBehaviour
     public Rounds rounds;
     private float spawnTimer = 1.0f;
     [SerializeField] private int upperLimit = 10;
+    //Boss Var
+    [SerializeField] bool isBossCrreated;
 
+    private void Start()
+    {
+        isBossCrreated = false;
+    }
     void Update()
     {
         if (menu.eSpawn == true)
@@ -26,6 +32,7 @@ public class EnemySpawn : MonoBehaviour
             if (spawnTimer <= 0 & rounds.timer > 0)
             {
                 GetLocation();
+                InstantiateBoss();
                 spawnTimer = 10.0f;
             }
         }
@@ -58,5 +65,21 @@ public class EnemySpawn : MonoBehaviour
         }
         iniSpawn = 0;
         return spawn;
+    }
+
+    //Added by Bruce
+    private void InstantiateBoss()  
+    {
+        if (rounds.roundCount == 1)
+        {
+            if (isBossCrreated == true)
+            {   }
+            else
+            {
+                Instantiate(bbegModel, transform.position + spawn, transform.rotation);
+                isBossCrreated = true;
+            }
+            
+        }   
     }
 }

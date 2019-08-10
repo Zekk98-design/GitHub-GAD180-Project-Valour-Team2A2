@@ -46,15 +46,15 @@ public class MeleeAttack : MonoBehaviour
                 }
             }
 
-            if (isWeapon == false & playerStats.defence > 0)
-            {
-                playerStats.defence = playerStats.defence - enemyStats.damage;                // if not weapon, take damage
-            }
+            //if (isWeapon == false & playerStats.defence > 0)
+            //{
+            //    playerStats.defence = playerStats.defence - enemyStats.damage;                // if not weapon, take damage
+            //}
 
-            if (isWeapon == false & playerStats.defence <= 0)
-            {
-                playerStats.health = playerStats.health - enemyStats.damage;
-            }
+            //if (isWeapon == false & playerStats.defence <= 0)
+            //{
+            //    playerStats.health = playerStats.health - enemyStats.damage;
+            //}
         }
         else
         {

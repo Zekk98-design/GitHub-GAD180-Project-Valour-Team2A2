@@ -19,6 +19,7 @@ TagManager:
   - Fire
   - HP
   - Pots EGO
+  - Boss
   layers:
   - Default
   - TransparentFX

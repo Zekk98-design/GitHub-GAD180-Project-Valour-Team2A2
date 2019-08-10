@@ -8,7 +8,7 @@ public class EnemyStats : MonoBehaviour
     public GameObject owner;
     public Leaderboard lBoard;
     public float maxHealth = 10;
-    public float damage = 1;
+    public float damage = 5;
     public float health = 10;
     public float defence = 3;
     public bool healthBar;

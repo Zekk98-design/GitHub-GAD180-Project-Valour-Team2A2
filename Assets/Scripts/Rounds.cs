@@ -9,11 +9,11 @@ public class Rounds : MonoBehaviour
     public MenuPauser menu;
     public float roundTimer = 60.0f;
     public float timer;
-    [SerializeField] private int roundCount;
+    public int roundCount;
     public EnemySpawn enemySpawn;
     public Text timerText;
     private int enemyCount;
-    private int maxRound = 2;
+    public int maxRound = 2;
 
 
     // Start is called before the first frame update

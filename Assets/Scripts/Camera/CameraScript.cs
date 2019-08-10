@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
+    public float            _screenConstraintsZ=18.0f;
+    public float            _screenConstraintsX=32.0f;
     private GameObject      _player1;
     private GameObject      _player2;
 
@@ -43,7 +45,7 @@ public class CameraScript : MonoBehaviour
   
        float _diffOfPosion_X = Mathf.Abs(_player1.transform.position.x - _player2.transform.position.x);
 
-       if (_diffOfPosion_Z >= 15.0f  )
+       if (_diffOfPosion_Z >= _screenConstraintsZ  )
        {
            //Player 1 at top, P2 at bottom
            if (_player1.transform.position.z > _player2.transform.position.z)
@@ -63,7 +65,7 @@ public class CameraScript : MonoBehaviour
             }
        }
        
-       if (_diffOfPosion_X >= 28.0f)
+       if (_diffOfPosion_X >= _screenConstraintsX)
        {
            //Player 1 at right boarder
            if (_player1.transform.position.x > _player2.transform.position.x)

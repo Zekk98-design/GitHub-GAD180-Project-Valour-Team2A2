@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823207e1ee0fac547b28cb5faaa7eced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _screenConstraintsZ: 18
+  _screenConstraintsX: 32
   _playerActivated: Null
   _playerActivated_2: Null
   _height: 18

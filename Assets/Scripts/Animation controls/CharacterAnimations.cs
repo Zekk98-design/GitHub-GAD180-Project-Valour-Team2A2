@@ -80,7 +80,7 @@ public class CharacterAnimations : MonoBehaviour
     {
         anim.SetTrigger("Attack Patron");
     }
-
+         
 
     //******************************** Animations for Bartender ************************************************* //
     public void Atk_Bartender()
@@ -92,5 +92,24 @@ public class CharacterAnimations : MonoBehaviour
     {
         anim.SetTrigger("Ability Bartender");
     }
+
+    //******************************** Animations Chicken ************************************************* //
+    public void Atk_Chicken()
+    {
+        anim.SetTrigger("Attack Chicken");
+    }
+
+    //******************************** Animations for Bull ************************************************* //
+    public void Atk_Bull()
+    {
+        anim.SetTrigger("Attack Bull");
+    }
+    //Ability attack
+    public void Ability_Bull()
+    {
+        anim.SetTrigger("Ability Bull");
+        
+    }
+
 
 }

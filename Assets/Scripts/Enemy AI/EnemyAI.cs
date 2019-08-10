@@ -7,77 +7,102 @@ using UnityEngine;
 /// Attach this to enemy prefabs
 /// </summary>
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(EnemyStats))]
 
 public class EnemyAI : MonoBehaviour
-{
-    public MenuPauser menu;
-    [SerializeField] private GameObject Player1;
-    [SerializeField] private GameObject Player2;
-   
-    [SerializeField] private float mSpeed= 2f; // enemy speed
-    private CharacterAnimations playerAnimations;
-    private Rigidbody rb;
+{   
+    [SerializeField] private GameObject     Player1;
+    [SerializeField] private GameObject     Player2;    
+    public MenuPauser                       menu;
+    public PlayerStats                      player1_Stats, player2_Stats;
 
-    private float curDistance = 1000.0f;
-    private Vector3 movement;
-
+    private CharacterAnimations             characterAnimation;
+    private EnemyStats                      enemyStats;
+    private Rigidbody                       rb;
+    
+    private float                           curDistance = 1000.0f;
+    private Vector3                         movement;
+    [SerializeField] private float          mSpeed = 2f;            //enemy move speed
     //Wander state var
-    private float _stoppingDistance = 1.5f;
-    private Vector3 _destination;
-    private Quaternion _desiredRotation;
-    private Vector3 _direction;
-
+    private float                           _stoppingDistance = 1.5f;
+    private Vector3                         _destination;
+    private Quaternion                      _desiredRotation;
+    private Vector3                         _direction;
+    private float                           dmg;
+    bool                                  isAttackAnimaPlayed;    // for enemy normal attack
+    bool                                  isAbilityAnimaPlayed;   // for enemy Ability attack
+    bool                                    isPlayer1 = false;
+    bool                                    isPlayer2 = false;
+    [SerializeField] float                  AttackSpeed = 1.5f;     //control Enemy attack-speed per attack
+    private float                           timerAttackReset;
+    [SerializeField] float                  BossAbilitySpeed = 10f;
+    private float                           BossAbilityReset;
+    float                                   distanceToP1;
+    float                                   distanceToP2;
 
     // Start is called before the first frame update
     void Start()
-    {   //find characters with matched tag
+    {  //find characters with matched tag
         Player1 = GameObject.FindGameObjectWithTag("Player1");
         Player2 = GameObject.FindGameObjectWithTag("Player2");
+        player1_Stats = Player1.GetComponent<PlayerStats>();
+        player2_Stats = Player2.GetComponent<PlayerStats>();
 
         GameObject Spawn = GameObject.Find("EGO Spawn");
         menu = Spawn.GetComponent<MenuPauser>();
-
-        playerAnimations = GetComponent<CharacterAnimations>();
+        
+        characterAnimation = GetComponent<CharacterAnimations>();
+        enemyStats= GetComponent<EnemyStats>();
         rb = GetComponent<Rigidbody>();
         movement = Vector3.zero;
-    }
 
-    // Update is called once per frame
-    void Update()
+        dmg= 5f;
+        isAttackAnimaPlayed = false;
+        timerAttackReset = AttackSpeed;
+        BossAbilityReset = BossAbilitySpeed;
+
+
+
+}
+
+// Update is called once per frame
+void Update()
     {
-        float distanceToP1= Mathf.Infinity;
-        float distanceToP2 = Mathf.Infinity;
-
+        distanceToP1 = Mathf.Infinity;
+        distanceToP2 = Mathf.Infinity;
         if (menu.eAI == true)
         {
+            // get distance between Enemy and Character
             if (Player1 != null)
-            {
-                distanceToP1 = Vector3.Distance(transform.position, Player1.transform.position); // get distance between Enemy and Character
-            }
+            {distanceToP1 = Vector3.Distance(transform.position, Player1.transform.position); }
 
             if (Player2 != null)
-            {
-                distanceToP2 = Vector3.Distance(transform.position, Player2.transform.position);
-            }
+            {distanceToP2 = Vector3.Distance(transform.position, Player2.transform.position); }
 
             //find if it is closer to P1...........................................
             if (distanceToP1 < distanceToP2)
             {
                 curDistance = distanceToP1;
-                
+
                 //Chasing State to player 1
-                if (curDistance > 1.3f && curDistance < 16f)
+                if (curDistance > 1.1f && curDistance < 14.0f)
                 {
                     transform.LookAt(Player1.transform);
-                    transform.Translate(Vector3.forward * mSpeed* Time.deltaTime);
+                    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
                     Vector3 temp = transform.position;
                     movement = temp;
                     // Play Walk animation
                     WalkAnimation();
-                    
-                }  
+                }
+                if (curDistance <= 3.5f && curDistance >= 1.2f&& gameObject.tag=="Boss")
+                {
+                    //starts Boss ability attack
+                    isPlayer1 = true;
+                    BossAbility();
+                }
+                
                 //Wandering State
-                if (curDistance >= 16.0f)
+                if (curDistance >= 14.0f)
                 {
                     if (NeedsDestination())
                     {
@@ -89,14 +114,20 @@ public class EnemyAI : MonoBehaviour
                     //Play walk animation
                     WalkAnimation();
                 }
-                //Attacking State
-                if (curDistance <= 1.3f)
+
+                //Attack State
+                
+                if (curDistance <= 1.1f)
                 {
                     movement = Vector3.zero;
                     rb.velocity = Vector3.zero;
                     transform.LookAt(Player1.transform);
+                    transform.Translate(Vector3.zero);
+                    isPlayer1 = true;
                     WalkAnimation();
-                    // ...attack
+                    //Attack
+                    EnemyAttack();
+
                 }
             }
 
@@ -105,8 +136,8 @@ public class EnemyAI : MonoBehaviour
             {
                 curDistance = distanceToP2;
 
-                //Chasing State to player 1
-                if (curDistance > 1.3f && curDistance < 16f)
+                //Chasing State to player 2
+                if (curDistance > 1.1f && curDistance < 14f)
                 {
                     transform.LookAt(Player2.transform);
                     transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
@@ -115,9 +146,15 @@ public class EnemyAI : MonoBehaviour
                     // Play Walk animation
                     WalkAnimation();
 
+                    if (curDistance <= 3.5f && curDistance >= 1.2f && gameObject.tag == "Boss")
+                    {
+                        //starts Boss ability attack
+                        isPlayer2 = true;
+                        BossAbility();  
+                    }
                 }
                 //Wandering State
-                if (curDistance >= 16.0f)
+                if (curDistance >= 14.0f)
                 {
                     if (NeedsDestination())
                     {
@@ -130,38 +167,163 @@ public class EnemyAI : MonoBehaviour
                     WalkAnimation();
                 }
                 //Attacking State
-                if (curDistance <= 1.3f)
+                if (curDistance <= 1.1f)
                 {
                     movement = Vector3.zero;
                     rb.velocity = Vector3.zero;
                     transform.LookAt(Player2.transform);
+                    isPlayer2 = true;
                     WalkAnimation();
-                    // ...attack
+                    //Attack
+                    EnemyAttack();
                 }
             }
 
-            //Debug.Log("Distance to Player = " + curDistance);
-            //Debug.Log("Velocity = " + rb.velocity.sqrMagnitude);
+            Debug.Log("Distance to Player = " + curDistance);
+            //Debug.Log("enemyStats.damage is " + enemyStats.damage+"\t dmg is "+ dmg );
         }
-
         if (menu.eAI == false)
         {
             //rb.velocity = Vector3.zero;
             transform.Translate( Vector3.zero);
             //rb.angularVelocity = Vector3.zero;
-        }
-        
-
+        } 
     }//end update
+
 
     public void WalkAnimation()
     {
         if (movement.sqrMagnitude != 0f)
         {
-            playerAnimations.Walk(true);
+            characterAnimation.Walk(true);
         }
         else
-            playerAnimations.Walk(false);
+            characterAnimation.Walk(false);
+    }
+
+    public void EnemyNormalAttackAnima()
+    {
+        if (gameObject.name == "Patron")
+        {characterAnimation.Atk_Patron();}
+        if (gameObject.name == "Patron(Clone)")
+        { characterAnimation.Atk_Patron(); }
+
+        if (gameObject.name == "Bartender")
+        { characterAnimation.Atk_Bartender(); }
+        if (gameObject.name == "Bartender(Clone)")
+        { characterAnimation.Atk_Bartender(); }
+
+        if (gameObject.name == "Chicken")
+        {
+            characterAnimation.Atk_Chicken();
+            //transform.Translate(transform.up + transform.forward);
+        }
+        if (gameObject.name == "Chicken(Clone)")
+        {
+            characterAnimation.Atk_Chicken();
+            //transform.Translate(transform.up + transform.forward);
+        }
+        if (gameObject.name == "Bull")
+        { characterAnimation.Atk_Bull(); }
+        if (gameObject.name == "Bull(Clone)")
+        { characterAnimation.Atk_Bull(); }
+    }
+
+    public void EnemyAbilityAttackAnima()
+    {
+        if (gameObject.name == "Bartender")
+        {
+            characterAnimation.Ability_Bartender(); 
+        }
+        if (gameObject.name == "Bartender(Clone)")
+        {
+            characterAnimation.Ability_Bartender();
+        }
+
+        if (gameObject.name == "Bull")
+        { characterAnimation.Ability_Bull(); }
+        transform.Translate((transform.forward* 2.5f) + transform.up * 2f * Time.deltaTime);
+        if (gameObject.name == "Bull(Clone)")
+        { characterAnimation.Ability_Bull(); }
+        transform.Translate((transform.forward * 2.5f) + transform.up * 2f * Time.deltaTime);
+
+    }
+
+    public void EnemyAttack()
+    {
+        AttackSpeed = AttackSpeed - Time.deltaTime;
+        if (AttackSpeed <= 0)
+        {
+            EnemyNormalAttackAnima();          
+            AttackSpeed = timerAttackReset;
+            isAttackAnimaPlayed = true;
+
+            if (distanceToP1 <= 1.1f && isPlayer1==true)
+            {
+                if (player1_Stats.defence > 0)
+                {
+                    player1_Stats.defence = player1_Stats.defence - enemyStats.damage;
+                }
+                if (player1_Stats.defence <= 0)
+                {
+                    player1_Stats.health = player1_Stats.health - enemyStats.damage;
+                }
+                isPlayer1 = false;
+            }
+            if (distanceToP2 <= 1.1f && isPlayer2 == true)
+            {
+                if (player2_Stats.defence > 0)
+                {
+                    player2_Stats.defence = player2_Stats.defence - enemyStats.damage;
+                }
+                if (player2_Stats.defence <= 0)
+                {
+                    player2_Stats.health = player2_Stats.health - enemyStats.damage;
+                }
+                isPlayer2 = false;
+            }
+        }
+        else
+        {isAttackAnimaPlayed = false;}
+    }
+
+    public void BossAbility()
+    {
+        BossAbilitySpeed = BossAbilitySpeed - Time.deltaTime;
+        if (BossAbilitySpeed <= 0.3f)
+        {
+            BossAbilitySpeed = BossAbilityReset;
+            EnemyAbilityAttackAnima();
+            isAbilityAnimaPlayed = true;
+
+            if (distanceToP1 <= 3.5f && isPlayer1 == true)
+            {
+                
+                if (player1_Stats.defence > 0)
+                {
+                    player1_Stats.defence = player1_Stats.defence - enemyStats.damage * 3f;
+                }
+                if (player1_Stats.defence <= 0)
+                {
+                    player1_Stats.health = player1_Stats.health - enemyStats.damage * 3f;
+                }
+                isPlayer1 = false;
+            }
+            if (distanceToP2 <= 3.5f && isPlayer2 == true)
+            {           
+                if (player2_Stats.defence > 0)
+                {
+                    player2_Stats.defence = player2_Stats.defence - enemyStats.damage * 3f;
+                }
+                if (player2_Stats.defence <= 0)
+                {
+                    player2_Stats.health = player2_Stats.health - enemyStats.damage * 3f;
+                }
+                isPlayer2 = false;
+            }
+        }
+        else
+        { isAbilityAnimaPlayed = false; }
     }
 
     private void GetDestination()
