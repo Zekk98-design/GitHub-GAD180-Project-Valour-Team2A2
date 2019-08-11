@@ -71,54 +71,7 @@ public class PlayerAtkAnimations : MonoBehaviour
         }
     }
 
-
-
-    //Characters ability attack animation
-    //void Ability()
-    //{
-    //    if (gameObject.CompareTag("Player1"))
-    //    {
-    //        if (Input.GetKeyDown(KeyCode.Q))
-    //        {
-    //            switch (gameObject.name)
-    //            {
-    //                case "warrior":
-    //                    playerAtkAnimations.Ability_Atk_Warrior();
-    //                    break;
-
-    //                case "rogue":
-    //                    playerAtkAnimations.Dodge();
-    //                    break;
-
-    //                case "mage":
-    //                    playerAtkAnimations.Fireball();
-    //                    break;
-    //            }
-    //        }
-    //    }
-
-    //    if (gameObject.CompareTag("Player2"))
-    //    {
-    //        if (Input.GetKeyDown(KeyCode.U))
-    //        {
-    //            switch (gameObject.name)
-    //            {
-    //                case "warrior":
-    //                    playerAtkAnimations.Ability_Atk_Warrior();
-    //                    break;
-
-    //                case "rogue":
-    //                    playerAtkAnimations.Dodge();
-    //                    break;
-
-    //                case "mage":
-    //                    playerAtkAnimations.Fireball();
-    //                    break;
-    //            }
-    //        }
-    //    }
-
-    //}   
+  
     
 
 

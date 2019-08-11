@@ -15,6 +15,7 @@ public class EnemyStats : MonoBehaviour
     public GameObject healthBarUI;
     public Slider slider;
 
+
     // Start is called before the first frame update
     void Start()
     {

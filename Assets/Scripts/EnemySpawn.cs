@@ -8,7 +8,7 @@ public class EnemySpawn : MonoBehaviour
     public int maxSpawn = 3;
     public int iniSpawn = 0;
     public int bbegSpawn = 0;
-    public float spawnRadius = 3.0f;
+    public float spawnRadius = 2.2f;
     private List<Vector3> spawnPoints = new List<Vector3>();
     public GameObject charModel;
     public GameObject bbegModel;
@@ -72,11 +72,10 @@ public class EnemySpawn : MonoBehaviour
     {
         if (rounds.roundCount == 1)
         {
-            if (isBossCrreated == true)
-            {   }
+            if (isBossCrreated == true) {   }
             else
             {
-                Instantiate(bbegModel, transform.position + spawn, transform.rotation);
+                Instantiate(bbegModel, transform.position , transform.rotation);
                 isBossCrreated = true;
             }
             

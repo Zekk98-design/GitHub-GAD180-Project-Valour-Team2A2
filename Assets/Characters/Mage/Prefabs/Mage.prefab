@@ -1695,12 +1695,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lBoard: {fileID: 0}
+  gcs: {fileID: 0}
+  life1: {fileID: 7324096590052947648, guid: 9d68a5b387a46984eb5b576db397c8c3, type: 3}
+  life2: {fileID: 9127419373647021233, guid: 348b6f1398f74dc4f8cac5a107e74d35, type: 3}
+  life3: {fileID: 2915510960075580926, guid: 89987fe38f47fa843836c270560a61f2, type: 3}
+  life4: {fileID: 2837547775858362875, guid: ab396688bd656a44891d8af2badf13ae, type: 3}
+  life5: {fileID: 7860697431745415175, guid: 62c0f75d5aeef9d49af019694bc20dab, type: 3}
+  life6: {fileID: 6274946893493248345, guid: 6149d1e2442c0c14a8a4fc14456d2083, type: 3}
   maxHealth: 80
   damage: 100
   defence: 70
   state: 1
   health: 20
   healthText: {fileID: 0}
+  isPlayer1FinalD: 0
+  isPlayer2FinalD: 0
+  death: 0
 --- !u!114 &4543277692453494352
 MonoBehaviour:
   m_ObjectHideFlags: 0

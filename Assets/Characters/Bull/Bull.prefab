@@ -141,9 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 4451119854824609383}
   lBoard: {fileID: 0}
-  maxHealth: 70
-  damage: 80
-  health: 60
+  maxHealth: 400
+  damage: 20
+  health: 400
   defence: 9
   healthBar: 0
   healthBarUI: {fileID: 5190457223271407056}
@@ -178,7 +178,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1: {fileID: 0}
   Player2: {fileID: 0}
+  menu: {fileID: 0}
+  player1_Stats: {fileID: 0}
+  player2_Stats: {fileID: 0}
   mSpeed: 10
+  AttackSpeed: 1.5
+  BossAbilitySpeed: 10
 --- !u!65 &4451119854824609382
 BoxCollider:
   m_ObjectHideFlags: 0

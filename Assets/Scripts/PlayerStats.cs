@@ -3,42 +3,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// </summary>
+
 public class PlayerStats : MonoBehaviour
 {
     public Leaderboard lBoard;
     public GameControlScript gcs;
-    public float maxHealth = 20;
+    //public GameObject life1, life2, life3, life4, life5, life6;  
+
+    public float maxHealth = 20f;
     public float damage = 3;
     public float defence = 20;
     public int state = 1;
-    public float health;
+    public float health=20f;
     public Text healthText;
-    private bool isDead = false;
-    private int death;
+
+    private GameControlScript gameControlScript;
+
+    public bool isPlayer1FinalD = false;          //for Enemy AI routing
+    public bool isPlayer2FinalD = false;
+
+    public int death=0;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        health = maxHealth;
+             
         GameObject EGO = GameObject.Find("EGO Spawn");
         lBoard = EGO.GetComponent<Leaderboard>();
         gcs = GameObject.Find("GameControl").GetComponent<GameControlScript>();
-        health = maxHealth;
+
+        //GameObject temp = GameObject.Find("GameControlHealth");
+        //gameControlScript = temp.GetComponent<GameControlScript>();
+        
+        //life1 = GameObject.Find("life1");
+        //life3 = GameObject.Find("life2");
+        //life3 = GameObject.Find("life3");
+        //life4 = GameObject.Find("life4");
+        //life5 = GameObject.Find("life5");
+        //life6 = GameObject.Find("life6");
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        healthText.text = "HP: " + health;
+        //healthText.text = "HP: " + health; for testing purpose
 
         if (health <= 0 & death != 2)
         {
             if (gameObject.CompareTag("Player1"))
             {
                 ++lBoard.p1Death;
+                
             }
             if (gameObject.CompareTag("Player2"))
             {
                 ++lBoard.p2Death;
+                
             }
 
             health = maxHealth;
@@ -50,13 +75,20 @@ public class PlayerStats : MonoBehaviour
             if (gameObject.CompareTag("Player1"))
             {
                 lBoard.p1Death = lBoard.p1Death + 1;
+                isPlayer1FinalD = true;
+
+                
             }
             if (gameObject.CompareTag("Player2"))
             {
                 lBoard.p2Death = lBoard.p2Death + 1;
+                isPlayer2FinalD = true;
+                
             }
+
             Destroy(gameObject);
         }
+
         Healthbar();
     }
 

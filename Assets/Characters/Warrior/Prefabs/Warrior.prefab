@@ -719,12 +719,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lBoard: {fileID: 0}
+  gcs: {fileID: 0}
+  life1: {fileID: 0}
+  life2: {fileID: 0}
+  life3: {fileID: 0}
+  life4: {fileID: 0}
+  life5: {fileID: 0}
+  life6: {fileID: 0}
   maxHealth: 200
   damage: 50
   defence: 90
   state: 1
   health: 0
   healthText: {fileID: 0}
+  isPlayer1FinalD: 0
+  isPlayer2FinalD: 0
+  death: 0
 --- !u!114 &6264443269412183228
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class GameControlScript : MonoBehaviour
 {
@@ -8,6 +11,11 @@ public class GameControlScript : MonoBehaviour
 
     public GameObject bar1, bar2, bar3, bar4, bar5, bar6, bar7, bar8, bar9, gameOver;
     public GameObject p2Bar1, p2Bar2, p2Bar3, p2Bar4, p2Bar5, p2Bar6, p2Bar7, p2Bar8, p2Bar9, p2GameOver;
+    public GameObject life1, life2, life3, life4, life5, life6;
+
+    private GameObject Player1;
+    private GameObject Player2;
+    private PlayerStats player1_Stats, player2_Stats;
 
     public static int health;
     public static int p2Health;
@@ -38,10 +46,42 @@ public class GameControlScript : MonoBehaviour
         p2Bar9.gameObject.SetActive(true);
         p2GameOver.gameObject.SetActive(false);
 
+        Player1 = GameObject.FindGameObjectWithTag("Player1");
+        Player2 = GameObject.FindGameObjectWithTag("Player2");
+        player1_Stats = Player1.GetComponent<PlayerStats>();
+        player2_Stats = Player2.GetComponent<PlayerStats>();
+
     }
 
     void Update()
     {
+        if (player1_Stats.death == 0)
+        {
+            life3.gameObject.SetActive(false);
+        }
+        if (player1_Stats.death == 1)
+        {
+            life2.gameObject.SetActive(false); ;
+        }
+
+        if (player2_Stats.death == 0)
+        {
+            life6.gameObject.SetActive(false);
+        }
+        if (player2_Stats.death == 1)
+        {
+            life5.gameObject.SetActive(false);
+        }
+
+        if (player1_Stats.death == 2)
+        {
+            life1.gameObject.SetActive(false);
+        }
+        if (player2_Stats.death == 2)
+        {
+            life4.gameObject.SetActive(false);
+        }
+
         // P1.
         if (health > 9)
             health = 9;
@@ -296,5 +336,10 @@ public class GameControlScript : MonoBehaviour
         {
             p2GameOver.gameObject.SetActive(false);
         }
+
+
+       
+
+
     }
 }

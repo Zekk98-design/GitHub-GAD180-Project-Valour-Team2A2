@@ -4165,7 +4165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19.490997}
+  m_AnchoredPosition: {x: 0, y: -19.490967}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374580786
@@ -20869,6 +20869,12 @@ MonoBehaviour:
   p2Bar8: {fileID: 1878452975}
   p2Bar9: {fileID: 1715039411}
   p2GameOver: {fileID: 1325621629}
+  life1: {fileID: 0}
+  life2: {fileID: 0}
+  life3: {fileID: 0}
+  life4: {fileID: 0}
+  life5: {fileID: 0}
+  life6: {fileID: 0}
 --- !u!4 &2136239228
 Transform:
   m_ObjectHideFlags: 0

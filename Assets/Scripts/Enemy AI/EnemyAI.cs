@@ -19,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     private CharacterAnimations             characterAnimation;
     private EnemyStats                      enemyStats;
     private Rigidbody                       rb;
+    PlayerRespawn playerRespawn;
     
     private float                           curDistance = 1000.0f;
     private Vector3                         movement;
@@ -40,6 +41,7 @@ public class EnemyAI : MonoBehaviour
     float                                   distanceToP1;
     float                                   distanceToP2;
 
+
     // Start is called before the first frame update
     void Start()
     {  //find characters with matched tag
@@ -47,6 +49,7 @@ public class EnemyAI : MonoBehaviour
         Player2 = GameObject.FindGameObjectWithTag("Player2");
         player1_Stats = Player1.GetComponent<PlayerStats>();
         player2_Stats = Player2.GetComponent<PlayerStats>();
+        
 
         GameObject Spawn = GameObject.Find("EGO Spawn");
         menu = Spawn.GetComponent<MenuPauser>();
@@ -61,23 +64,43 @@ public class EnemyAI : MonoBehaviour
         timerAttackReset = AttackSpeed;
         BossAbilityReset = BossAbilitySpeed;
 
-
-
-}
+        distanceToP1 = Mathf.Infinity;
+        distanceToP2 = Mathf.Infinity;
+    }
 
 // Update is called once per frame
 void Update()
     {
-        distanceToP1 = Mathf.Infinity;
-        distanceToP2 = Mathf.Infinity;
         if (menu.eAI == true)
         {
-            // get distance between Enemy and Character
-            if (Player1 != null)
-            {distanceToP1 = Vector3.Distance(transform.position, Player1.transform.position); }
-
-            if (Player2 != null)
-            {distanceToP2 = Vector3.Distance(transform.position, Player2.transform.position); }
+            //Player 1 is gone
+            if (player1_Stats.isPlayer1FinalD == true)
+            {
+                distanceToP1 = Mathf.Infinity;
+                Player2 = GameObject.FindGameObjectWithTag("Player2");
+                player2_Stats = Player2.GetComponent<PlayerStats>();
+                distanceToP2 = Vector3.Distance(transform.position, Player2.transform.position);
+                Debug.Log("Player1 is null, set distanceToP1 = " + distanceToP1);
+            }
+            //Player 2 is gone
+            else if (player2_Stats.isPlayer2FinalD == true)
+            {
+                distanceToP2 = Mathf.Infinity;
+                Player1 = GameObject.FindGameObjectWithTag("Player1");
+                player1_Stats = Player1.GetComponent<PlayerStats>();
+                distanceToP1 = Vector3.Distance(transform.position, Player1.transform.position);
+                Debug.Log("Player1 is null, set distanceToP1 = " + distanceToP1);
+            }
+            else
+            {   // 2 Players are present
+                Player1 = GameObject.FindGameObjectWithTag("Player1");
+                player1_Stats = Player1.GetComponent<PlayerStats>();
+                Player2 = GameObject.FindGameObjectWithTag("Player2");
+                player2_Stats = Player2.GetComponent<PlayerStats>();
+                distanceToP1 = Vector3.Distance(transform.position, Player1.transform.position);
+                distanceToP2 = Vector3.Distance(transform.position, Player2.transform.position);
+                //Debug.Log("Running Nomally ...");
+            }
 
             //find if it is closer to P1...........................................
             if (distanceToP1 < distanceToP2)
@@ -88,7 +111,8 @@ void Update()
                 if (curDistance > 1.1f && curDistance < 14.0f)
                 {
                     transform.LookAt(Player1.transform);
-                    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
+                    
+                    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);              
                     Vector3 temp = transform.position;
                     movement = temp;
                     // Play Walk animation
@@ -140,7 +164,7 @@ void Update()
                 if (curDistance > 1.1f && curDistance < 14f)
                 {
                     transform.LookAt(Player2.transform);
-                    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
+                    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);               
                     Vector3 temp = transform.position;
                     movement = temp;
                     // Play Walk animation
@@ -179,7 +203,7 @@ void Update()
                 }
             }
 
-            Debug.Log("Distance to Player = " + curDistance);
+            //Debug.Log("Distance toP1 = " + distanceToP1 + "\t toP2 = " + distanceToP2 );
             //Debug.Log("enemyStats.damage is " + enemyStats.damage+"\t dmg is "+ dmg );
         }
         if (menu.eAI == false)

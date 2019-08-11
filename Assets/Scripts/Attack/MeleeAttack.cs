@@ -48,7 +48,7 @@ public class MeleeAttack : MonoBehaviour
 
             //if (isWeapon == false & playerStats.defence > 0)
             //{
-            //    playerStats.defence = playerStats.defence - enemyStats.damage;                // if not weapon, take damage
+            //    playerStats.defence = playerStats.defence - enemyStats.damage;        //No need. Code for dealing dmg to Players is recreated in EnemyAI script
             //}
 
             //if (isWeapon == false & playerStats.defence <= 0)
