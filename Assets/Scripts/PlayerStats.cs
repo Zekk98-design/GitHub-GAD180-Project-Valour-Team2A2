@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
 {
     public Leaderboard lBoard;
     public GameControlScript gcs;
+    public UIHealth uiHealth;
     //public GameObject life1, life2, life3, life4, life5, life6;  
 
     public float maxHealth = 20f;
@@ -35,11 +36,12 @@ public class PlayerStats : MonoBehaviour
              
         GameObject EGO = GameObject.Find("EGO Spawn");
         lBoard = EGO.GetComponent<Leaderboard>();
+        uiHealth = EGO.GetComponent<UIHealth>();
         gcs = GameObject.Find("GameControl").GetComponent<GameControlScript>();
 
         //GameObject temp = GameObject.Find("GameControlHealth");
         //gameControlScript = temp.GetComponent<GameControlScript>();
-        
+
         //life1 = GameObject.Find("life1");
         //life3 = GameObject.Find("life2");
         //life3 = GameObject.Find("life3");
@@ -47,6 +49,7 @@ public class PlayerStats : MonoBehaviour
         //life5 = GameObject.Find("life5");
         //life6 = GameObject.Find("life6");
 
+        UIInit();
     }
 
     void Update()
@@ -90,6 +93,54 @@ public class PlayerStats : MonoBehaviour
         }
 
         Healthbar();
+        Shieldbar();
+    }
+
+    void UIInit()
+    {
+        uiHealth.bar1.gameObject.SetActive(true);
+        uiHealth.bar2.gameObject.SetActive(true);
+        uiHealth.bar3.gameObject.SetActive(true);
+        uiHealth.bar4.gameObject.SetActive(true);
+        uiHealth.bar5.gameObject.SetActive(true);
+        uiHealth.bar6.gameObject.SetActive(true);
+        uiHealth.bar7.gameObject.SetActive(true);
+        uiHealth.bar8.gameObject.SetActive(true);
+        uiHealth.bar9.gameObject.SetActive(true);
+        uiHealth.gameOver.gameObject.SetActive(false);
+
+        uiHealth.p2Bar1.gameObject.SetActive(true);
+        uiHealth.p2Bar2.gameObject.SetActive(true);
+        uiHealth.p2Bar3.gameObject.SetActive(true);
+        uiHealth.p2Bar4.gameObject.SetActive(true);
+        uiHealth.p2Bar5.gameObject.SetActive(true);
+        uiHealth.p2Bar6.gameObject.SetActive(true);
+        uiHealth.p2Bar7.gameObject.SetActive(true);
+        uiHealth.p2Bar8.gameObject.SetActive(true);
+        uiHealth.p2Bar9.gameObject.SetActive(true);
+        uiHealth.p2GameOver.gameObject.SetActive(false);
+
+        uiHealth.shield1.gameObject.SetActive(true);
+        uiHealth.shield2.gameObject.SetActive(true);
+        uiHealth.shield3.gameObject.SetActive(true);
+        uiHealth.shield4.gameObject.SetActive(true);
+        uiHealth.shield5.gameObject.SetActive(true);
+        uiHealth.shield6.gameObject.SetActive(true);
+        uiHealth.shield7.gameObject.SetActive(true);
+        uiHealth.shield8.gameObject.SetActive(true);
+        uiHealth.shield9.gameObject.SetActive(true);
+        uiHealth.shieldGone.gameObject.SetActive(false);
+
+        uiHealth.p2Shield1.gameObject.SetActive(true);
+        uiHealth.p2Shield2.gameObject.SetActive(true);
+        uiHealth.p2Shield3.gameObject.SetActive(true);
+        uiHealth.p2Shield4.gameObject.SetActive(true);
+        uiHealth.p2Shield5.gameObject.SetActive(true);
+        uiHealth.p2Shield6.gameObject.SetActive(true);
+        uiHealth.p2Shield7.gameObject.SetActive(true);
+        uiHealth.p2Shield8.gameObject.SetActive(true);
+        uiHealth.p2Shield9.gameObject.SetActive(true);
+        uiHealth.p2ShieldGone.gameObject.SetActive(false);
     }
 
     void Healthbar()
@@ -98,47 +149,146 @@ public class PlayerStats : MonoBehaviour
         {
             if (health >= 90 && health <= 100)
             {
-                GameControlScript.health = 9;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(true);
+                uiHealth.bar4.gameObject.SetActive(true);
+                uiHealth.bar5.gameObject.SetActive(true);
+                uiHealth.bar6.gameObject.SetActive(true);
+                uiHealth.bar7.gameObject.SetActive(true);
+                uiHealth.bar8.gameObject.SetActive(true);
+                uiHealth.bar9.gameObject.SetActive(true);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 80 && health < 90)
             {
-                GameControlScript.health = 8;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(true);
+                uiHealth.bar4.gameObject.SetActive(true);
+                uiHealth.bar5.gameObject.SetActive(true);
+                uiHealth.bar6.gameObject.SetActive(true);
+                uiHealth.bar7.gameObject.SetActive(true);
+                uiHealth.bar8.gameObject.SetActive(true);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 70 && health < 80)
             {
-                GameControlScript.health = 7;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(true);
+                uiHealth.bar4.gameObject.SetActive(true);
+                uiHealth.bar5.gameObject.SetActive(true);
+                uiHealth.bar6.gameObject.SetActive(true);
+                uiHealth.bar7.gameObject.SetActive(true);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 60 && health < 70)
             {
-                GameControlScript.health = 6;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(true);
+                uiHealth.bar4.gameObject.SetActive(true);
+                uiHealth.bar5.gameObject.SetActive(true);
+                uiHealth.bar6.gameObject.SetActive(true);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 50 && health < 60)
             {
-                GameControlScript.health = 5;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(true);
+                uiHealth.bar4.gameObject.SetActive(true);
+                uiHealth.bar5.gameObject.SetActive(true);
+                uiHealth.bar6.gameObject.SetActive(false);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 40 && health < 50)
             {
-                GameControlScript.health = 4;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(true);
+                uiHealth.bar4.gameObject.SetActive(true);
+                uiHealth.bar5.gameObject.SetActive(false);
+                uiHealth.bar6.gameObject.SetActive(false);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 30 && health < 40)
             {
-                GameControlScript.health = 3;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(true);
+                uiHealth.bar4.gameObject.SetActive(false);
+                uiHealth.bar5.gameObject.SetActive(false);
+                uiHealth.bar6.gameObject.SetActive(false);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 20 && health < 30)
             {
-                GameControlScript.health = 2;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(true);
+                uiHealth.bar3.gameObject.SetActive(false);
+                uiHealth.bar4.gameObject.SetActive(false);
+                uiHealth.bar5.gameObject.SetActive(false);
+                uiHealth.bar6.gameObject.SetActive(false);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health >= 10 && health < 20)
             {
-                GameControlScript.health = 1;
+                uiHealth.bar1.gameObject.SetActive(true);
+                uiHealth.bar2.gameObject.SetActive(false);
+                uiHealth.bar3.gameObject.SetActive(false);
+                uiHealth.bar4.gameObject.SetActive(false);
+                uiHealth.bar5.gameObject.SetActive(false);
+                uiHealth.bar6.gameObject.SetActive(false);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health > 0 && health < 10)
             {
-                GameControlScript.health = 1;
+                uiHealth.bar1.gameObject.SetActive(false);
+                uiHealth.bar2.gameObject.SetActive(false);
+                uiHealth.bar3.gameObject.SetActive(false);
+                uiHealth.bar4.gameObject.SetActive(false);
+                uiHealth.bar5.gameObject.SetActive(false);
+                uiHealth.bar6.gameObject.SetActive(false);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(false);
             }
             if (health <= 0)
             {
-                GameControlScript.health = 0;
+                uiHealth.bar1.gameObject.SetActive(false);
+                uiHealth.bar2.gameObject.SetActive(false);
+                uiHealth.bar3.gameObject.SetActive(false);
+                uiHealth.bar4.gameObject.SetActive(false);
+                uiHealth.bar5.gameObject.SetActive(false);
+                uiHealth.bar6.gameObject.SetActive(false);
+                uiHealth.bar7.gameObject.SetActive(false);
+                uiHealth.bar8.gameObject.SetActive(false);
+                uiHealth.bar9.gameObject.SetActive(false);
+                uiHealth.gameOver.gameObject.SetActive(true);
             }
         }
 
@@ -146,47 +296,452 @@ public class PlayerStats : MonoBehaviour
         {
             if (health >= 90 && health <= 100)
             {
-                GameControlScript.p2Health = 9;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(true);
+                uiHealth.p2Bar4.gameObject.SetActive(true);
+                uiHealth.p2Bar5.gameObject.SetActive(true);
+                uiHealth.p2Bar6.gameObject.SetActive(true);
+                uiHealth.p2Bar7.gameObject.SetActive(true);
+                uiHealth.p2Bar8.gameObject.SetActive(true);
+                uiHealth.p2Bar9.gameObject.SetActive(true);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 80 && health < 90)
             {
-                GameControlScript.p2Health = 8;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(true);
+                uiHealth.p2Bar4.gameObject.SetActive(true);
+                uiHealth.p2Bar5.gameObject.SetActive(true);
+                uiHealth.p2Bar6.gameObject.SetActive(true);
+                uiHealth.p2Bar7.gameObject.SetActive(true);
+                uiHealth.p2Bar8.gameObject.SetActive(true);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 70 && health < 80)
             {
-                GameControlScript.p2Health = 7;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(true);
+                uiHealth.p2Bar4.gameObject.SetActive(true);
+                uiHealth.p2Bar5.gameObject.SetActive(true);
+                uiHealth.p2Bar6.gameObject.SetActive(true);
+                uiHealth.p2Bar7.gameObject.SetActive(true);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 60 && health < 70)
             {
-                GameControlScript.p2Health = 6;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(true);
+                uiHealth.p2Bar4.gameObject.SetActive(true);
+                uiHealth.p2Bar5.gameObject.SetActive(true);
+                uiHealth.p2Bar6.gameObject.SetActive(true);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 50 && health < 60)
             {
-                GameControlScript.p2Health = 5;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(true);
+                uiHealth.p2Bar4.gameObject.SetActive(true);
+                uiHealth.p2Bar5.gameObject.SetActive(true);
+                uiHealth.p2Bar6.gameObject.SetActive(false);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 40 && health < 50)
             {
-                GameControlScript.p2Health = 4;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(true);
+                uiHealth.p2Bar4.gameObject.SetActive(true);
+                uiHealth.p2Bar5.gameObject.SetActive(false);
+                uiHealth.p2Bar6.gameObject.SetActive(false);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 30 && health < 40)
             {
-                GameControlScript.p2Health = 3;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(true);
+                uiHealth.p2Bar4.gameObject.SetActive(false);
+                uiHealth.p2Bar5.gameObject.SetActive(false);
+                uiHealth.p2Bar6.gameObject.SetActive(false);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 20 && health < 30)
             {
-                GameControlScript.p2Health = 2;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(true);
+                uiHealth.p2Bar3.gameObject.SetActive(false);
+                uiHealth.p2Bar4.gameObject.SetActive(false);
+                uiHealth.p2Bar5.gameObject.SetActive(false);
+                uiHealth.p2Bar6.gameObject.SetActive(false);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health >= 10 && health < 20)
             {
-                GameControlScript.p2Health = 1;
+                uiHealth.p2Bar1.gameObject.SetActive(true);
+                uiHealth.p2Bar2.gameObject.SetActive(false);
+                uiHealth.p2Bar3.gameObject.SetActive(false);
+                uiHealth.p2Bar4.gameObject.SetActive(false);
+                uiHealth.p2Bar5.gameObject.SetActive(false);
+                uiHealth.p2Bar6.gameObject.SetActive(false);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health > 0 && health < 10)
             {
-                GameControlScript.p2Health = 1;
+                uiHealth.p2Bar1.gameObject.SetActive(false);
+                uiHealth.p2Bar2.gameObject.SetActive(false);
+                uiHealth.p2Bar3.gameObject.SetActive(false);
+                uiHealth.p2Bar4.gameObject.SetActive(false);
+                uiHealth.p2Bar5.gameObject.SetActive(false);
+                uiHealth.p2Bar6.gameObject.SetActive(false);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(false);
             }
             if (health <= 0)
             {
-                GameControlScript.p2Health = 0;
+                uiHealth.p2Bar1.gameObject.SetActive(false);
+                uiHealth.p2Bar2.gameObject.SetActive(false);
+                uiHealth.p2Bar3.gameObject.SetActive(false);
+                uiHealth.p2Bar4.gameObject.SetActive(false);
+                uiHealth.p2Bar5.gameObject.SetActive(false);
+                uiHealth.p2Bar6.gameObject.SetActive(false);
+                uiHealth.p2Bar7.gameObject.SetActive(false);
+                uiHealth.p2Bar8.gameObject.SetActive(false);
+                uiHealth.p2Bar9.gameObject.SetActive(false);
+                uiHealth.p2GameOver.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    void Shieldbar()
+    {
+        if (gameObject.CompareTag("Player1"))
+        {
+            if (defence >= 90 && defence <= 100)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(true);
+                uiHealth.shield4.gameObject.SetActive(true);
+                uiHealth.shield5.gameObject.SetActive(true);
+                uiHealth.shield6.gameObject.SetActive(true);
+                uiHealth.shield7.gameObject.SetActive(true);
+                uiHealth.shield8.gameObject.SetActive(true);
+                uiHealth.shield9.gameObject.SetActive(true);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 80 && defence < 90)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(true);
+                uiHealth.shield4.gameObject.SetActive(true);
+                uiHealth.shield5.gameObject.SetActive(true);
+                uiHealth.shield6.gameObject.SetActive(true);
+                uiHealth.shield7.gameObject.SetActive(true);
+                uiHealth.shield8.gameObject.SetActive(true);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 70 && defence < 80)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(true);
+                uiHealth.shield4.gameObject.SetActive(true);
+                uiHealth.shield5.gameObject.SetActive(true);
+                uiHealth.shield6.gameObject.SetActive(true);
+                uiHealth.shield7.gameObject.SetActive(true);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+
+            }
+            if (defence >= 60 && defence < 70)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(true);
+                uiHealth.shield4.gameObject.SetActive(true);
+                uiHealth.shield5.gameObject.SetActive(true);
+                uiHealth.shield6.gameObject.SetActive(true);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+            }
+            if(defence >= 50 && defence < 60)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(true);
+                uiHealth.shield4.gameObject.SetActive(true);
+                uiHealth.shield5.gameObject.SetActive(true);
+                uiHealth.shield6.gameObject.SetActive(false);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+
+            }
+            if (defence >= 40 && defence < 50)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(true);
+                uiHealth.shield4.gameObject.SetActive(true);
+                uiHealth.shield5.gameObject.SetActive(false);
+                uiHealth.shield6.gameObject.SetActive(false);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+            }
+            if(defence >= 30 && defence < 40)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(true);
+                uiHealth.shield4.gameObject.SetActive(false);
+                uiHealth.shield5.gameObject.SetActive(false);
+                uiHealth.shield6.gameObject.SetActive(false);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+
+            }
+            if(defence >= 20 && defence < 30)
+            {
+
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(true);
+                uiHealth.shield3.gameObject.SetActive(false);
+                uiHealth.shield4.gameObject.SetActive(false);
+                uiHealth.shield5.gameObject.SetActive(false);
+                uiHealth.shield6.gameObject.SetActive(false);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 10 && defence < 20)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(false);
+                uiHealth.shield3.gameObject.SetActive(false);
+                uiHealth.shield4.gameObject.SetActive(false);
+                uiHealth.shield5.gameObject.SetActive(false);
+                uiHealth.shield6.gameObject.SetActive(false);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+            }
+            if(defence > 0 && defence < 10)
+            {
+                uiHealth.shield1.gameObject.SetActive(true);
+                uiHealth.shield2.gameObject.SetActive(false);
+                uiHealth.shield3.gameObject.SetActive(false);
+                uiHealth.shield4.gameObject.SetActive(false);
+                uiHealth.shield5.gameObject.SetActive(false);
+                uiHealth.shield6.gameObject.SetActive(false);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(false);
+            }
+            if(defence <= 0)
+            {
+                uiHealth.shield1.gameObject.SetActive(false);
+                uiHealth.shield2.gameObject.SetActive(false);
+                uiHealth.shield3.gameObject.SetActive(false);
+                uiHealth.shield4.gameObject.SetActive(false);
+                uiHealth.shield5.gameObject.SetActive(false);
+                uiHealth.shield6.gameObject.SetActive(false);
+                uiHealth.shield7.gameObject.SetActive(false);
+                uiHealth.shield8.gameObject.SetActive(false);
+                uiHealth.shield9.gameObject.SetActive(false);
+                uiHealth.shieldGone.gameObject.SetActive(true);
+            }
+        }
+
+        if (gameObject.CompareTag("Player2"))
+        {
+            if (defence >= 90 && defence <= 100)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(true);
+                uiHealth.p2Shield4.gameObject.SetActive(true);
+                uiHealth.p2Shield5.gameObject.SetActive(true);
+                uiHealth.p2Shield6.gameObject.SetActive(true);
+                uiHealth.p2Shield7.gameObject.SetActive(true);
+                uiHealth.p2Shield8.gameObject.SetActive(true);
+                uiHealth.p2Shield9.gameObject.SetActive(true);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 80 && defence < 90)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(true);
+                uiHealth.p2Shield4.gameObject.SetActive(true);
+                uiHealth.p2Shield5.gameObject.SetActive(true);
+                uiHealth.p2Shield6.gameObject.SetActive(true);
+                uiHealth.p2Shield7.gameObject.SetActive(true);
+                uiHealth.p2Shield8.gameObject.SetActive(true);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 70 && defence < 80)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(true);
+                uiHealth.p2Shield4.gameObject.SetActive(true);
+                uiHealth.p2Shield5.gameObject.SetActive(true);
+                uiHealth.p2Shield6.gameObject.SetActive(true);
+                uiHealth.p2Shield7.gameObject.SetActive(true);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 60 && defence < 70)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(true);
+                uiHealth.p2Shield4.gameObject.SetActive(true);
+                uiHealth.p2Shield5.gameObject.SetActive(true);
+                uiHealth.p2Shield6.gameObject.SetActive(true);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 50 && defence < 60)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(true);
+                uiHealth.p2Shield4.gameObject.SetActive(true);
+                uiHealth.p2Shield5.gameObject.SetActive(true);
+                uiHealth.p2Shield6.gameObject.SetActive(false);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+
+            }
+            if (defence >= 40 && defence < 50)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(true);
+                uiHealth.p2Shield4.gameObject.SetActive(true);
+                uiHealth.p2Shield5.gameObject.SetActive(false);
+                uiHealth.p2Shield6.gameObject.SetActive(false);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+            }
+            if (defence >= 30 && defence < 40)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(true);
+                uiHealth.p2Shield4.gameObject.SetActive(false);
+                uiHealth.p2Shield5.gameObject.SetActive(false);
+                uiHealth.p2Shield6.gameObject.SetActive(false);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+
+            }
+            if (defence >= 20 && defence < 30)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(true);
+                uiHealth.p2Shield3.gameObject.SetActive(false);
+                uiHealth.p2Shield4.gameObject.SetActive(false);
+                uiHealth.p2Shield5.gameObject.SetActive(false);
+                uiHealth.p2Shield6.gameObject.SetActive(false);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+
+            }
+            if (defence >= 10 && defence < 20)
+            {
+
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(false);
+                uiHealth.p2Shield3.gameObject.SetActive(false);
+                uiHealth.p2Shield4.gameObject.SetActive(false);
+                uiHealth.p2Shield5.gameObject.SetActive(false);
+                uiHealth.p2Shield6.gameObject.SetActive(false);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+            }
+            if (defence > 0 && defence < 10)
+            {
+
+                uiHealth.p2Shield1.gameObject.SetActive(true);
+                uiHealth.p2Shield2.gameObject.SetActive(false);
+                uiHealth.p2Shield3.gameObject.SetActive(false);
+                uiHealth.p2Shield4.gameObject.SetActive(false);
+                uiHealth.p2Shield5.gameObject.SetActive(false);
+                uiHealth.p2Shield6.gameObject.SetActive(false);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(false);
+            }
+            if (defence <= 0)
+            {
+                uiHealth.p2Shield1.gameObject.SetActive(false);
+                uiHealth.p2Shield2.gameObject.SetActive(false);
+                uiHealth.p2Shield3.gameObject.SetActive(false);
+                uiHealth.p2Shield4.gameObject.SetActive(false);
+                uiHealth.p2Shield5.gameObject.SetActive(false);
+                uiHealth.p2Shield6.gameObject.SetActive(false);
+                uiHealth.p2Shield7.gameObject.SetActive(false);
+                uiHealth.p2Shield8.gameObject.SetActive(false);
+                uiHealth.p2Shield9.gameObject.SetActive(false);
+                uiHealth.p2ShieldGone.gameObject.SetActive(true);
             }
         }
     }
