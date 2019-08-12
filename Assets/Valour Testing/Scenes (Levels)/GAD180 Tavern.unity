@@ -15098,37 +15098,37 @@ PrefabInstance:
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -69.42
+      value: -69.36
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.27
+      value: 17.67
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.38
+      value: -26.16
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.49679756
+      value: 0.43410945
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0025977313
+      value: -0.0026964904
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0014870424
+      value: 0.0012994008
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.86786133
+      value: 0.9008552
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
@@ -15138,7 +15138,7 @@ PrefabInstance:
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 59.577003
+      value: 51.458004
       objectReference: {fileID: 0}
     - target: {fileID: 5593420196241809676, guid: cff17d06a90999a47a19e1dc75206a53,
         type: 3}
@@ -28084,7 +28084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179528517}
   m_Layer: 0
-  m_Name: Bar
+  m_Name: Tavern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
