@@ -720,12 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lBoard: {fileID: 0}
   gcs: {fileID: 0}
-  life1: {fileID: 0}
-  life2: {fileID: 0}
-  life3: {fileID: 0}
-  life4: {fileID: 0}
-  life5: {fileID: 0}
-  life6: {fileID: 0}
+  uiHealth: {fileID: 0}
   maxHealth: 200
   damage: 50
   defence: 90
@@ -2392,10 +2387,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2391504002080951766}
     m_Modifications:
-    - target: {fileID: 1876799204783976, guid: f54261f0400931d48b47367297bc0215, type: 3}
-      propertyPath: m_Name
-      value: sword1H1
-      objectReference: {fileID: 0}
     - target: {fileID: 4528223158025008, guid: f54261f0400931d48b47367297bc0215, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.141
@@ -2451,6 +2442,10 @@ PrefabInstance:
     - target: {fileID: 4528223158025008, guid: f54261f0400931d48b47367297bc0215, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.35000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876799204783976, guid: f54261f0400931d48b47367297bc0215, type: 3}
+      propertyPath: m_Name
+      value: sword1H1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f54261f0400931d48b47367297bc0215, type: 3}

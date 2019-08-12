@@ -80,7 +80,7 @@ void Update()
                 Player2 = GameObject.FindGameObjectWithTag("Player2");
                 player2_Stats = Player2.GetComponent<PlayerStats>();
                 distanceToP2 = Vector3.Distance(transform.position, Player2.transform.position);
-                Debug.Log("Player1 is null, set distanceToP1 = " + distanceToP1);
+                //Debug.Log("Player1 is null, set distanceToP1 = " + distanceToP1);
             }
             //Player 2 is gone
             else if (player2_Stats.isPlayer2FinalD == true)
@@ -89,7 +89,7 @@ void Update()
                 Player1 = GameObject.FindGameObjectWithTag("Player1");
                 player1_Stats = Player1.GetComponent<PlayerStats>();
                 distanceToP1 = Vector3.Distance(transform.position, Player1.transform.position);
-                Debug.Log("Player1 is null, set distanceToP1 = " + distanceToP1);
+                //Debug.Log("Player1 is null, set distanceToP1 = " + distanceToP1);
             }
             else
             {   // 2 Players are present

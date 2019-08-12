@@ -12,7 +12,6 @@ public class PlayerStats : MonoBehaviour
     public Leaderboard lBoard;
     public GameControlScript gcs;
     public UIHealth uiHealth;
-    //public GameObject life1, life2, life3, life4, life5, life6;  
 
     public float maxHealth = 20f;
     public float damage = 3;
@@ -39,17 +38,8 @@ public class PlayerStats : MonoBehaviour
         uiHealth = EGO.GetComponent<UIHealth>();
         gcs = GameObject.Find("GameControl").GetComponent<GameControlScript>();
 
-        //GameObject temp = GameObject.Find("GameControlHealth");
-        //gameControlScript = temp.GetComponent<GameControlScript>();
-
-        //life1 = GameObject.Find("life1");
-        //life3 = GameObject.Find("life2");
-        //life3 = GameObject.Find("life3");
-        //life4 = GameObject.Find("life4");
-        //life5 = GameObject.Find("life5");
-        //life6 = GameObject.Find("life6");
-
         UIInit();
+
     }
 
     void Update()

@@ -14,11 +14,24 @@ public class GameControlScript : MonoBehaviour
     public GameObject life1, life2, life3, life4, life5, life6;
 
     private GameObject Player1;
-    private GameObject Player2;
-    private PlayerStats player1_Stats, player2_Stats;
+    private GameObject Player2, playerNull;
+    private PlayerStats player1_Stats, player2_Stats,playerNull_Stats;
 
     public static int health;
     public static int p2Health;
+    int p1LifeCounter = 0;
+    int p2LifeCounter = 0;
+   
+    public GameObject _DeathSkull;
+    GameObject skull;
+    GameObject skull2;
+    GameObject skull3;
+    GameObject skull4;
+    GameObject skull5;
+    GameObject skull6;
+
+    int skullCounter=0;
+    int skullCounter2 = 0;
 
     void Start()
     {
@@ -48,39 +61,118 @@ public class GameControlScript : MonoBehaviour
 
         Player1 = GameObject.FindGameObjectWithTag("Player1");
         Player2 = GameObject.FindGameObjectWithTag("Player2");
+        playerNull = GameObject.FindGameObjectWithTag("EGO_Null_Player");
         player1_Stats = Player1.GetComponent<PlayerStats>();
         player2_Stats = Player2.GetComponent<PlayerStats>();
-
+        playerNull_Stats = playerNull.GetComponent<PlayerStats>();
     }
 
     void Update()
     {
-        if (player1_Stats.death == 0)
+        // To disable Life UI when consumes life...
+        if (Player1 != null)
         {
-            life3.gameObject.SetActive(false);
+            Player1 = GameObject.FindGameObjectWithTag("Player1");
+            player1_Stats = Player1.GetComponent<PlayerStats>();
+            if (player1_Stats.health <= 0)
+            {
+                //Debug.Log("P1 HP in GamecontrolSript = " + player1_Stats.health);
+                p1LifeCounter++;
+                switch (p1LifeCounter)
+                {
+                    case 1:
+                        life3.gameObject.SetActive(false);
+                        skull = Instantiate(_DeathSkull, Player1.transform.position+new Vector3(0f,2f,0f), Quaternion.Euler(90f, 0f, 0f));
+                        skull.name = "skull_01";
+                        skullCounter++;
+                        break;
+                    case 2:
+                        life2.gameObject.SetActive(false);
+                        skull2 = Instantiate(_DeathSkull, Player1.transform.position + new Vector3(0f, 2f, 0f), Quaternion.Euler(90f, 0f, 0f));
+                        skull2.name = "skull_02";
+                        skullCounter++;
+                        break;
+                    case 3:
+                        life1.gameObject.SetActive(false);
+                        skull3 = Instantiate(_DeathSkull, Player1.transform.position + new Vector3(0.1f, 2f, 0f), Quaternion.Euler(90f, 0f, 0f));
+                        skull3.name = "skull_03";
+                        skullCounter++;
+                        //Debug.Log("skullcounter in case3 = " + skullCounter);
+                        break;
+                }
+            }
+            if (skullCounter == 1)
+            {
+                skull.transform.Translate(new Vector3(0, 0, -1f) * 4f * Time.deltaTime);
+            }
+            else if (skullCounter == 2)
+            {
+                skull2.gameObject.transform.Translate(new Vector3(0, 0, -1f) * 4f * Time.deltaTime);
+            }
+            else if (skullCounter == 3)
+            {
+                skull3.gameObject.transform.Translate(new Vector3(0, 0, -1f) * 4f * Time.deltaTime);
+            }
         }
-        if (player1_Stats.death == 1)
+        else
         {
-            life2.gameObject.SetActive(false); ;
+            Player1 = playerNull;
+            player1_Stats = playerNull_Stats;
+            Debug.Log("Player1 is null");
         }
 
-        if (player2_Stats.death == 0)
+        
+        if (Player2 != null)
         {
-            life6.gameObject.SetActive(false);
+            Player2 = GameObject.FindGameObjectWithTag("Player2");
+            player2_Stats = Player2.GetComponent<PlayerStats>();
+            if (player2_Stats.health <= 0)
+            {
+                Debug.Log("P2 HP in GamecontrolSript = " + player2_Stats.health);
+                p2LifeCounter++;
+                switch (p2LifeCounter)
+                {
+                    case 1:
+                        life6.gameObject.SetActive(false);
+                        skull4 = Instantiate(_DeathSkull, Player2.transform.position + new Vector3(0f, 2f, 0f), Quaternion.Euler(90f, 0f, 0f));
+                        skull4.name = "skull_04";
+                        skullCounter2++;
+                        break;
+                    case 2:
+                        life5.gameObject.SetActive(false);
+                        skull5 = Instantiate(_DeathSkull, Player2.transform.position + new Vector3(0f, 2f, 0f), Quaternion.Euler(90f, 0f, 0f));
+                        skull5.name = "skull_05";
+                        skullCounter2++;
+                        //Debug.Log("Player2 case2 life5 should be deleted.");
+                        break;
+                    case 3:
+                        life4.gameObject.SetActive(false);
+                        skull6 = Instantiate(_DeathSkull, Player2.transform.position + new Vector3(0f, 2f, 0f), Quaternion.Euler(90f, 0f, 0f));
+                        skull6.name = "skull_06";
+                        skullCounter2++;
+                        break;
+                }
+            }
+            if (skullCounter2 == 1)
+            {
+                skull4.gameObject.transform.Translate(new Vector3(0, 0, -1f) * 4f * Time.deltaTime);
+            }
+            else if (skullCounter2 == 2)
+            {
+                skull5.gameObject.transform.Translate(new Vector3(0, 0, -1f) * 4f * Time.deltaTime);
+            }
+            else if (skullCounter2 == 3)
+            {
+                skull6.gameObject.transform.Translate(new Vector3(0, 0, -1f) * 4f * Time.deltaTime);
+            }
         }
-        if (player2_Stats.death == 1)
+        else
         {
-            life5.gameObject.SetActive(false);
+            Player2 = playerNull;
+            player2_Stats = playerNull_Stats;
+            Debug.Log("Player2 is null");
         }
 
-        if (player1_Stats.death == 2)
-        {
-            life1.gameObject.SetActive(false);
-        }
-        if (player2_Stats.death == 2)
-        {
-            life4.gameObject.SetActive(false);
-        }
 
         // P1.
         if (health > 9)
