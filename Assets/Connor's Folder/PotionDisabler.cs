@@ -12,20 +12,23 @@ public class PotionDisabler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject egoPots = Instantiate(pots, transform.position, transform.rotation);
-        temp = egoPots;
-        int egoCount = GameObject.FindGameObjectsWithTag("EGO Pots").Length;
-        //checking the temp object for a variable to be false
-        for (int i = 0; i < egoCount; i++)
+        if (other.gameObject.CompareTag("Player1") || other.gameObject.CompareTag("Player2"))
         {
-            tempTimer = temp.GetComponent<PotionTimer>();
-            //once found, start disabled timer
-            if (tempTimer.start == false)
+            GameObject egoPots = Instantiate(pots, transform.position, transform.rotation);
+            temp = egoPots;
+            int egoCount = GameObject.FindGameObjectsWithTag("EGO Pots").Length;
+            //checking the temp object for a variable to be false
+            for (int i = 0; i < egoCount; i++)
             {
-                timer = tempTimer;
-                timer.owner = gameObject;
-                timer.disabler = gameObject.GetComponent<PotionDisabler>();
-                timer.start = true;
+                tempTimer = temp.GetComponent<PotionTimer>();
+                //once found, start disabled timer
+                if (tempTimer.start == false)
+                {
+                    timer = tempTimer;
+                    timer.owner = gameObject;
+                    timer.disabler = gameObject.GetComponent<PotionDisabler>();
+                    timer.start = true;
+                }
             }
         }
     }
