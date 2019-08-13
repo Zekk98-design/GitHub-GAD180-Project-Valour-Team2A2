@@ -99,17 +99,23 @@ public class CharacterAnimations : MonoBehaviour
         anim.SetTrigger("Attack Chicken");
     }
 
-    //******************************** Animations for Bull ************************************************* //
+    //******************************** Animations for Bull/ Minotaur ************************************************* //
     public void Atk_Bull()
     {
         anim.SetTrigger("Attack Bull");
     }
+    public void Atk_Minotaur()
+    {
+        anim.SetTrigger("Attack Mino");
+    }
     //Ability attack
     public void Ability_Bull()
     {
-        anim.SetTrigger("Ability Bull");
-        
+        anim.SetTrigger("Ability Bull"); 
     }
-
+    public void Ability_Minotaur()
+    {
+        anim.SetTrigger("Ability Mino");
+    }
 
 }

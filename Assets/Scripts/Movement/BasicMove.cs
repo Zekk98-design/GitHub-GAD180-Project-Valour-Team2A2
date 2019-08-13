@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(CharacterAnimations))]
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 
 public class BasicMove : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class BasicMove : MonoBehaviour
     public float                moveSpeed = 6.0f;
     public Vector3              movement;               // used in Character selection logic as well
     private Quaternion          currentRotation;
-
 
     void Start()
     {
@@ -28,6 +28,7 @@ public class BasicMove : MonoBehaviour
 
         GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
         cameraScript = cam.GetComponent<CameraScript>();
+
     }
 
     // Update is called once per frame
@@ -48,7 +49,7 @@ public class BasicMove : MonoBehaviour
                 //Read inputs from Player 1
                 float mHorizontal = Input.GetAxisRaw("Horizontal");
                 float mVertical = Input.GetAxisRaw("Vertical");
-
+                
                 //Player 1 at top boarder
                 if (cameraScript._playerActivated == "Top")
                 {
@@ -84,7 +85,7 @@ public class BasicMove : MonoBehaviour
                 //Read inputs from Player 2
                 float mHorizontal_2 = Input.GetAxisRaw("Horizontal_Player2");
                 float mVertical_2 = Input.GetAxisRaw("Vertical_Player2");
-
+                
                 //Player 2 at Bottom boarder
                 if (cameraScript._playerActivated_2 == "Bottom")
                 {

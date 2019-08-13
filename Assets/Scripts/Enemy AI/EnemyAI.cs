@@ -229,7 +229,7 @@ void Update()
     public void EnemyNormalAttackAnima()
     {
         if (gameObject.name == "Patron")
-        {characterAnimation.Atk_Patron();}
+        { characterAnimation.Atk_Patron(); }
         if (gameObject.name == "Patron(Clone)")
         { characterAnimation.Atk_Patron(); }
 
@@ -241,17 +241,22 @@ void Update()
         if (gameObject.name == "Chicken")
         {
             characterAnimation.Atk_Chicken();
-            //transform.Translate(transform.up + transform.forward);
+            
         }
         if (gameObject.name == "Chicken(Clone)")
         {
             characterAnimation.Atk_Chicken();
-            //transform.Translate(transform.up + transform.forward);
+            
         }
         //if (gameObject.name == "Bull")
         //{ characterAnimation.Atk_Bull(); }
         //if (gameObject.name == "Bull(Clone)")
         //{ characterAnimation.Atk_Bull(); }
+
+        if (gameObject.name == "Minotaur")
+        { characterAnimation.Atk_Minotaur(); }
+        if (gameObject.name == "Minotaur(Clone)")
+        { characterAnimation.Atk_Minotaur(); }
     }
 
     public void EnemyAbilityAttackAnima()
@@ -263,6 +268,15 @@ void Update()
         if (gameObject.name == "Bartender(Clone)")
         {
             characterAnimation.Ability_Bartender();
+        }
+
+        if (gameObject.name == "Minotaur")
+        {
+            characterAnimation.Ability_Minotaur();
+        }
+        if (gameObject.name == "Minotaur(Clone)")
+        {
+            characterAnimation.Ability_Minotaur();
         }
 
         //if (gameObject.name == "Bull")

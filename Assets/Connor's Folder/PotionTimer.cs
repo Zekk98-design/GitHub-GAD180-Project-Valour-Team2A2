@@ -10,6 +10,7 @@ public class PotionTimer : MonoBehaviour
     private int ego;
     [SerializeField] private float timer;
     [SerializeField] private float upTimer = 5;
+    PickUpAudioControl pickUpAudioControl;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class PotionTimer : MonoBehaviour
         //setting name to EGO Pots
         ego = GameObject.FindGameObjectsWithTag("EGO Pots").Length;
         gameObject.name = "EGO Pots";
+        pickUpAudioControl = GameObject.Find("Game Manager").GetComponent<PickUpAudioControl>();
     }
 
     void Update()
@@ -35,6 +37,7 @@ public class PotionTimer : MonoBehaviour
         {
             owner.SetActive(true);
             Destroy(gameObject);
+            pickUpAudioControl.GetComponent<AudioSource>().PlayOneShot(pickUpAudioControl.pickUp);
         }
     }
 }

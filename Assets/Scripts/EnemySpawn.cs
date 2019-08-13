@@ -51,7 +51,7 @@ public class EnemySpawn : MonoBehaviour
     {
         while (iniSpawn <= maxSpawn && maxSpawn <= upperLimit)
         {
-            spawn = new Vector3(17f + Random.Range(-spawnRadius, spawnRadius), 0.4f, Random.Range(-spawnRadius, spawnRadius));
+            spawn = new Vector3(10f + Random.Range(-spawnRadius, spawnRadius), 0.4f, Random.Range(-spawnRadius, spawnRadius));
 
             if (spawnPoints.Contains(spawn))
             {
