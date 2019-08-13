@@ -11,7 +11,7 @@ public class ArrowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject EGO = GameObject.Find("EGO Spawn");
+        GameObject EGO = GameObject.Find("Game Manager");
         lBoard = EGO.GetComponent<Leaderboard>();
         gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
         StartCoroutine(waiter());

@@ -10,7 +10,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Start()
     {
-        GameObject EGO = GameObject.Find("EGO Spawn");
+        GameObject EGO = GameObject.Find("Game Manager");
         lBoard = EGO.GetComponent<Leaderboard>();
     }
 

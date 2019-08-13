@@ -35,7 +35,7 @@ public class PlayerStats : MonoBehaviour
         health = maxHealth;
         defence = maxDefence;
              
-        GameObject EGO = GameObject.Find("EGO Spawn");
+        GameObject EGO = GameObject.Find("Game Manager");
         lBoard = EGO.GetComponent<Leaderboard>();
         uiHealth = EGO.GetComponent<UIHealth>();
         gcs = GameObject.Find("GameControl").GetComponent<GameControlScript>();

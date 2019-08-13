@@ -19,7 +19,7 @@ public class BasicMove : MonoBehaviour
     void Start()
     {
         //setting menu script on EGO Spawn
-        GameObject temp = GameObject.Find("EGO Spawn");
+        GameObject temp = GameObject.Find("Game Manager");
         menu = temp.GetComponent<MenuPauser>();
 
         rb = GetComponent<Rigidbody>();

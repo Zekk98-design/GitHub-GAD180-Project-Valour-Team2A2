@@ -19,7 +19,7 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject EGO = GameObject.Find("EGO Spawn");
+        GameObject EGO = GameObject.Find("Game Manager");
         lBoard = EGO.GetComponent<Leaderboard>();
         health = maxHealth;
         slider.value = calculateHealth();
