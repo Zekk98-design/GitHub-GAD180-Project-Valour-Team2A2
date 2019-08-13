@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public Leaderboard lBoard;
-    public GameControlScript gcs;
+    //public GameControlScript gcs;
     public UIHealth uiHealth;
 
     public float maxHealth = 20f;
@@ -38,7 +38,7 @@ public class PlayerStats : MonoBehaviour
         GameObject EGO = GameObject.Find("Game Manager");
         lBoard = EGO.GetComponent<Leaderboard>();
         uiHealth = EGO.GetComponent<UIHealth>();
-        gcs = GameObject.Find("GameControl").GetComponent<GameControlScript>();
+        //gcs = GameObject.Find("GameControl").GetComponent<GameControlScript>();
 
         UIInit();
 

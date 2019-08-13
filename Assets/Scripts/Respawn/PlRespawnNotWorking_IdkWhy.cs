@@ -36,7 +36,7 @@ public class PlRespawnNotWorking_IdkWhy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject EGO = GameObject.Find("EGO Spawn");
+        GameObject EGO = GameObject.Find("Game Manager");
         lBoard = EGO.GetComponent<Leaderboard>();
         GameObject temp = GameObject.Find("GameControlHealth");
         gameControlScript = temp.GetComponent<GameControlScript>();

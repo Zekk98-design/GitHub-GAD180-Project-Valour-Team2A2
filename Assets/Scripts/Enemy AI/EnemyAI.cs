@@ -52,7 +52,7 @@ public class EnemyAI : MonoBehaviour
         player2_Stats = Player2.GetComponent<PlayerStats>();
         
 
-        GameObject Spawn = GameObject.Find("EGO Spawn");
+        GameObject Spawn = GameObject.Find("Game Manager");
         menu = Spawn.GetComponent<MenuPauser>();
         
         characterAnimation = GetComponent<CharacterAnimations>();
