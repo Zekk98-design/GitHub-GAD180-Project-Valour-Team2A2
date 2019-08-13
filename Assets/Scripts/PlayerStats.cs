@@ -14,10 +14,11 @@ public class PlayerStats : MonoBehaviour
     public UIHealth uiHealth;
 
     public float maxHealth = 20f;
+    public float health;
+    public float maxDefence = 20f;
+    public float defence;
     public float damage = 3;
-    public float defence = 20;
     public int state = 1;
-    public float health=20f;
     public Text healthText;
 
     private GameControlScript gameControlScript;
@@ -32,6 +33,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        defence = maxDefence;
              
         GameObject EGO = GameObject.Find("EGO Spawn");
         lBoard = EGO.GetComponent<Leaderboard>();
@@ -45,43 +47,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         //healthText.text = "HP: " + health; for testing purpose
-
-        if (health <= 0 & death != 2)
-        {
-            if (gameObject.CompareTag("Player1"))
-            {
-                ++lBoard.p1Death;
-                
-            }
-            if (gameObject.CompareTag("Player2"))
-            {
-                ++lBoard.p2Death;
-                
-            }
-
-            health = maxHealth;
-            ++death;
-        }
-
-        if (health <= 0 & death == 2)
-        {
-            if (gameObject.CompareTag("Player1"))
-            {
-                lBoard.p1Death = lBoard.p1Death + 1;
-                isPlayer1FinalD = true;
-
-                
-            }
-            if (gameObject.CompareTag("Player2"))
-            {
-                lBoard.p2Death = lBoard.p2Death + 1;
-                isPlayer2FinalD = true;
-                
-            }
-
-            Destroy(gameObject);
-        }
-
+        StatCheck();
         Healthbar();
         Shieldbar();
     }
@@ -733,6 +699,52 @@ public class PlayerStats : MonoBehaviour
                 uiHealth.p2Shield9.gameObject.SetActive(false);
                 uiHealth.p2ShieldGone.gameObject.SetActive(true);
             }
+        }
+    }
+
+    void StatCheck()
+    {
+        if (defence > maxDefence)
+        {
+            defence = maxDefence;
+        }
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        if (health <= 0 & death != 2)
+        {
+            if (gameObject.CompareTag("Player1"))
+            {
+                ++lBoard.p1Death;
+
+            }
+            if (gameObject.CompareTag("Player2"))
+            {
+                ++lBoard.p2Death;
+
+            }
+
+            health = maxHealth;
+            ++death;
+        }
+        if (health <= 0 & death == 2)
+        {
+            if (gameObject.CompareTag("Player1"))
+            {
+                lBoard.p1Death = lBoard.p1Death + 1;
+                isPlayer1FinalD = true;
+
+
+            }
+            if (gameObject.CompareTag("Player2"))
+            {
+                lBoard.p2Death = lBoard.p2Death + 1;
+                isPlayer2FinalD = true;
+
+            }
+
+            Destroy(gameObject);
         }
     }
 }

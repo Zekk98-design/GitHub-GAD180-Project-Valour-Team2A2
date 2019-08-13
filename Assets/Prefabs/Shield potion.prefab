@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 628619707253260633}
   - component: {fileID: 628619707253260632}
   - component: {fileID: -1973662009606100833}
+  - component: {fileID: 5671061337997298342}
   m_Layer: 0
   m_Name: Shield potion
   m_TagString: Untagged
@@ -75,8 +76,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
   tempTimer: {fileID: 0}
+  hg: {fileID: 0}
+  sg: {fileID: 0}
   temp: {fileID: 0}
   pots: {fileID: 4433621922011178535, guid: 9bc5ecb9e748605439e5c4c7c0bca80a, type: 3}
+--- !u!114 &5671061337997298342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629078337042045809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc14bb886923c1e4a92584a136fe0ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
+  start: 0
 --- !u!1 &629084589060318701
 GameObject:
   m_ObjectHideFlags: 0
