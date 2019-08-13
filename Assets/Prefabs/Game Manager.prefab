@@ -187,3 +187,11 @@ MonoBehaviour:
   p2Shield8: {fileID: 0}
   p2Shield9: {fileID: 0}
   p2ShieldGone: {fileID: 0}
+  life1: {fileID: 0}
+  life2: {fileID: 0}
+  life3: {fileID: 0}
+  life4: {fileID: 0}
+  life5: {fileID: 0}
+  life6: {fileID: 0}
+  _DeathSkull: {fileID: 1525863562097537036, guid: 724afa691532058458d2e455165f4830,
+    type: 3}

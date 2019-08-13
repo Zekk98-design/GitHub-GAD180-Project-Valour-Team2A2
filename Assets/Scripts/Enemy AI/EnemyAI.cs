@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
     private float                           BossAbilityReset;
     float                                   distanceToP1;
     float                                   distanceToP2;
-    float                                   distanceToAttack=1.4f;
+    [SerializeField] float                  distanceToAttack=1.4f;
 
 
     // Start is called before the first frame update
@@ -248,10 +248,10 @@ void Update()
             characterAnimation.Atk_Chicken();
             //transform.Translate(transform.up + transform.forward);
         }
-        if (gameObject.name == "Bull")
-        { characterAnimation.Atk_Bull(); }
-        if (gameObject.name == "Bull(Clone)")
-        { characterAnimation.Atk_Bull(); }
+        //if (gameObject.name == "Bull")
+        //{ characterAnimation.Atk_Bull(); }
+        //if (gameObject.name == "Bull(Clone)")
+        //{ characterAnimation.Atk_Bull(); }
     }
 
     public void EnemyAbilityAttackAnima()
@@ -265,12 +265,12 @@ void Update()
             characterAnimation.Ability_Bartender();
         }
 
-        if (gameObject.name == "Bull")
-        { characterAnimation.Ability_Bull(); }
-        transform.Translate((transform.forward* 1.5f) + transform.up * 2f * Time.deltaTime);
-        if (gameObject.name == "Bull(Clone)")
-        { characterAnimation.Ability_Bull(); }
-        transform.Translate((transform.forward * 1.5f) + transform.up * 2f * Time.deltaTime);
+        //if (gameObject.name == "Bull")
+        //{ characterAnimation.Ability_Bull(); }
+        ////transform.Translate((transform.forward* 1.5f) + transform.up * 2f * Time.deltaTime);
+        //if (gameObject.name == "Bull(Clone)")
+        //{ characterAnimation.Ability_Bull(); }
+        ////transform.Translate((transform.forward * 1.5f) + transform.up * 2f * Time.deltaTime);
 
     }
 

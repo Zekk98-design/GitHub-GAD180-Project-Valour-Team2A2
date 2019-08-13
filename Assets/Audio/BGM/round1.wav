@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Sign in - Google Accounts</title>
+  <meta http-equiv="refresh" content="1; url=https://www.google.com/accounts/AccountChooser?hd=student.sae.edu.au&amp;continue=https%3A%2F%2Fdocs.google.com%2Fa%2Fstudent.sae.edu.au%2FnonceSigner%3Fnonce%3Df8mf6v4q488d8%26continue%3Dhttps%3A%2F%2Fdoc-14-4s-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F8p1lcvnrlkmhhb1atahj861ujfuhh5aj%2Fbv0r2kqtai70oerh3ff6hmpgar00t0jn%2F1565690400000%2F12125291026292553062%2F14232381205305738943%2F1SYgiUnEom_-7WxsSlp_Z_S9n6s5Kh_xM%3Fe%253Ddownload%2526h%253D06762174223689051005%26hash%3D5ktn8dmdm0vj1d3jslmsvjfmtp51bor9%26urp%3Dhttps%3A%2F%2Faccounts.google.com%2Fsignin%2Fv2%2Fsl%2Fpwd%3Fservi&amp;followup=https%3A%2F%2Fdocs.google.com%2Fa%2Fstudent.sae.edu.au%2FnonceSigner%3Fnonce%3Df8mf6v4q488d8%26continue%3Dhttps%3A%2F%2Fdoc-14-4s-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F8p1lcvnrlkmhhb1atahj861ujfuhh5aj%2Fbv0r2kqtai70oerh3ff6hmpgar00t0jn%2F1565690400000%2F12125291026292553062%2F14232381205305738943%2F1SYgiUnEom_-7WxsSlp_Z_S9n6s5Kh_xM%3Fe%253Ddownload%2526h%253D06762174223689051005%26hash%3D5ktn8dmdm0vj1d3jslmsvjfmtp51bor9%26urp%3Dhttps%3A%2F%2Faccounts.google.com%2Fsignin%2Fv2%2Fsl%2Fpwd%3Fservi&amp;service=wise&amp;ltmpl=homepage"></meta>
+  </head>
+  <body >
+  <form id="hiddenget" action="https://www.google.com/accounts/AccountChooser?hd=student.sae.edu.au&amp;continue=https%3A%2F%2Fdocs.google.com%2Fa%2Fstudent.sae.edu.au%2FnonceSigner%3Fnonce%3Df8mf6v4q488d8%26continue%3Dhttps%3A%2F%2Fdoc-14-4s-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F8p1lcvnrlkmhhb1atahj861ujfuhh5aj%2Fbv0r2kqtai70oerh3ff6hmpgar00t0jn%2F1565690400000%2F12125291026292553062%2F14232381205305738943%2F1SYgiUnEom_-7WxsSlp_Z_S9n6s5Kh_xM%3Fe%253Ddownload%2526h%253D06762174223689051005%26hash%3D5ktn8dmdm0vj1d3jslmsvjfmtp51bor9%26urp%3Dhttps%3A%2F%2Faccounts.google.com%2Fsignin%2Fv2%2Fsl%2Fpwd%3Fservi&amp;followup=https%3A%2F%2Fdocs.google.com%2Fa%2Fstudent.sae.edu.au%2FnonceSigner%3Fnonce%3Df8mf6v4q488d8%26continue%3Dhttps%3A%2F%2Fdoc-14-4s-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F8p1lcvnrlkmhhb1atahj861ujfuhh5aj%2Fbv0r2kqtai70oerh3ff6hmpgar00t0jn%2F1565690400000%2F12125291026292553062%2F14232381205305738943%2F1SYgiUnEom_-7WxsSlp_Z_S9n6s5Kh_xM%3Fe%253Ddownload%2526h%253D06762174223689051005%26hash%3D5ktn8dmdm0vj1d3jslmsvjfmtp51bor9%26urp%3Dhttps%3A%2F%2Faccounts.google.com%2Fsignin%2Fv2%2Fsl%2Fpwd%3Fservi&amp;service=wise&amp;ltmpl=homepage" method="get">
+  <noscript>
+  You should turn on Javascript support.
+  <input type="submit" id="nojssubmit" value="Continue">
+  </noscript>
+</form>
+  <script nonce="JNk3wUw13exz2BExxHxXBQ">
+window.onload = function() {
+  var redirectUrl = 'https:\x2F\x2Fwww.google.com\x2Faccounts\x2FAccountChooser?hd=student.sae.edu.au\x26continue=https%3A%2F%2Fdocs.google.com%2Fa%2Fstudent.sae.edu.au%2FnonceSigner%3Fnonce%3Df8mf6v4q488d8%26continue%3Dhttps%3A%2F%2Fdoc-14-4s-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F8p1lcvnrlkmhhb1atahj861ujfuhh5aj%2Fbv0r2kqtai70oerh3ff6hmpgar00t0jn%2F1565690400000%2F12125291026292553062%2F14232381205305738943%2F1SYgiUnEom_-7WxsSlp_Z_S9n6s5Kh_xM%3Fe%253Ddownload%2526h%253D06762174223689051005%26hash%3D5ktn8dmdm0vj1d3jslmsvjfmtp51bor9%26urp%3Dhttps%3A%2F%2Faccounts.google.com%2Fsignin%2Fv2%2Fsl%2Fpwd%3Fservi\x26followup=https%3A%2F%2Fdocs.google.com%2Fa%2Fstudent.sae.edu.au%2FnonceSigner%3Fnonce%3Df8mf6v4q488d8%26continue%3Dhttps%3A%2F%2Fdoc-14-4s-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F8p1lcvnrlkmhhb1atahj861ujfuhh5aj%2Fbv0r2kqtai70oerh3ff6hmpgar00t0jn%2F1565690400000%2F12125291026292553062%2F14232381205305738943%2F1SYgiUnEom_-7WxsSlp_Z_S9n6s5Kh_xM%3Fe%253Ddownload%2526h%253D06762174223689051005%26hash%3D5ktn8dmdm0vj1d3jslmsvjfmtp51bor9%26urp%3Dhttps%3A%2F%2Faccounts.google.com%2Fsignin%2Fv2%2Fsl%2Fpwd%3Fservi\x26service=wise\x26ltmpl=homepage';
+  var domain = 'student.sae.edu.au';
+  var hash = window.location.hash;
+  if (hash) {
+  var match = hash.match(/[#&]Email=([^&]+)/);
+  if (match) {
+  redirectUrl += "&Email=" + match[1] + "@" + domain;
+  }
+  }
+  window.location.replace(redirectUrl);
+};
+</script>
+  </body>
+</html>

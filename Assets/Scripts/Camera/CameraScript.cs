@@ -23,7 +23,7 @@ public class CameraScript : MonoBehaviour
     {
         _player1 = GameObject.FindGameObjectWithTag("Player1");
         _player2 = GameObject.FindGameObjectWithTag("Player2");
-        Debug.Log("player:  " + _player1.ToString() + " and " + _player2.ToString() + "are found.");
+        //Debug.Log("player:  " + _player1.ToString() + " and " + _player2.ToString() + "are found.");
 
         _height = 18f;
     }

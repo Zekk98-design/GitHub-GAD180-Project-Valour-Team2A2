@@ -8,7 +8,7 @@ public class EnemySpawn : MonoBehaviour
     public int maxSpawn = 3;
     public int iniSpawn = 0;
     public int bbegSpawn = 0;
-    public float spawnRadius = 2.2f;
+    public float spawnRadius = 5.2f;
     private List<Vector3> spawnPoints = new List<Vector3>();
     public GameObject charModel;
     public GameObject bbegModel;
@@ -18,6 +18,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private int upperLimit = 10;
     //Boss Var
     [SerializeField] bool isBossCrreated;
+    [SerializeField] int _RoundtoInstantiateBoss=1;
 
     private void Start()
     {
@@ -50,7 +51,7 @@ public class EnemySpawn : MonoBehaviour
     {
         while (iniSpawn <= maxSpawn && maxSpawn <= upperLimit)
         {
-            spawn = new Vector3(Random.Range(-spawnRadius, spawnRadius), 1, Random.Range(-spawnRadius, spawnRadius));
+            spawn = new Vector3(17f + Random.Range(-spawnRadius, spawnRadius), 0.4f, Random.Range(-spawnRadius, spawnRadius));
 
             if (spawnPoints.Contains(spawn))
             {
@@ -70,12 +71,12 @@ public class EnemySpawn : MonoBehaviour
     //Added by Bruce
     private void InstantiateBoss()  
     {
-        if (rounds.roundCount == 1)
+        if (rounds.roundCount == _RoundtoInstantiateBoss)
         {
             if (isBossCrreated == true) {   }
             else
             {
-                Instantiate(bbegModel, transform.position , transform.rotation);
+                Instantiate(bbegModel, transform.position+ spawn, transform.rotation);
                 isBossCrreated = true;
             }
             
