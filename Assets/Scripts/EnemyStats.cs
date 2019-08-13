@@ -31,36 +31,22 @@ public class EnemyStats : MonoBehaviour
         slider.value = calculateHealth();
         if (health < maxHealth)
         {
-
             healthBarUI.SetActive(true);
-
         }
         if (health <= 0)
         {
-            if (owner.transform.parent.CompareTag("Player1"))
-            {
-                ++lBoard.p1Kill;
-            }
-            if (owner.transform.parent.CompareTag("Player2"))
-            {
-                ++lBoard.p2Kill;
-            }
             Destroy(gameObject);
         }
         if (health > maxHealth)
         {
-
             health = maxHealth;
-
         }
         
     }
 
     float calculateHealth()
     {
-
         return health / maxHealth;
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -68,10 +54,18 @@ public class EnemyStats : MonoBehaviour
         if (collision.gameObject.CompareTag("Player1"))
         {
             owner = collision.gameObject;
+            if (health <= 0)
+            {
+                ++lBoard.p1Kill;
+            }
         }
         if (collision.gameObject.CompareTag("Player2"))
         {
             owner = collision.gameObject;
+            if (health <= 0)
+            {
+                ++lBoard.p2Kill;
+            }
         }
         if (collision.gameObject.name == "Arrow(Clone)")
         {
