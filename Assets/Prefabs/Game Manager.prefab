@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6339787216992710927}
   - component: {fileID: 6339787216992710929}
   - component: {fileID: 6339787216992710928}
+  - component: {fileID: 6339787215603616195}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -134,3 +135,55 @@ MonoBehaviour:
   eSpawn: 1
   eAI: 1
   pControl: 1
+--- !u!114 &6339787215603616195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6339787216992710922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4467fc22a6232ce4487884a5446f65cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar1: {fileID: 0}
+  bar2: {fileID: 0}
+  bar3: {fileID: 0}
+  bar4: {fileID: 0}
+  bar5: {fileID: 0}
+  bar6: {fileID: 0}
+  bar7: {fileID: 0}
+  bar8: {fileID: 0}
+  bar9: {fileID: 0}
+  gameOver: {fileID: 0}
+  p2Bar1: {fileID: 0}
+  p2Bar2: {fileID: 0}
+  p2Bar3: {fileID: 0}
+  p2Bar4: {fileID: 0}
+  p2Bar5: {fileID: 0}
+  p2Bar6: {fileID: 0}
+  p2Bar7: {fileID: 0}
+  p2Bar8: {fileID: 0}
+  p2Bar9: {fileID: 0}
+  p2GameOver: {fileID: 0}
+  shield1: {fileID: 0}
+  shield2: {fileID: 0}
+  shield3: {fileID: 0}
+  shield4: {fileID: 0}
+  shield5: {fileID: 0}
+  shield6: {fileID: 0}
+  shield7: {fileID: 0}
+  shield8: {fileID: 0}
+  shield9: {fileID: 0}
+  shieldGone: {fileID: 0}
+  p2Shield1: {fileID: 0}
+  p2Shield2: {fileID: 0}
+  p2Shield3: {fileID: 0}
+  p2Shield4: {fileID: 0}
+  p2Shield5: {fileID: 0}
+  p2Shield6: {fileID: 0}
+  p2Shield7: {fileID: 0}
+  p2Shield8: {fileID: 0}
+  p2Shield9: {fileID: 0}
+  p2ShieldGone: {fileID: 0}
