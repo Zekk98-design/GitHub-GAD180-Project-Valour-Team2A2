@@ -40,6 +40,7 @@ public class EnemyAI : MonoBehaviour
     private float                           BossAbilityReset;
     float                                   distanceToP1;
     float                                   distanceToP2;
+    float                                   distanceToAttack=1.4f;
 
 
     // Start is called before the first frame update
@@ -108,7 +109,7 @@ void Update()
                 curDistance = distanceToP1;
 
                 //Chasing State to player 1
-                if (curDistance > 1.1f && curDistance < 14.0f)
+                if (curDistance > distanceToAttack && curDistance < 14.0f)
                 {
                     transform.LookAt(Player1.transform);
                     
@@ -141,7 +142,7 @@ void Update()
 
                 //Attack State
                 
-                if (curDistance <= 1.1f)
+                if (curDistance <= distanceToAttack)
                 {
                     movement = Vector3.zero;
                     rb.velocity = Vector3.zero;
@@ -161,7 +162,7 @@ void Update()
                 curDistance = distanceToP2;
 
                 //Chasing State to player 2
-                if (curDistance > 1.1f && curDistance < 14f)
+                if (curDistance > distanceToAttack && curDistance < 14f)
                 {
                     transform.LookAt(Player2.transform);
                     transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);               
@@ -191,7 +192,7 @@ void Update()
                     WalkAnimation();
                 }
                 //Attacking State
-                if (curDistance <= 1.1f)
+                if (curDistance <= distanceToAttack)
                 {
                     movement = Vector3.zero;
                     rb.velocity = Vector3.zero;
@@ -266,10 +267,10 @@ void Update()
 
         if (gameObject.name == "Bull")
         { characterAnimation.Ability_Bull(); }
-        transform.Translate((transform.forward* 2.5f) + transform.up * 2f * Time.deltaTime);
+        transform.Translate((transform.forward* 1.5f) + transform.up * 2f * Time.deltaTime);
         if (gameObject.name == "Bull(Clone)")
         { characterAnimation.Ability_Bull(); }
-        transform.Translate((transform.forward * 2.5f) + transform.up * 2f * Time.deltaTime);
+        transform.Translate((transform.forward * 1.5f) + transform.up * 2f * Time.deltaTime);
 
     }
 
@@ -282,7 +283,7 @@ void Update()
             AttackSpeed = timerAttackReset;
             isAttackAnimaPlayed = true;
 
-            if (distanceToP1 <= 1.1f && isPlayer1==true)
+            if (distanceToP1 <= distanceToAttack && isPlayer1==true)
             {
                 if (player1_Stats.defence > 0)
                 {
@@ -294,7 +295,7 @@ void Update()
                 }
                 isPlayer1 = false;
             }
-            if (distanceToP2 <= 1.1f && isPlayer2 == true)
+            if (distanceToP2 <= distanceToAttack && isPlayer2 == true)
             {
                 if (player2_Stats.defence > 0)
                 {
