@@ -1698,10 +1698,11 @@ MonoBehaviour:
   gcs: {fileID: 0}
   uiHealth: {fileID: 0}
   maxHealth: 80
-  damage: 100
-  defence: 70
-  state: 1
   health: 20
+  maxDefence: 70
+  defence: 70
+  damage: 100
+  state: 1
   healthText: {fileID: 0}
   isPlayer1FinalD: 0
   isPlayer2FinalD: 0

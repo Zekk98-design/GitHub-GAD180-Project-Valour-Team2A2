@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 1064612693225423407}
   - component: {fileID: 1064612693225423405}
   - component: {fileID: -1948468793095924472}
+  - component: {fileID: 1934309999929886770}
   m_Layer: 0
   m_Name: Health potion
   m_TagString: Untagged
@@ -183,8 +184,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
   tempTimer: {fileID: 0}
+  hg: {fileID: 0}
+  sg: {fileID: 0}
   temp: {fileID: 0}
   pots: {fileID: 4433621922011178535, guid: 9bc5ecb9e748605439e5c4c7c0bca80a, type: 3}
+--- !u!114 &1934309999929886770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063229766520348576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bc32aab2ce3414c8ae99f441c84831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
+  start: 0
 --- !u!1 &1063741929280302468
 GameObject:
   m_ObjectHideFlags: 0
