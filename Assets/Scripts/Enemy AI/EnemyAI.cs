@@ -119,7 +119,7 @@ void Update()
                     // Play Walk animation
                     WalkAnimation();
                 }
-                if (curDistance <= 3.5f && curDistance >= 1.2f&& gameObject.tag=="Boss")
+                if (curDistance <= 3.5f && curDistance >= 1.2f&& gameObject.name== "Bartender(Clone)"||gameObject.name== "Minotaur(Clone)")
                 {
                     //starts Boss ability attack
                     isPlayer1 = true;
@@ -171,7 +171,7 @@ void Update()
                     // Play Walk animation
                     WalkAnimation();
 
-                    if (curDistance <= 3.5f && curDistance >= 1.2f && gameObject.tag == "Boss")
+                    if (curDistance <= 3.5f && curDistance >= 1.2f && gameObject.name == "Bartender(Clone)" || gameObject.name == "Minotaur(Clone)")
                     {
                         //starts Boss ability attack
                         isPlayer2 = true;

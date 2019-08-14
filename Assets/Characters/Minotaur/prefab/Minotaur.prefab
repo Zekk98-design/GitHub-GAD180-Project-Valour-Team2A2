@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 2387432849711347115}
   m_Layer: 0
   m_Name: Minotaur
-  m_TagString: Boss
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -817,10 +817,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   lBoard: {fileID: 0}
-  maxHealth: 700
+  maxHealth: 1500
   damage: 5
   health: 0
-  defence: 50
+  defence: 70
   healthBar: 0
   healthBarUI: {fileID: 0}
   slider: {fileID: 0}

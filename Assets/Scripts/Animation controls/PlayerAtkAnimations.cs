@@ -38,12 +38,12 @@ public class PlayerAtkAnimations : MonoBehaviour
                 {
                     case "Warrior" :
                         playerAtkAnimations.Atk_Warrior();
-                        GetComponent<AudioSource>().PlayOneShot(sword);
+                        GetComponent<AudioSource>().PlayOneShot(sword,0.45f);
                         break;
 
                     case "Rogue":
                         playerAtkAnimations.Attack_Rogue();
-                        GetComponent<AudioSource>().PlayOneShot(fireArrow);
+                        GetComponent<AudioSource>().PlayOneShot(fireArrow,0.9f);
                         //audioSource.clip = fireArrow;
                         //audioSource.Play();
                         break;
@@ -64,12 +64,12 @@ public class PlayerAtkAnimations : MonoBehaviour
                 {
                     case "Warrior":
                         playerAtkAnimations.Atk_Warrior();
-                        GetComponent<AudioSource>().PlayOneShot(sword);
+                        GetComponent<AudioSource>().PlayOneShot(sword, 0.45f);
                         break;
 
                     case "Rogue":
                         playerAtkAnimations.Attack_Rogue();
-                        GetComponent<AudioSource>().PlayOneShot(fireArrow);
+                        GetComponent<AudioSource>().PlayOneShot(fireArrow,0.9f);
                         break;
 
                     case "Mage":
