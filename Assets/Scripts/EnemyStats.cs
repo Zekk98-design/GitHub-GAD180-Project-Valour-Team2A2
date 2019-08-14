@@ -28,14 +28,14 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
         slider.value = calculateHealth();
         if (health < maxHealth)
         {
             healthBarUI.SetActive(true);
-        }
-        if (health <= 0)
-        {
-            Destroy(gameObject);
         }
         if (health > maxHealth)
         {
@@ -51,7 +51,7 @@ public class EnemyStats : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player1"))
+        if (collision.gameObject.CompareTag("Player1") || collision.gameObject.transform.root.CompareTag("Player1"))
         {
             owner = collision.gameObject;
             if (health <= 0)
@@ -59,7 +59,7 @@ public class EnemyStats : MonoBehaviour
                 ++lBoard.p1Kill;
             }
         }
-        if (collision.gameObject.CompareTag("Player2"))
+        if (collision.gameObject.CompareTag("Player2") || collision.gameObject.transform.root.CompareTag("Player2"))
         {
             owner = collision.gameObject;
             if (health <= 0)

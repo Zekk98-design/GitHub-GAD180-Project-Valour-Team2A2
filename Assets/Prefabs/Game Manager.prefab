@@ -76,6 +76,7 @@ MonoBehaviour:
   rounds: {fileID: 6339787216992710929}
   upperLimit: 7
   isBossCrreated: 0
+  _RoundtoInstantiateBoss: 2
 --- !u!114 &6339787216992710927
 MonoBehaviour:
   m_ObjectHideFlags: 0
