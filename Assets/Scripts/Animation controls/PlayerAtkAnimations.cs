@@ -14,6 +14,7 @@ public class PlayerAtkAnimations : MonoBehaviour
     CharacterAnimations playerAtkAnimations;
     private AudioSource audioSource;
     public AudioClip sword, fireArrow, fireBall;
+    public int isWarriorAtkPressed =0;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class PlayerAtkAnimations : MonoBehaviour
     void Update()
     {
         NormalAttack();
-       
+        
     }
 
     //Characters normal attack animation
@@ -39,6 +40,7 @@ public class PlayerAtkAnimations : MonoBehaviour
                     case "Warrior" :
                         playerAtkAnimations.Atk_Warrior();
                         GetComponent<AudioSource>().PlayOneShot(sword,0.45f);
+                        
                         break;
 
                     case "Rogue":
