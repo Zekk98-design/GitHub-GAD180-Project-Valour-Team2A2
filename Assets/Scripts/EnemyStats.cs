@@ -57,6 +57,7 @@ public class EnemyStats : MonoBehaviour
             if (health <= 0)
             {
                 ++lBoard.p1Kill;
+                lBoard.p1Dmg = lBoard.p1Dmg + maxHealth;
             }
         }
         if (collision.gameObject.CompareTag("Player2") || collision.gameObject.transform.root.CompareTag("Player2"))
@@ -65,6 +66,7 @@ public class EnemyStats : MonoBehaviour
             if (health <= 0)
             {
                 ++lBoard.p2Kill;
+                lBoard.p2Dmg = lBoard.p2Dmg + maxHealth;
             }
         }
         if (collision.gameObject.name == "Arrow(Clone)")
