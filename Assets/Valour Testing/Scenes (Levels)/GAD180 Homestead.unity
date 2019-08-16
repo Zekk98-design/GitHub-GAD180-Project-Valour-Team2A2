@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.28735608, g: 0.39150274, b: 0.5386594, a: 1}
+  m_IndirectSpecularColor: {r: 0.28740415, g: 0.39151573, b: 0.538657, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12896,18 +12896,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6339787216992710926, guid: f35d1278786974c44a557dee33967fcc,
-        type: 3}
-      propertyPath: bbegModel
-      value: 
-      objectReference: {fileID: 2652368406995254341, guid: bb7b5df039e427d4c8cd296e1d8a28c5,
-        type: 3}
-    - target: {fileID: 6339787216992710926, guid: f35d1278786974c44a557dee33967fcc,
-        type: 3}
-      propertyPath: charModel
-      value: 
-      objectReference: {fileID: 1020065271607171432, guid: 8cb09e19e13b859429cdf17fcccb7d1a,
-        type: 3}
     - target: {fileID: 6339787216992710929, guid: f35d1278786974c44a557dee33967fcc,
         type: 3}
       propertyPath: timerText
@@ -13143,6 +13131,18 @@ PrefabInstance:
       propertyPath: life6
       value: 
       objectReference: {fileID: 182041439}
+    - target: {fileID: 6339787216992710926, guid: f35d1278786974c44a557dee33967fcc,
+        type: 3}
+      propertyPath: bbegModel
+      value: 
+      objectReference: {fileID: 2652368406995254341, guid: bb7b5df039e427d4c8cd296e1d8a28c5,
+        type: 3}
+    - target: {fileID: 6339787216992710926, guid: f35d1278786974c44a557dee33967fcc,
+        type: 3}
+      propertyPath: charModel
+      value: 
+      objectReference: {fileID: 1020065271607171432, guid: 8cb09e19e13b859429cdf17fcccb7d1a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f35d1278786974c44a557dee33967fcc, type: 3}
 --- !u!1 &287991259 stripped
@@ -45364,6 +45364,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406863972742503621, guid: 539456985413bac4e83579eea36da6fa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8775912987846466106, guid: f35d1278786974c44a557dee33967fcc,
+        type: 3}
+    - target: {fileID: 3406863972742503621, guid: 539456985413bac4e83579eea36da6fa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DoExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406863972742503621, guid: 539456985413bac4e83579eea36da6fa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539456985413bac4e83579eea36da6fa, type: 3}

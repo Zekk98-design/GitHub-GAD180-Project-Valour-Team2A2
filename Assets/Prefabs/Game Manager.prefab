@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6339787216992710929}
   - component: {fileID: 6339787216992710928}
   - component: {fileID: 6339787215603616195}
+  - component: {fileID: 8775912987846466106}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -196,3 +197,15 @@ MonoBehaviour:
   life6: {fileID: 0}
   _DeathSkull: {fileID: 1525863562097537036, guid: 724afa691532058458d2e455165f4830,
     type: 3}
+--- !u!114 &8775912987846466106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6339787216992710922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7122cb46a5bd4f840b29ed18272d5264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
