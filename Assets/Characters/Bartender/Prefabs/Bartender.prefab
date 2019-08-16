@@ -1268,9 +1268,9 @@ MonoBehaviour:
   menu: {fileID: 0}
   player1_Stats: {fileID: 0}
   player2_Stats: {fileID: 0}
-  mSpeed: 2.6
-  AttackSpeed: 1.2
-  BossAbilitySpeed: 8
+  mSpeed: 3.2
+  AttackSpeed: 1.4
+  BossAbilitySpeed: 6.5
   distanceToAttack: 1.4
 --- !u!114 &6418140275486150850
 MonoBehaviour:
@@ -1286,8 +1286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   lBoard: {fileID: 0}
-  maxHealth: 2000
-  damage: 10
+  maxHealth: 3000
+  damage: 20
   health: 0
   defence: 100
   healthBar: 0
