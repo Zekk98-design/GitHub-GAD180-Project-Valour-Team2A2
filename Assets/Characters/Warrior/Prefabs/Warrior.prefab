@@ -5330,7 +5330,6 @@ GameObject:
   - component: {fileID: 1159402578}
   - component: {fileID: 1159402579}
   - component: {fileID: 1159402580}
-  - component: {fileID: 6264443269412183228}
   - component: {fileID: 175599977295174833}
   - component: {fileID: -8897070990397491785}
   m_Layer: 0
@@ -5490,21 +5489,6 @@ MonoBehaviour:
   isPlayer1FinalD: 0
   isPlayer2FinalD: 0
   death: 0
---- !u!114 &6264443269412183228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2391504002464795501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ae9568492deaa4586f17c09c159213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lBoard: {fileID: 0}
-  playerStats: {fileID: 1159402580}
-  isWeapon: 0
 --- !u!114 &175599977295174833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12000,6 +11984,7 @@ MonoBehaviour:
   lBoard: {fileID: 0}
   playerStats: {fileID: 1159402580}
   isWeapon: 1
+  isAttacked: 0
 --- !u!1001 &7588803437079225707
 PrefabInstance:
   m_ObjectHideFlags: 0
